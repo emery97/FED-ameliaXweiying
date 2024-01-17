@@ -208,7 +208,6 @@
     margin:0;
     text-align: center;
     width: 100%;
-    overflow-x: auto;
     white-space: nowrap;
 }
 
@@ -217,14 +216,31 @@
     display: inline-block;
     position: relative;
     cursor: pointer; 
+    overflow: hidden;
 }
 
 .product img {
-    width: 100%; 
-    height: 400px; 
+    position: absolute; /* Make both images absolutely positioned */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
     vertical-align: middle;
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
 }
+.product .hover-image {
+    opacity: 0; /* Make hover image invisible initially */
+    }
+    
+    .product:hover .hover-image {
+    opacity: 1; /* Make hover image fully visible on hover */
+    }
+    
+    .product:hover .original-image {
+    opacity: 0; /* Make original image invisible on hover */
+    }
 
+    
 .size-selector {
     display: none;
     position: absolute;
@@ -280,4 +296,6 @@
     background: #000; /* Change color as needed */
     margin: 0 2px;
 }
+
+  
 
