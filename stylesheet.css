@@ -2,6 +2,7 @@
     padding:0px;
     margin:0;
 }
+
 .promotion-bar{
     background-color: black;
     color:white;
@@ -23,16 +24,21 @@
 }
 .top-nav h2{
     font-family: 'Roboto Condensed', sans-serif;
-    font-size:55px;
-    margin-left:38%;
+    font-size:75px;
+    margin-left:35%;
+    margin-top: 5px;
 }
 .top-nav-icons {
-    margin-top: -280px;
+    margin-top: -250px;
     display: flex;
     align-items: center; /* This ensures the icons align with the search box vertically */
     font-size: 35px;
     gap: 20px; /* Adjust the space between the icons */
-    margin-right: 55px; /* Pushes everything to the left */
+    margin-right: 35px; /* Pushes everything to the left */
+}
+
+.icon-link{
+    color: #000;
 }
 .search-container {
     display: flex;
@@ -63,7 +69,7 @@
     background-color: white;
     display: flex;
     justify-content: center; /* Center-align items */
-    margin-top: -250px;
+    margin-top: -240px;
   }
   
   /* Links inside the navbar */
@@ -96,7 +102,7 @@
   
   /* Add a red background color to navbar links on hover */
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    color: #757575;
   }
   
   /* Dropdown content (hidden by default) */
@@ -129,14 +135,88 @@
     display: block;
   }
 
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img{
+    height: auto;
+    width: 100%;
+  }
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+  /*
   .main-image img{
     width: 100%;
     height: auto;
   }
-
+*/
   .categories-container {
     text-align: center;
     font-family: Arial, sans-serif;
+    margin-top: 80px;
 }
 
 .category {
@@ -147,8 +227,8 @@
 }
 
 .category img {
-    width: 200px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
+    width: 235px; /* Adjust as needed */
+    height: 235px; /* Adjust as needed */
     border-radius: 50%; /* Makes the image circular */
     display: block;
     margin: 0 38px; /* Centers the image */
@@ -157,27 +237,21 @@
 .categories-container h2{
     color: #000;
     text-decoration: none;
-    margin-top: 30px;
-    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 40px;
 }
 .categories-container h3{
     color: #000;
     text-decoration: none;
     margin-top: 30px;
-    font-size: 25px;
+    font-size: 30px;
 }
-.category-label {
+.category-label { /* this is the text that appears when you hover the circular img */
     display: block;
-}
-
-
-/* Hover effect */
-.category a:hover img {
-    opacity: 0.9;
-}
-
-/* Ensure the text is displayed on hover only and has a transition */
-.category-label {
+    font-size: 28px;
+    height: 38%; /*Center the text*/
+    font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s;
     position: absolute;
@@ -187,6 +261,13 @@
     white-space: nowrap;
     color: #000;
 }
+
+
+/* Hover effect */
+.category a:hover img {
+    opacity: 0.9;
+}
+
 
 .category a:hover .category-label {
     opacity: 1;
@@ -207,62 +288,83 @@
     text-align: center;
     width: 100%;
     height:auto;
+    margin-top: 80px;
 }
 
+.product-container{
+    display: flex;
+    flex-wrap: wrap; /* This allows for wrapping items if the container width is not enough */
+    justify-content: center; /* This will center the items in the container if there's extra space */
+    align-items: flex-start; /* Aligns items at the start of the container vertically */
+}
 .product {
-    margin:5px;
-    display: inline-block;
+    flex: 0 1 25%; /* This allows the product to grow and shrink but starts at 25% of the container's width */
+    margin: 20px;
     position: relative;
     cursor: pointer;
-    z-index: 10; 
+    box-sizing: border-box; /* This ensures padding and border are included in the width */
+    max-width: 375px; /* Optional: set a max-width for larger screens */
 }
 
 .product img {
-    position: absolute; /* Make both images absolutely positioned */
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height:100%;
+    width: 100%; /* This ensures the image takes the full width of the .product */
+    height: auto; /* This ensures the image height scales with the width to maintain aspect ratio */
     vertical-align: middle;
     transition: opacity 0.5s ease; /* Smooth transition for opacity */
 }
+
 .product .hover-image {
     opacity: 0; /* Make hover image invisible initially */
-    }
-    
-    .product:hover .hover-image {
-    opacity: 1; /* Make hover image fully visible on hover */
-    }
-    
-    .product:hover .original-image {
-    opacity: 0; /* Make original image invisible on hover */
-    }
+    position: absolute; /* Absolutely position the hover image */
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
 
-    
+.product:hover .hover-image {
+    opacity: 1; /* Make hover image fully visible on hover */
+}
+
+.product:hover .original-image {
+    opacity: 0; /* Make original image invisible on hover */
+}
+
+.product-info {
+    padding: 10px 0; /* Add padding to create space around the text */
+}
+.product-info h4{
+    font-size: 30px;
+}
+.product-info h5{
+    font-size: 35px;
+    margin-top: 3px;
+}
+
 .size-selector {
     display: none;
     position: absolute;
-    bottom: 19%;
+    top: 45%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: white;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     text-align: center;
     width:100%;
+    height: 150px;
     box-sizing: border-box;
-    border:1px solid; /*DELETE*/
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
 }
 
 .size-selector span {
     display: block;
-    margin-bottom: 5px;
-    
+    margin-top: 25px;
+    margin-bottom: 0px;
+    font-weight: bolder;
 }
 
 .size-selector button {
-    font-size: 15px;
-    margin: 0 5px;
+    font-size: 20px;
+    margin-top: 10px;
     padding: 5px 10px;
 }
 
@@ -270,23 +372,287 @@
     display: block;
 }
 
-.price {
-    font-weight: bold;
-}
-
 .color-options {
-    margin-top: 5px;
-}
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Add some space above the color options */
+  }
+  
+  .color-option {
+    width: 16px; /* Size of the color circle */
+    height: 16px; /* Size of the color circle */
+    border-radius: 50%; /* Make it round */
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .color-option:hover {
+    border-color: black; /* Change border color on hover */
+  }
+  
 
-.color-option {
+
+
+  .promo-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .promo-card {
+    position: relative;
+  }
+  
+  .promo-card img {
+    width: 730px;
+    height: 730px;
+    display: block;
+    margin: 58px;
+  }
+  
+  .promo-code {
+    position: absolute;
+    top: 30px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    font-size: 32px;
+    margin-left: 20px;
+
+  }
+  
+  .promo-link {
+    position: absolute;
+    bottom: 110px; /* Distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 40px;
+    white-space: nowrap; /* Ensure the text does not wrap */
+  }
+  
+  /* Additional responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .promo-container {
+      flex-direction: column;
+    }
+    
+    .promo-card {
+      flex-basis: 100%;
+      margin-bottom: 20px; /* Add space between cards */
+    }
+  }
+  
+
+  
+
+
+  .above-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  .sustainability-mission,
+  .rewards-program {
+    flex: 1; /* Each box will take up an equal amount of space */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically *//
+  }
+  
+  .learn-more{
+    display: block;
+    background-color: #fff0f7; /* Your choice of color */
+    padding: 78px;
+    font-size: 45px;
+    text-decoration: none;
+    color: #333; /* Your choice of text color */
+    font-weight: bold;
+    margin: 20px;
+  }
+  
+  /* This is for the rewards link to not stretch beyond its content */
+  .rewards-link {
+    display: block;
+    background-color: #ffffe6 ;
+    padding: 78px;
+    font-size: 45px;
+    text-decoration: none;
+    color: #333; /* Your choice of text color */
+    font-weight: bold;
+    margin: 20px;
+  }
+  
+  .about-section {
+    text-align: center;
+    color: black; 
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 250px;
+    font-size: 20px;
+    max-width: 70%;
+  }
+  
+  .about-section h1{
+    font-size: 35px;
+    margin-bottom: 13px;
+    margin-top: 50px;
+  }
+  .about-section p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 80px;
+    font-size: 22px;
+  }
+  
+  
+  .site-footer {
+    font-family: 'Inter Tight', sans-serif;
+  }
+  
+  .footer-top {
+    text-align: center;
+  }
+  
+  .footer-divider {
+    width: 100%;
+    border: 1px solid #000; /* Adjust the thickness and color as needed */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around; /* Spreads out the sections */
+    align-items: start;
+    padding: 20px;
+    margin-left: 55px;
+    margin-top: 20px;
+  }
+  
+  .footer-section h5 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: bolder;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .app-download a {
+    position: relative;
     display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #000; /* Change color as needed */
-    margin: 0 2px;
-}
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .app-download a img {
+    height: 230px;
+    width: 220px;
+  }
 
+  
+  .qr-code {
+    display: none;
+    position: absolute;
+    width: 20px; 
+    height: 20px; 
+    top: -100%; /* Position the QR code just ABOVE the button */
+    left: 5%; /* Center horizontally */
+    transform: translate(-50%, 0); /* Center based on its own size */
+    transform: translateX(-50%);
+    border-radius: 20px;
+  }
+  
 
+  
+  .footer-section-sign-up h5{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: bolder;
+  }
 
+  .footer-section-sign-up h6{
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 85%;
+    font-weight: lighter;
+  }
 
+  
+  .footer-section-sign-up form {
+    align-items: center; /* Aligns items vertically */
+  }
+  
+  .footer-section-sign-up form input,
+  .footer-section-sign-up form button {
+    margin: 0; /* Removes default margin */
+    padding: 9px;
+  }
+  
+  .footer-section-sign-up form input {
+    margin: 5px; /* Adds some space between the input and the button */
+  }
+
+  .footer-bottom {
+    background: #fff; 
+    border-top: 1px solid #ccc; 
+    padding: 20px 0;
+  }
+  
+  .country-notice {
+    font-size: 20px;
+    margin-left: 600px; /* Adjust the value as needed */
+  }
+  .social-icons {
+    margin-left: 700px;
+    margin-top: 15px;
+  }
+  
+  .social-icon {
+    margin: 8px; /* Adjust the margin as needed */
+  }  
+  
+  .legal-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .legal-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+  }  
+  
+  .legal-links a:hover {
+    text-decoration: underline;
+  }
+  
+  
+
+  
+  
