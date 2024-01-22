@@ -26,6 +26,32 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+//Home page pop up
+// Function to open the popup
+function openPopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = "block";
+  document.body.classList.add('body-no-scroll'); // Disable scrolling
+}
+
+// Function to close the popup
+function closePopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = "none";
+  document.body.classList.remove('body-no-scroll'); // Re-enable scrolling
+}
+
+// When the user clicks on <span> (x), close the popup
+var close = document.getElementsByClassName("close")[0];
+close.onclick = function() {
+  closePopup();
+}
+
+// Open the popup after 3 seconds (3000 milliseconds)
+window.onload = function() {
+  setTimeout(openPopup, 3000);
+}
+
 
 
 //Home page hovering images
@@ -58,4 +84,32 @@ document.addEventListener("DOMContentLoaded", function() {
     qrCode.style.display = (qrCode.style.display === "none") ? "block" : "none";
   }
   
+  
+  //Products display heart shape when hover change color
+  function toggleHeart(element) {
+    element.classList.toggle('liked');
+  }
+
+  //Products image switching upon arrow click
+  function nextImage(productItem) {
+    const images = productItem.querySelectorAll('.product-image img');
+    for (let i = 0; i < images.length; i++) {
+      if (images[i].classList.contains('active') && i < images.length - 1) {
+        images[i].classList.remove('active');
+        images[i + 1].classList.add('active');
+        break;
+      }
+    }
+  }
+  
+  function previousImage(productItem) {
+    const images = productItem.querySelectorAll('.product-image img');
+    for (let i = images.length - 1; i >= 0; i--) {
+      if (images[i].classList.contains('active') && i > 0) {
+        images[i].classList.remove('active');
+        images[i - 1].classList.add('active');
+        break;
+      }
+    }
+  }
   
