@@ -2,6 +2,9 @@
 
 Welcome to *ameliaxweiying*, your go-to destination for trendy and affordable clothing designed specifically for teenage girls. Our mission is to provide stylish yet budget-friendly options to empower young fashion enthusiasts. Explore the exciting features we've incorporated to enhance our customers' shopping experience:
 
+### Design Process
+Our development approach revolves around a user-centric design process, with a primary emphasis on delivering a smooth and delightful browsing journey. Through thorough market research, we've delved deep into comprehending the distinct requirements and preferences of our customers. This not only enhances the overall shopping experience but also fosters lasting customer loyalty to our platform.
+
 ### Gamification Features:
 
 #### 1. Loyalty Points System:
@@ -27,9 +30,12 @@ Welcome to *ameliaxweiying*, your go-to destination for trendy and affordable cl
    - Exclusive to customers spending over 50SGD.
    
    **Purpose:** Adds excitement for customers, enticing them to spend more to unlock the mystery box feature and thereby boosting sales.
-
-### Credits
-
+   
+### Technologies Used
+   - HTML/CSS - For structuring and styling the website's content.
+   
+   - JavaScript - To enhance interactivity, particularly in the points system and the spin-to-win feature.
+   
 ### Credits
 
 #### Media
