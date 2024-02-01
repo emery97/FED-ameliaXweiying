@@ -2,7 +2,7 @@
 <html lang = "en">
     <head>
         <link rel = "stylesheet" href = "stylesheet.css" type = "text/css">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--FONT-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,42 +22,43 @@
 
         <!--ICON LINK-->
         <script src="https://kit.fontawesome.com/85b6a0f764.js" crossorigin="anonymous"></script>
-    </head>
+        <title>Home</title>
+        <!--FAVICON-->
+        <link rel="icon" type="image/png" href="image/index/favicon.png" sizes="17x17 40x40">
+      </head>
     <body>
         <div class = "promotion-bar">
             <p>FREE SHIPPING ON ORDERS OVER $50</p>
         </div>
 
-        <div class = "top-nav">
-            <a href ="index.html"> <h2> AMELIAXWEIYING </h2> </a>
-            <div class = "top-nav-icons">
-                <div class="search-container">
-                    <div class="search-box">
-                        <input type="text" class="search-input" placeholder="SEARCH">
-                        <button class="search-button">
-                            <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
-                        </button>
-                    </div>
-                </div>
-                <a href="#" class="icon-link"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                <a href="#" class="icon-link"><i class="fa-solid fa-user"></i></a>
-                <a href="#" class="icon-link"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>                
-            </div>
-        </div>
+        <div class="top-nav">
+          <a href="index.html" class="brand-name"> <h2> AMELIAXWEIYING </h2> </a>
+          <div class="top-nav-icons">
+              <div class="search-container">
+                  <div class="search-box">
+                      <input type="text" class="search-input" placeholder="SEARCH">
+                      <button class="search-button">
+                        <i class="fas fa-search" style="font-size: 22px; background: none; border: none; padding: 5px 10px; cursor: pointer; outline: none; background-color: transparent; color: #000000;"></i>
+                      </button>
+                  </div>
+              </div>
+              <a href="#" class="icon-link"><i class="far fa-heart"></i></a>
+              <a href="login2.html" class="icon-link"><i class="fas fa-user"></i></a>
+              <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i></a>
+          </div>
+      </div>
+      
+      
 
         <div class="navbar">
-            <a href="new_products.html">NEW</a>
+            <a href="new-products.html">NEW</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     TOPS
                 </button>
                 <div class="dropdown-content">
-                    <a href="tops_page.html">Crop Tops</a>
-                    <a href="tops_page.html">Long Sleeve Tops</a>
-                    <a href="tops_page.html">Corsets</a>
-                    <a href="tops_page.html">Shirts & Blouses</a>
-                    <a href="tops_page.html">Tanks & Strapless Tops</a>
-                    <a href="tops_page.html">Graphic Tees</a>
+                    <a href="croptop.html">Crop Tops</a>
+                    <a href="strapless&tank.html">Tanks & Strapless Tops</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -65,11 +66,8 @@
                     DRESSES
                 </button>
                 <div class="dropdown-content">
-                    <a href="dresses_page.html">Mini Dresses</a>
                     <a href="dresses_page.html">Midi Dresses</a>
-                    <a href="dresses_page.html">Maxi Dresses</a>
                     <a href="dresses_page.html">Strapless Dresses</a>
-                    <a href="dresses_page.html">Satin Dresses</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -77,7 +75,6 @@
                     SKIRTS
                 </button>
                 <div class="dropdown-content">
-                    <a href="bottoms_page.html">Maxi & Midi Skirts</a>
                     <a href="bottoms_page.html">Skorts</a>
                     <a href="bottoms_page.html">Denim Skirts</a>
                 </div>
@@ -87,10 +84,7 @@
                     JEANS
                 </button>
                 <div class="dropdown-content">
-                    <a href="bottoms_page.html">High Waisted Jeans</a>
-                    <a href="bottoms_page.html">Low Waisted Jeans</a>
                     <a href="bottoms_page.html">Straight Leg Jeans</a>
-                    <a href="bottoms_page.html">Baggy Jeans</a>
                     <a href="bottoms_page.html">Cargo Jeans</a>
                 </div>
             </div>
@@ -127,17 +121,46 @@
   </div>
 
   <!-- Pop up -->
+  <!-- 
   <div id="popup" class="popup">
     <div class="popup-content">
       <span class="close">&times;</span>
       <img src="image/index/new_for_you/popup.png" alt="Popup Image">
     </div>
   </div>
+-->
+
+
+        <!-- Popup Overlay -->
+        <div id="popup-overlay" class="popup-overlay">
+          <!-- Popup Content -->
+          <div class="popup-content">
+            <!-- Close Button -->
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <!-- Popup Text Content -->
+            <div class="popup-text">
+              <h2>BLUME</h2>
+              <p>20% OFF SITEWIDE<br>+ free returns, always 💜</p>
+              <!-- Email Form -->
+              <form id="email-form">
+                <input type="email" id="newsletter-email" placeholder="your email" required>
+                <button type="submit" id="newsletter-submit">SUBMIT</button>
+                <button type="button" class="no-thanks-btn" onclick="closePopup()">no thanks</button>
+              </form>
+            </div>
+            <!-- Popup Image -->
+            <div class="popup-image">
+              <img src="path-to-your-image.jpg" alt="Product Image">
+            </div>
+          </div>
+        </div>
+
+
 
         <div class="categories-container">
             <h2>SHOP BY CATEGORY</h2>
             <div class="category">
-                <a href="link-to-new-arrivals-page.html">
+                <a href="new_products.html">
                     <img src="image/index/new_for_you/circle1.jpg" alt="New Arrivals">
                     <div class="category-label">NEW ARRIVALS </div>
                 </a>
@@ -145,7 +168,7 @@
             </div>
 
             <div class="category">
-                <a href="link-to-new-arrivals-page.html">
+                <a href="top.html">
                     <img src="image/index/new_for_you/circle1.1.jpg" alt="Tops">
                     <div class="category-label">TOPS</div>
                 </a>
@@ -176,94 +199,100 @@
                 <h3>SALE</h3>
             </div>
         </div>
+
         <div class="product-carousel">
             <h2>NEW FOR YOU</h2>
-            <div class="product-container">
+            <div class="product-row">
+                <!-- Product 1 -->
                 <div class="product">
-                    <img src="image/index/new_for_you/top1.jpg" alt="Original Image" class="product-image original-image">
-                    <img src="image/index/new_for_you/top1.1.jpg" alt="Hover Image" class="product-image hover-image">
-                    <div class="product-info">
-                        <h4>THE FLORALS</h4>
-                        <h5>$94.00</h5>
-                        <div class="color-options">
-                            <div class="color-option" style="background-color: #2e8b57;"></div>
-                            <div class="color-option" style="background-color: #ffb6c1;"></div>
-                            <div class="color-option" style="background-color: #000080;"></div>
-                            <div class="color-option" style="background-color: #800000;"></div>
-                          </div>
+                  <button class="arrow left-arrow" onclick="toggleImage(0)">&#10094;</button>
+                  <div class="image-container">
+                    <i class="far fa-heart heart-icon"></i>
+                    <img src="image/index/new_for_you/top1.jpg" alt="Product 1" class="product-image active">
+                    <img src="image/index/new_for_you/top1.1.jpg" alt="Product 1 alternative" class="product-image">
+                  </div>
+                  <button class="arrow right-arrow" onclick="toggleImage(0)">&#10095;</button>
+                  <div class="product-info">
+                    <div class="product-name">White & Roses</div>
+                    <div class="product-price">$68.00</div>
+                    <div class = "product-size"> XS, S, M, L, XL </div>
+                    <div class="color-options">
+                      <div class="color-option" style="background-color: #2e8b57;"></div>
+                      <div class="color-option" style="background-color: #ffb6c1;"></div>
+                      <div class="color-option" style="background-color: #000080;"></div>
+                      <div class="color-option" style="background-color: #800000;"></div>
                     </div>
-                    <div class="size-selector">
-                        <span>SELECT A SIZE</span>
-                        <button>S</button>
-                        <button>M</button>
-                        <button>L</button>
-                        <button>XL</button>
-                    </div>
+                    <a href="cart.html" class="add-to-cart-btn" data-name="White & Roses" data-price="68.00" onclick="addToCart('White & Roses', 68.00)">Add to Cart</a>
+                  </div>
                 </div>
+ 
+                <!-- Product 2 -->
                 <div class="product">
-                    <img src="image/index/new_for_you/top2.jpg" alt="Original Image" class="product-image original-image">
-                    <img src="image/index/new_for_you/top2.2.jpg" alt="Hover Image" class="product-image hover-image">
-                    <div class="product-info">
-                        <h4>ROWS & BOWS</h4>
-                        <h5>$80.00</h5>
-                        <div class="color-options">
-                            <div class="color-option" style="background-color: #e9967a;"></div>
-                            <div class="color-option" style="background-color: #014421;"></div>
-                            <div class="color-option" style="background-color: #c4aead;"></div>
-                            <div class="color-option" style="background-color: #5f9ea0;"></div>
-                          </div>
+                  <button class="arrow left-arrow" onclick="toggleImage(1)">&#10094;</button>
+                  <div class="image-container">
+                    <i class="far fa-heart heart-icon"></i>
+                    <img src="image/index/new_for_you/top2.jpg" alt="Product 1" class="product-image active">
+                    <img src="image/index/new_for_you/top2.2.jpg" alt="Product 1 alternative" class="product-image">
+                  </div>
+                  <button class="arrow right-arrow" onclick="toggleImage(1)">&#10095;</button>
+                  <div class="product-info">
+                    <div class="product-name">Forest Fairy Leaf</div>
+                    <div class="product-price">$98.00</div>
+                    <div class = "product-size"> XS, S, M, L, XL </div>
+                    <div class="color-options">
+                      <div class="color-option" style="background-color: #d8bfd8;"></div>
+                      <div class="color-option" style="background-color: #778899 ;"></div>
+                      <div class="color-option" style="background-color: #fbec5d;"></div>
+                      <div class="color-option" style="background-color: #fbab60;"></div>
                     </div>
-                    <div class="size-selector">
-                        <span>SELECT A SIZE</span>
-                        <button>S</button>
-                        <button>M</button>
-                        <button>L</button>
-                        <button>XL</button>
-                    </div>
+                    <a href="cart.html" class="add-to-cart-btn" data-name="Forest Fairy Leaf" data-price="98.00" onclick="addToCart('Forest Fairy Leaf', 98.00)">Add to Cart</a>
+                  </div>
                 </div>
+
+                <!-- Product 3 -->
                 <div class="product">
-                    <img src="image/index/new_for_you/top3.jpg" alt="Original Image" class="product-image original-image">
-                    <img src="image/index/new_for_you/top3.1.jpg" alt="Hover Image" class="product-image hover-image">
-                    <div class="product-info">
-                        <h4>STRIPED LOVE</h4>
-                        <h5>$104.00</h5>
-                        <div class="color-options">
-                            <div class="color-option" style="background-color: #80daeb;"></div>
-                            <div class="color-option" style="background-color: #002387;"></div>
-                            <div class="color-option" style="background-color: #8e3a59;"></div>
-                            <div class="color-option" style="background-color: #e7accf;"></div>
-                          </div>
+                  <button class="arrow left-arrow" onclick="toggleImage(2)">&#10094;</button>
+                  <div class="image-container">
+                    <i class="far fa-heart heart-icon"></i>
+                    <img src="image/index/new_for_you/top3.jpg" alt="Product 1" class="product-image active">
+                    <img src="image/index/new_for_you/top3.1.jpg" alt="Product 1 alternative" class="product-image">
+                  </div>
+                  <button class="arrow right-arrow" onclick="toggleImage(2)">&#10095;</button>
+                  <div class="product-info">
+                    <div class="product-name">Devil Spice</div>
+                    <div class="product-price">$108.00</div>
+                    <div class = "product-size"> XS, S, M, L, XL </div>
+                    <div class="color-options">
+                      <div class="color-option" style="background-color: #e9967a;"></div>
+                      <div class="color-option" style="background-color: #014421;"></div>
+                      <div class="color-option" style="background-color: #c4aead;"></div>
+                      <div class="color-option" style="background-color: #5f9ea0;"></div>
                     </div>
-                    <div class="size-selector">
-                        <span>SELECT A SIZE</span>
-                        <button>S</button>
-                        <button>M</button>
-                        <button>L</button>
-                        <button>XL</button>
-                    </div>
+                    <a href="cart.html" class="add-to-cart-btn" data-name="Devil Spice" data-price="108.00" onclick="addToCart('Devil Spice', 108.00)">Add to Cart</a>
+                  </div>
                 </div>
+                <!-- Product 4 -->
                 <div class="product">
-                    <img src="image/index/new_for_you/top4.jpg" alt="Original Image" class="product-image original-image">
-                    <img src="image/index/new_for_you/top4.1.jpg" alt="Hover Image" class="product-image hover-image">
-                    <div class="product-info">
-                        <h4>SWEET TREAT</h4>
-                        <h5>$76.00</h5>
-                        <div class="color-options">
-                            <div class="color-option" style="background-color: #d8bfd8;"></div>
-                            <div class="color-option" style="background-color: #778899 ;"></div>
-                            <div class="color-option" style="background-color: #fbec5d;"></div>
-                            <div class="color-option" style="background-color: #fbab60;"></div>
-                          </div>
+                  <button class="arrow left-arrow" onclick="toggleImage(3)">&#10094;</button>
+                  <div class="image-container">
+                    <i class="far fa-heart heart-icon"></i>
+                    <img src="image/index/new_for_you/top4.jpg" alt="Product 1" class="product-image active">
+                    <img src="image/index/new_for_you/top4.1.jpg" alt="Product 1 alternative" class="product-image">
+                  </div>
+                  <button class="arrow right-arrow" onclick="toggleImage(3)">&#10095;</button>
+                  <div class="product-info">
+                    <div class="product-name">Aura Omps</div>
+                    <div class="product-price">$67.00</div>
+                    <div class = "product-size"> XS, S, M, L, XL </div>
+                    <div class="color-options">
+                      <div class="color-option" style="background-color: #80daeb;"></div>
+                      <div class="color-option" style="background-color: #002387;"></div>
+                      <div class="color-option" style="background-color: #8e3a59;"></div>
+                      <div class="color-option" style="background-color: #e7accf;"></div>
                     </div>
-                    <div class="size-selector">
-                        <span>SELECT A SIZE</span>
-                        <button>S</button>
-                        <button>M</button>
-                        <button>L</button>
-                        <button>XL</button>
-                    </div>
+                    <a href="cart.html" class="add-to-cart-btn" data-name="Aura Omps" data-price="67.00" onclick="addToCart('Aura Omps', 67.00)">Add to Cart</a>
+                  </div>
                 </div>
-            </div>
         </div>
         
 
@@ -273,7 +302,7 @@
             <div class="promo-card">
               <img src="image/index/new_for_you/img1.jpg" alt="First Promotional Offer">
               <span class="promo-code">USE CODE: FED2024</span>
-              <a href="#" class="promo-link">NEW & ICONIC ></a>
+              <a href="new_products.html" class="promo-link">NEW & ICONIC ></a>
             </div>
             <div class="promo-card">
               <img src="image/index/new_for_you/img1.1.jpg" alt="Second Promotional Offer">
@@ -305,54 +334,54 @@
             </div>
             <div class="footer-content">
               <div class="footer-section">
-                <h5>HELP</h5>
+                <h5>QUICK LINKS</h5>
                 <ul>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Track Order</a></li>
-                  <li><a href="#">Shipping</a></li>
-                  <li><a href="#">Returns</a></li>
-                  <li><a href="#">Sizing</a></li>
-                  <li><a href="#">Afterpay</a></li>
-                  <li><a href="#">Klarna</a></li>
-                  <li><a href="#">Shop Pay</a></li>
+                  <li>FAQ</li>
+                  <li>Track Order</li>
+                  <li>Shipping</li>
+                  <li>Returns</li>
+                  <li>Sizing</li>
+                  <li>Afterpay</li>
+                  <li>Klarna</li>
+                  <li>Shop Pay</li>
                 </ul>
               </div>
               <div class="footer-section">
                 <h5>MORE ABOUT US</h5>
                 <ul>
-                  <li><a href="#">Gift Cards</a></li>
-                  <li><a href="#">Rewards</a></li>
-                  <li><a href="#">Give & Recieve</a></li>
-                  <li><a href="#">Blogs</a></li>
-                  <li><a href="#">Promotions</a></li>
-                  <li><a href="#">Reviews</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Careers</a></li>
+                  <li>Gift Cards</li>
+                  <li>Rewards</li>
+                  <li>Give & Recieve</li>
+                  <li>Blogs</li>
+                  <li>Promotions</li>
+                  <li>Reviews</li>
+                  <li>About Us</li>
+                  <li>Careers</li>
                 </ul>
               </div>
               <div class="footer-section">
                 <h5>LOWER IMPACT</h5>
                 <ul>
-                  <li><a href="#">Our Mission</a></li>
-                  <li><a href="#">Ethical Sourcing</a></li>
-                  <li><a href="#">About Lower Impact</a></li>
-                  <li><a href="#">Sustainability & Environment</a></li>
-                  <li><a href="#">Equality & Community</a></li>
-                  <li><a href="#">Singapore's Act of Transparency</a></li>
+                  <li>Our Mission</li>
+                  <li>Ethical Sourcing</li>
+                  <li>About Lower Impact</li>
+                  <li>Sustainability & Environment</li>
+                  <li>Equality & Community</li>
+                  <li>Singapore's Act of Transparency</li>
                 </ul>
               </div>
               <div class="footer-section">
                 <h5>GET IN TOUCH</h5>
                 <ul>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Collaborations</a></li>
-                  <li><a href="#">College Ambassador</a></li>
-                  <li><a href="#">Afiiliate Program</a></li>
-                  <li><a href="#">Retail Store</a></li>
-                  <li><a href="#">Accessibility</a></li>
-                  <li><a href="#">Cookies Settings</a></li>
+                  <li>Contact Us</li>
+                  <li>Collaborations</li>
+                  <li>College Ambassador</li>
+                  <li>Afiiliate Program</li>
+                  <li>Retail Store</li>
+                  <li>Accessibility</li>
+                  <li>Cookies Settings</li>
                 </ul>
-              </div>
+              </div>              
               <div class="footer-section download-app">
                 <h5>DOWNLOAD OUR APP</h5>
                 <div class="app-download">
@@ -369,7 +398,6 @@
                 <h6>Your mystery discount + the chance to win a $500 gift card</h6>
                 <form action="#">
                   <input type="text" placeholder="ENTER PHONE NUMBER">
-                  <button type="submit">></button>
                 </form>
               </div>
             </div>
@@ -386,11 +414,7 @@
                         <i class="fa fa-spotify fa-2x social-icon" aria-hidden="true"></i>                     
                     </div>
                     <div class="legal-links">
-                      <a href="#">AMELIAXWEIYING SG</a> | 
-                      <a href="#">TERMS OF SALE</a> | 
-                      <a href="#">TERMS OF USE</a> | 
-                      <a href="#">PRIVACY POLICY</a> | 
-                      <a href="#">SITEMAP</a>
+                      <p>AMELIAXWEIYING SG | TERMS OF SALE | TERMS OF USE  | PRIVACY POLICY  | SITEMAP</p> 
                     </div>
                   </div>
                 </div>
@@ -402,6 +426,7 @@
 
 
         <script src="script.js"></script>
+        <script src="newsletter-api.js"></script>
     </body>
 </html>
 

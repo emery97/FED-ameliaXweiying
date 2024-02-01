@@ -28,29 +28,66 @@ function showSlides(n) {
 
 //Home page pop up
 // Function to open the popup
-function openPopup() {
-  var popup = document.getElementById("popup");
-  popup.style.display = "block";
-  document.body.classList.add('body-no-scroll'); // Disable scrolling
+//function openPopup() {
+ // var popup = document.getElementById("popup");
+ // popup.style.display = "block";
+ // document.body.classList.add('body-no-scroll'); // Disable scrolling
+//}
+
+// Function to close the popup
+//function closePopup() {
+ // var popup = document.getElementById("popup");
+//  popup.style.display = "none";
+ // document.body.classList.remove('body-no-scroll'); // Re-enable scrolling
+//}
+
+// When the user clicks on <span> (x), close the popup
+//var close = document.getElementsByClassName("close")[0];
+//close.onclick = function() {
+ // closePopup();
+//}
+
+//// Open the popup after 3 seconds (3000 milliseconds)
+//window.onload = function() {
+ // setTimeout(openPopup, 3000);
+//}
+
+
+// SIGN UP FOR NEWS LETTER
+// Function to show the popup
+function showPopup() {
+  document.getElementById('popup-overlay').style.display = 'flex';
 }
 
 // Function to close the popup
 function closePopup() {
-  var popup = document.getElementById("popup");
-  popup.style.display = "none";
-  document.body.classList.remove('body-no-scroll'); // Re-enable scrolling
+  document.getElementById('popup-overlay').style.display = 'none';
 }
 
-// When the user clicks on <span> (x), close the popup
-var close = document.getElementsByClassName("close")[0];
-close.onclick = function() {
+// Add event listener for the form submission
+document.getElementById('email-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var email = document.getElementById('email-input').value;
+  // Validate the email and handle the signup process
+  console.log('Email:', email);
+  // After handling the signup, close the popup
   closePopup();
-}
+});
 
-// Open the popup after 3 seconds (3000 milliseconds)
-window.onload = function() {
-  setTimeout(openPopup, 3000);
-}
+// Call showPopup to display the popup when needed
+showPopup();
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -113,3 +150,80 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
   
+
+//FOR API
+document.addEventListener("DOMContentLoaded", function () {
+  const APIKEY = "65b334a346893806b17bde81"; // Replace with your actual API key
+  const apiUrl = "https://fedpairassgn-14ba.restdb.io/rest/customer"; // Replace with your actual URL
+
+  document.getElementById("contact-submit").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let userName = document.getElementById("user-name").value;
+    let userEmail = document.getElementById("user-email").value;
+    let userPwd = document.getElementById("user-pwd").value;
+
+    let jsondata = {
+      "name": userName,
+      "email": userEmail,
+      "password": userPwd, // Passwords should be hashed before sending to the server
+    };
+
+    let settings = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-apikey": APIKEY,
+        "Cache-Control": "no-cache"
+      },
+      body: JSON.stringify(jsondata)
+    };
+
+    fetch(apiUrl, settings)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        alert("Account created successfully");
+        document.getElementById("add-contact-form").reset();
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("There was an error creating the account.");
+      });
+  });
+});
+
+//Press arrow change image for displaying of products
+function toggleImage(productIndex) {
+  var imageContainers = document.getElementsByClassName('image-container');
+  var images = imageContainers[productIndex].getElementsByClassName('product-image');
+  
+  // Toggle visibility of the images
+  for (var i = 0; i < images.length; i++) {
+    images[i].classList.toggle('active');
+  }
+}
+
+
+// FOR LOGIN PAGE
+// Simple example to handle form submission
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
+  // Perform your validation and AJAX request to login here
+  console.log('Username:', username, 'Password:', password);
+
+  // For now, just a simple alert
+  alert('Login form submitted. Check console for details.');
+});
+
+
+//ADD TO CART
