@@ -98,6 +98,47 @@ In a delightful contrast to our bold aesthetic, we introduce cute mini-games. Th
       2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/4-modelinfo-nat-us2_4bab7e2e-daea-43fe-af03-db52740c341e.jpg?v=1697765967&width=1800)
 5. [It Girl Edition](https://i.pinimg.com/564x/ea/cf/69/eacf691617cfdfc9254f64db52c131d5.jpg)
 6. [New and Iconic](https://i.pinimg.com/564x/d6/83/54/d68354573416cbb7da333691b6275d90.jpg)
+7. Games Page:
+  1. [Whack A Mole](https://i.pinimg.com/564x/42/5b/18/425b18eb18f33f5a3a35da83db54291c.jpg)
+  2. [Dinosaur Game](https://i.pinimg.com/564x/fa/9a/ec/fa9aec8b771312353076b46b66ac4e1a.jpg)
+  3. [Quiz](https://i.pinimg.com/564x/2e/35/29/2e352971e6ef5992a68f8759889e6f55.jpg)
+8. Crop Tops:
+   1. Fearless
+   2. Capture it
+      1. [Picture 1](https://us.princesspolly.com/cdn/shop/products/LoveBitesBabyTeeRed_sullivang_-1.jpg?v=1647840319&width=1800)
+      2. [Picture 2](https://us.princesspolly.com/cdn/shop/products/1-modelinfo-chloe_e-us2_34e0b851-a9a1-4540-bd97-4af747db0e14.jpg?v=1647840319&width=654)
+   3. Lushy Lush
+      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-lily-us4_6ca3c4a2-8b3b-446d-90f1-9a24622a75b9.jpg?v=1683687142&width=1800)
+      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/2-modelinfo-Lily-us4_6e262834-eb85-48e6-b794-7d43a5ffbf63.jpg?v=1683687142&width=654)
+   4. Loco Psycho
+      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-nat-us2_031b1e9f-d881-40d0-b0e1-1e48501532e2.jpg?v=1699836025&width=1800)
+      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-nat-us2_63161732-ddd8-4e75-9916-81f451e8df3a.jpg?v=1699836025&width=1800)
+   5. Wishy Wane
+      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-eva-us2_cb3a835a-4701-4ef9-a304-e84f6de6a044.jpg?v=1687484312&width=1800)
+      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-eva-us2_03a623c4-ec2d-407a-81aa-ed45d3442c07.jpg?v=1687484312&width=1800)
+   6. Cinnamon Moonlight
+      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-olivia-us2_e58c8d8b-fbbe-4193-a7af-5220dfc526af.jpg?v=1695941092&width=1800)
+      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-olivia-us2_367c017a-4a4f-40c4-9e54-47cd8c39d07e.jpg?v=1695941092&width=1800)
+   7. August
+      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-sneha-us2_2732b371-eb1d-4080-a8dd-5612f24d9c41.jpg?v=1696803959&width=1800)
+      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-sneha-us2_cc75bbea-1b5b-43ae-982b-299cb86d4ce8.jpg?v=1696803959&width=1800)
+   8. Fresh Flash 
+      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-bianca-us4_1b7c7ad6-ed48-4fad-8e35-2f28c6a192c7.jpg?v=1697432212&width=1800)
+      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-bianca-us4_15400a2e-4ff9-490a-b710-3acec419bb4a.jpg?v=1697432212&width=1800)
+9. Strapless & Tank Tops
+   1. Wanda
+      1. [Picture 1](https://us.princesspolly.com/cdn/shop/products/0-modelinfo-elise-us2_f7cf112d-9ecd-4304-8552-821cfd91a280.jpg?v=1694456711&width=1800)
+      2. [Picture 2](https://us.princesspolly.com/cdn/shop/products/1-modelinfo-elise-us2_f217363a-4e0d-4f38-8967-5167cad97193.jpg?v=1694456711&width=7674)
+   2. Penguin Disaster
+      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-kiana-us2_4db3077b-c4f8-42d6-8c1c-60255bc093cd.jpg?v=1706510673&width=1800)
+      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/3-modelinfo-kiana-us2_36ee69f5-a96c-4db0-a3b6-d32632762621.jpg?v=1706510673&width=654)
+   3. Alixa Melissa
+      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-Nat-us2_edc2c1fb-e15f-466e-aac1-037593505a84.jpg?v=1688015420&width=1800)
+      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-nat-us2_6b46c78a-7cba-4250-8436-cdcb68a59eda.jpg?v=1688015420&width=1800)
+   4. OMG!
+      1. [Picture 1](https://us.princesspolly.com/cdn/shop/products/0-modelinfo-margaret-us2_jpg_3993971e-5b63-4f0b-bf5b-e20bb7298523.jpg?v=1657499338&width=1800)
+      2. [Picture 2](https://us.princesspolly.com/cdn/shop/products/1-modelinfo-margaret-us2_d8f492a3-fb1b-4721-8d87-38198bf347bd.jpg?v=1657499338&width=1800)
+        
 #### [Login Page](https://i.pinimg.com/564x/22/0a/74/220a74c6f58c555d3341efed2b15dd47.jpg)
 
 ### Acknowledgements
