@@ -147,5 +147,6 @@ In a delightful contrast to our bold aesthetic, we introduce cute mini-games. Th
 - The whack a mole game code is contributed by [0shuvo0](https://github.com/0shuvo0/whack-a-mole.git)
 - The dinosaur game is contributed by [georgephillips](https://github.com/CloudCannon/Dinosaur-Chrome-Game)
 - Trivia quiz game is contributed by [prabinmagar](https://github.com/prabinmagar/quiz-app-using-js-with-open-trivia-DB-api)
+- Speed typing game is contributed by [WebDevSimplified](https://github.com/WebDevSimplified/JS-Speed-Typing-Game)
 
 
