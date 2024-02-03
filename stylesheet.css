@@ -330,21 +330,6 @@ width: 100%; /* Make the image fill the container */
 height: auto; /* Maintain aspect ratio */
 }
 
-/* Adjustments for mobile responsiveness */
-@media (max-width: 768px) {
-.popup-content {
-  flex-direction: column; /* Stack the content and image on top of each other */
-}
-
-.popup-image img {
-  width: 100%; /* Full width on smaller screens */
-}
-}
-
-
-
-
-
 /* the circle images in index html */
 .categories-container {
   text-align: center;
@@ -595,19 +580,6 @@ display: block; /* This will make it a block element */
   font-size: 40px;
   white-space: nowrap; /* Ensure the text does not wrap */
 }
-
-/* Additional responsiveness for smaller screens */
-@media (max-width: 768px) {
-  .promo-container {
-    flex-direction: column;
-  }
-  
-  .promo-card {
-    flex-basis: 100%;
-    margin-bottom: 20px; /* Add space between cards */
-  }
-}
-
 
 .above-footer {
   display: flex;
@@ -1094,6 +1066,283 @@ color: #000;
 font-family: 'Arial', sans-serif; /* Change to your preferred font */
 font-weight: 600;
 }
+/*TRIVIA QUIZ*/
+.trivia-top-nav{
+  background-color: white;
+}
+:root{
+  --light-purple-color: #8854C0;
+  --light-color: #fff;
+  --dark-color: #000;
+  --grey-color: #f2f2f2;
+  --transition: all 300ms ease-in-out;
+}
+.quiz-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper{
+  overflow-y: hidden;
+  font-family: 'Poppins', sans-serif;
+  padding: 1.5rem 4rem 3rem 4rem;
+  width: 600px;
+  height: 700px;
+  position: relative;
+  border-radius: 10%;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 10%);
+  background-color:#FEF9FF;
+}
+.quiz-title{
+  text-align: center;
+  font-size: 4rem;
+}
+
+.quiz-score{
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.1rem;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  margin: .5rem auto 1rem auto;
+  color: var(--light-purple-color);
+}
+.quiz-question{
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+.quiz-question .category{
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: var(--light-purple-color);
+  color: var(--light-color);
+  padding: .2rem .4rem;
+  border-radius: .2rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+.quiz-options{
+  list-style-type: none;
+  margin: 1rem 0;
+}
+.quiz-options li{
+  border-radius: 0.5rem;
+  font-weight: 590;
+  margin: .7rem 0;
+  padding: .4rem 1.2rem;
+  cursor: pointer;
+  border: 3px solid var(--light-purple-color);
+  background-color: var(--light-purple-color);
+  color: var(--light-color);
+  box-shadow: 0 4px 0 0 #6c4298;
+  transition: var(--transition);
+}
+.quiz-options li:hover{
+  background-color: var(--grey-color);
+  color: var(--dark-color);
+  border-color: var(--grey-color);
+  box-shadow: 0 4px 0 0 #bbbbbb;
+}
+.quiz-options li:active{
+    transform: scale(0.97);
+}
+/* js related */
+.selected{
+    background-color: var(--grey-color)!important;
+    color: var(--dark-color)!important;
+    border-color: var(--grey-color)!important;
+    box-shadow: 0 4px 0 0 #bbbbbb!important;
+}
+.quiz-foot button{
+    border: none;
+    border-radius: 0.5rem;
+    outline: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .5rem 1rem;    
+    margin: 0 auto 0 auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: block;
+    letter-spacing: 2px;
+    transition: var(--transition);
+    background-color: #EACBD2;
+}
+.quiz-foot button:hover{
+    background-color: #DFAEB4;
+}
+.quiz-foot button:active{
+    transform: scale(0.95);
+}
+#play-again{
+    display: none;
+}
+#result{
+    padding: .7rem 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+#result i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    background-color: var(--light-purple-color);
+    color: var(--light-color);
+}
+
+.modal {
+  border-radius: 10px;
+  display: flex; /* for responsiveness*/
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px; 
+  height: auto; 
+  background-color: #EDC7CF;
+  overflow: hidden;
+  display: none;
+}
+
+.modal-content {
+  margin: 10% auto;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-header h3{
+  font-size: 60px;
+  font-family: 'Honk', system-ui;  
+  color:black;
+  margin-bottom: 30px;
+}
+
+.modal-close-btn {
+  padding: 10px 20px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modal-body{
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+}
+/* tablet responsiveness */
+@media(max-width: 678px){
+    .quiz-title{
+        font-size: 1.6rem;
+    }
+    .wrapper{
+        margin: 3rem 0;
+        width: 90%;
+        height: 90%;
+        padding: 1.5rem 1rem 3rem 1rem;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .quiz-foot button{
+        font-size: 1rem;
+    }
+}
+/* mobile responsiveness */
+@media (max-width: 768px) {
+  *{
+    margin:0;
+    padding:0;
+  }
+  .promotion-bar{
+    font-size: 10px;
+  }
+  .brand-name{
+    display: flex;
+    justify-content:center;
+    margin-right: 25%;
+  }
+  .popup-content {
+    flex-direction: column; /* Stack the content and image on top of each other */
+  }
+  
+  .popup-image img {
+    width: 100%; /* Full width on smaller screens */
+  }
+  .promo-container {
+    flex-direction: column;
+  }
+  
+  .promo-card {
+    flex-basis: 100%;
+    margin-bottom: 20px; /* Add space between cards */
+  }
+  .top-nav {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .brand-name {
+    margin-left: 0;
+    font-size: 32px; /* Smaller font size for mobile */
+  }
+
+  .top-nav-icons {
+    margin-top: 20px; /* Adjusted margin */
+  }
+
+  .navbar a, .dropdown .dropbtn {
+    font-size: 18px; /* Smaller font size for mobile */
+    padding: 8px 10px; /* Adjusted padding */
+  }
+  .slideshow-container{
+    margin-top: 30%;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .footer-section h5, .footer-section ul li {
+    font-size: 14px; /* Smaller text for easier reading on mobile */
+  }
+
+  .app-download a img {
+    height: 150px; /* Adjusted for mobile */
+  }
+  /* Adjust modal for smaller screens */
+  .modal-content {
+    width: 90%; /* Adjusted width for mobile */
+  }
+
+  /* Adjust quiz container for smaller screens */
+  .quiz-container .wrapper {
+    width: 90%; /* Adjusted width for mobile */
+    height: auto; /* Auto height for better fit */
+    padding: 1rem; /* Reduced padding */
+  }
+  
+  /* Adjust font sizes for quiz elements on smaller screens */
+  .quiz-title, .quiz-question, .quiz-options li {
+    font-size: smaller; /* Adjust font size for readability */
+  }
+  }
 /*weiying's comp*/
 @media (max-width: 1600px){
 *{
