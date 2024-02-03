@@ -76,7 +76,7 @@ function startGame() {
     run();
 
     // Set a timeout to end the game after 5 minutes
-    gameTimer = setTimeout(showGameOverModal, 60000); // 1 minutes in milliseconds = 60000
+    gameTimer = setTimeout(showGameOverModal, 3000); // 1 minutes in milliseconds = 60000
 }
 
 // Event listener for the close button on the modal

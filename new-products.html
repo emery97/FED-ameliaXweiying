@@ -22,10 +22,9 @@
 
         <!--ICON LINK-->
         <script src="https://kit.fontawesome.com/85b6a0f764.js" crossorigin="anonymous"></script>
-        <title>New Products</title>
+        <title>New Products </title>
         <!--FAVICON-->
         <link rel="icon" type="image/png" href="image/index/favicon.png" sizes="17x17 40x40">
-
     </head>
     <body>
         <div class = "promotion-bar">
@@ -46,6 +45,7 @@
               <a href="#" class="icon-link"><i class="far fa-heart"></i></a>
               <a href="login2.html" class="icon-link"><i class="fas fa-user"></i></a>
               <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i></a>
+              <a href="all-games.html" class="icon-link"><i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i></a>
           </div>
       </div>
       
@@ -67,8 +67,8 @@
                     DRESSES
                 </button>
                 <div class="dropdown-content">
-                    <a href="dresses_page.html">Midi Dresses</a>
-                    <a href="dresses_page.html">Strapless Dresses</a>
+                    <a href="midi-dress.html">Midi Dresses</a>
+                    <a href="strapless-dress.html">Strapless Dresses</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -76,8 +76,7 @@
                     SKIRTS
                 </button>
                 <div class="dropdown-content">
-                    <a href="bottoms_page.html">Skorts</a>
-                    <a href="bottoms_page.html">Denim Skirts</a>
+                    <a href="denim-skirts.html">Denim Skirts</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -85,11 +84,10 @@
                     JEANS
                 </button>
                 <div class="dropdown-content">
-                    <a href="bottoms_page.html">Straight Leg Jeans</a>
-                    <a href="bottoms_page.html">Cargo Jeans</a>
+                    <a href="cargo-jeans.html">Cargo Jeans</a>
                 </div>
             </div>
-            <a href="#Sale">SALE</a>
+            <a href="sale.html">SALE</a>
         </div>
 
         <div class="filter-bar">
@@ -132,13 +130,13 @@
             <div class="product-row">
                 <!-- Product 1 -->
                 <div class="product-page-product">
-                <button class="arrow left-arrow" onclick="toggleImage(0)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                 <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/new/product.jpg" alt="Product 1" class="product-image active">
                     <img src="image/new/product1.1.jpg" alt="Product 1 alternative" class="product-image">
                 </div>
-                <button class="arrow right-arrow" onclick="toggleImage(0)">&#10095;</button>
+                <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                 <div class="product-info">
                     <div class="product-name">Timeless</div>
                     <div class="product-price">$98.00</div>
@@ -155,13 +153,13 @@
 
                 <!-- Product 2 -->
                 <div class="product-page-product">
-                <button class="arrow left-arrow" onclick="toggleImage(1)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                 <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/new/product2.jpg" alt="Product 1" class="product-image active">
                     <img src="image/new/product2.1.jpg" alt="Product 1 alternative" class="product-image">
                 </div>
-                <button class="arrow right-arrow" onclick="toggleImage(1)">&#10095;</button>
+                <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                 <div class="product-info">
                     <div class="product-name">Bloop Goop</div>
                     <div class="product-price">$98.00</div>
@@ -178,13 +176,13 @@
 
                 <!-- Product 3 -->
                 <div class="product-page-product">
-                <button class="arrow left-arrow" onclick="toggleImage(2)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                 <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/new/product3.jpg" alt="Product 1" class="product-image active">
                     <img src="image/new/product3.1.jpg"Product 1 alternative" class="product-image">
                 </div>
-                <button class="arrow right-arrow" onclick="toggleImage(2)">&#10095;</button>
+                <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                 <div class="product-info">
                     <div class="product-name">Monday Blues</div>
                     <div class="product-price">$38.00</div>
@@ -200,13 +198,13 @@
                 </div>
                 <!-- Product 4 -->
                 <div class="product-page-product">
-                <button class="arrow left-arrow" onclick="toggleImage(3)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                 <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/new/product4.jpg" alt="Product 1" class="product-image active">
                     <img src="image/new/product4.1.jpg" alt="Product 1 alternative" class="product-image">
                 </div>
-                <button class="arrow right-arrow" onclick="toggleImage(3)">&#10095;</button>
+                <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                 <div class="product-info">
                     <div class="product-name">Ribs & Bones</div>
                     <div class="product-price">$67.00</div>
@@ -226,13 +224,13 @@
             <div class="product-row">
                 <!-- Product 1 -->
                 <div class="product-page-product">
-                <button class="arrow left-arrow" onclick="toggleImage(4)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                 <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/new/product5.jpg" alt="Product 1" class="product-image active">
                     <img src="image/new/product5.1.jpg" alt="Product 1 alternative" class="product-image">
                 </div>
-                <button class="arrow right-arrow" onclick="toggleImage(4)">&#10095;</button>
+                <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                 <div class="product-info">
                     <div class="product-name">Cozey Booza</div>
                     <div class="product-price">$108.00</div>
@@ -249,13 +247,13 @@
 
                 <!-- Product 2 -->
                 <div class="product-page-product">
-                <button class="arrow left-arrow" onclick="toggleImage(5)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                 <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/new/product6.jpg" alt="Product 1" class="product-image active">
                     <img src="image/new/product6.1.jpg" alt="Product 1 alternative" class="product-image">
                 </div>
-                <button class="arrow right-arrow" onclick="toggleImage(5)">&#10095;</button>
+                <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                 <div class="product-info">
                     <div class="product-name">Burgundy on my T-Shirt</div>
                     <div class="product-price">$1989.00</div>
@@ -272,13 +270,13 @@
 
                 <!-- Product 3 -->
                 <div class="product-page-product">
-                <button class="arrow left-arrow" onclick="toggleImage(6)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                 <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/new/product7.jpg" alt="Product 1" class="product-image active">
                     <img src="image/new/prooduct7.1.jpg" alt="Product 1 alternative" class="product-image">
                 </div>
-                <button class="arrow right-arrow" onclick="toggleImage(6)">&#10095;</button>
+                <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                 <div class="product-info">
                     <div class="product-name">Better in Blue</div>
                     <div class="product-price">$98.00</div>
@@ -294,13 +292,13 @@
                 </div>
                 <!-- Product 4 -->
                 <div class="product-page-product">
-                <button class="arrow left-arrow" onclick="toggleImage(7)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                 <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/new/product8.jpg" alt="Product 1" class="product-image active">
                     <img src="image/new/product8.1.jpg" alt="Product 1 alternative" class="product-image">
                 </div>
-                <button class="arrow right-arrow" onclick="toggleImage(7)">&#10095;</button>
+                <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                 <div class="product-info">
                     <div class="product-name">Happy Valentines</div>
                     <div class="product-price">$100.00</div>

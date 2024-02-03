@@ -2,7 +2,7 @@
 <html lang = "en">
     <head>
         <link rel = "stylesheet" href = "stylesheet.css" type = "text/css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!--FONT-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
         <title>Home</title>
         <!--FAVICON-->
         <link rel="icon" type="image/png" href="image/index/favicon.png" sizes="17x17 40x40">
-      </head>
+    </head>
     <body>
         <div class = "promotion-bar">
             <p>FREE SHIPPING ON ORDERS OVER $50</p>
@@ -42,9 +42,10 @@
                       </button>
                   </div>
               </div>
-              <a href="#" class="icon-link"><i class="far fa-heart"></i></a>
+              <a href="wishlist.html" class="icon-link"><i class="far fa-heart"></i></a>
               <a href="login2.html" class="icon-link"><i class="fas fa-user"></i></a>
               <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i></a>
+              <a href="all-games.html" class="icon-link"><i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i></a>
           </div>
       </div>
       
@@ -66,8 +67,8 @@
                     DRESSES
                 </button>
                 <div class="dropdown-content">
-                    <a href="dresses_page.html">Midi Dresses</a>
-                    <a href="dresses_page.html">Strapless Dresses</a>
+                    <a href="midi-dress.html">Midi Dresses</a>
+                    <a href="strapless-dress.html">Strapless Dresses</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -75,8 +76,7 @@
                     SKIRTS
                 </button>
                 <div class="dropdown-content">
-                    <a href="bottoms_page.html">Skorts</a>
-                    <a href="bottoms_page.html">Denim Skirts</a>
+                    <a href="denim-skirts.html">Denim Skirts</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -84,11 +84,10 @@
                     JEANS
                 </button>
                 <div class="dropdown-content">
-                    <a href="bottoms_page.html">Straight Leg Jeans</a>
-                    <a href="bottoms_page.html">Cargo Jeans</a>
+                    <a href="cargo-jeans.html">Cargo Jeans</a>
                 </div>
             </div>
-            <a href="#Sale">SALE</a>
+            <a href="sale.html">SALE</a>
         </div>
 
         <!-- Slideshow container -->
@@ -131,30 +130,29 @@
 -->
 
 
-        <!-- Popup Overlay -->
-        <div id="popup-overlay" class="popup-overlay">
-          <!-- Popup Content -->
-          <div class="popup-content">
-            <!-- Close Button -->
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <!-- Popup Text Content -->
-            <div class="popup-text">
-              <h2>BLUME</h2>
-              <p>20% OFF SITEWIDE<br>+ free returns, always 💜</p>
-              <!-- Email Form -->
-              <form id="email-form">
-                <input type="email" id="newsletter-email" placeholder="your email" required>
-                <button type="submit" id="newsletter-submit">SUBMIT</button>
-                <button type="button" class="no-thanks-btn" onclick="closePopup()">no thanks</button>
-              </form>
-            </div>
-            <!-- Popup Image -->
-            <div class="popup-image">
-              <img src="path-to-your-image.jpg" alt="Product Image">
-            </div>
+       <!-- Popup Overlay -->
+       <div id="popup-overlay" class="popup-overlay">
+        <!-- Popup Content -->
+        <div class="popup-content">
+          <!-- Close Button -->
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <!-- Popup Text Content -->
+          <div class="popup-text">
+            <h2>AMELIAXWEIYING</h2>
+            <p>sign up for our newsletter now 🖤🤍</p>
+            <!-- Email Form -->
+            <form id="email-form">
+              <input type="email" id="newsletter-email" placeholder="EMAIL" required>
+              <button type="submit" id="newsletter-submit">SUBMIT</button>
+              <button type="button" class="no-thanks-btn" onclick="closePopup()">no thanks!</button>
+            </form>
+          </div>
+          <!-- Popup Image -->
+          <div class="popup-image">
+            <img src="image/index/new_for_you/popup.png" alt="Product Image">
           </div>
         </div>
-
+      </div>
 
 
         <div class="categories-container">
@@ -176,7 +174,7 @@
             </div>
 
             <div class="category">
-                <a href="link-to-new-arrivals-page.html">
+                <a href="dress.html">
                     <img src="image/index/new_for_you/circle1.2.jpg" alt="Dresses">
                     <div class="category-label">DRESSES</div>
                 </a>
@@ -184,7 +182,7 @@
             </div>
 
             <div class="category">
-                <a href="link-to-new-arrivals-page.html">
+                <a href="bottoms.html">
                     <img src="image/index/new_for_you/circle1.3.jpg" alt="Bottoms">
                     <div class="category-label">BOTTOMS</div>
                 </a>
@@ -192,7 +190,7 @@
             </div>
             
             <div class="category">
-                <a href="link-to-sale-page.html">
+                <a href="sale.html">
                     <img src="image/index/new_for_you/circle1.4.jpg" alt="Sale">
                     <div class="category-label">SALE</div>
                 </a>
@@ -205,13 +203,13 @@
             <div class="product-row">
                 <!-- Product 1 -->
                 <div class="product">
-                  <button class="arrow left-arrow" onclick="toggleImage(0)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                   <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/index/new_for_you/top1.jpg" alt="Product 1" class="product-image active">
                     <img src="image/index/new_for_you/top1.1.jpg" alt="Product 1 alternative" class="product-image">
                   </div>
-                  <button class="arrow right-arrow" onclick="toggleImage(0)">&#10095;</button>
+                  <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                   <div class="product-info">
                     <div class="product-name">White & Roses</div>
                     <div class="product-price">$68.00</div>
@@ -228,13 +226,13 @@
  
                 <!-- Product 2 -->
                 <div class="product">
-                  <button class="arrow left-arrow" onclick="toggleImage(1)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                   <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/index/new_for_you/top2.jpg" alt="Product 1" class="product-image active">
                     <img src="image/index/new_for_you/top2.2.jpg" alt="Product 1 alternative" class="product-image">
                   </div>
-                  <button class="arrow right-arrow" onclick="toggleImage(1)">&#10095;</button>
+                  <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                   <div class="product-info">
                     <div class="product-name">Forest Fairy Leaf</div>
                     <div class="product-price">$98.00</div>
@@ -251,13 +249,13 @@
 
                 <!-- Product 3 -->
                 <div class="product">
-                  <button class="arrow left-arrow" onclick="toggleImage(2)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                   <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/index/new_for_you/top3.jpg" alt="Product 1" class="product-image active">
                     <img src="image/index/new_for_you/top3.1.jpg" alt="Product 1 alternative" class="product-image">
                   </div>
-                  <button class="arrow right-arrow" onclick="toggleImage(2)">&#10095;</button>
+                  <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                   <div class="product-info">
                     <div class="product-name">Devil Spice</div>
                     <div class="product-price">$108.00</div>
@@ -273,13 +271,13 @@
                 </div>
                 <!-- Product 4 -->
                 <div class="product">
-                  <button class="arrow left-arrow" onclick="toggleImage(3)">&#10094;</button>
+                  <button class="arrow left-arrow" onclick="toggleImage(this.parentNode)">&#10094;</button>
                   <div class="image-container">
-                    <i class="far fa-heart heart-icon"></i>
+                    <i class="far fa-heart heart-icon" onclick="toggleHeart(this)"></i>
                     <img src="image/index/new_for_you/top4.jpg" alt="Product 1" class="product-image active">
                     <img src="image/index/new_for_you/top4.1.jpg" alt="Product 1 alternative" class="product-image">
                   </div>
-                  <button class="arrow right-arrow" onclick="toggleImage(3)">&#10095;</button>
+                  <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                   <div class="product-info">
                     <div class="product-name">Aura Omps</div>
                     <div class="product-price">$67.00</div>
@@ -302,12 +300,12 @@
             <div class="promo-card">
               <img src="image/index/new_for_you/img1.jpg" alt="First Promotional Offer">
               <span class="promo-code">USE CODE: FED2024</span>
-              <a href="new_products.html" class="promo-link">NEW & ICONIC ></a>
+              <a href="new-products.html" class="promo-link">NEW & ICONIC ></a>
             </div>
             <div class="promo-card">
               <img src="image/index/new_for_you/img1.1.jpg" alt="Second Promotional Offer">
               <span class="promo-code">USE CODE: FED2024</span>
-              <a href="#" class="promo-link">TOPS: IT GIRL EDITION ></a>
+              <a href="top.html" class="promo-link">TOPS: IT GIRL EDITION ></a>
             </div>
           </div>
           
@@ -319,7 +317,7 @@
               <div class="learn-more"> OUR SUSTAINABILITY MISSION - LEARN MORE</div>
             </div>
             <div class="rewards-program">
-              <a href="#" class="rewards-link">OUR STAR$ SYSTEM - LOG IN OR SIGN UP</a>
+              <a href="all-games.html" class="rewards-link">OUR STAR$ SYSTEM - LOG IN OR SIGN UP</a>
             </div>
           </div>
           <div class="about-section">

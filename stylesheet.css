@@ -1,78 +1,78 @@
 *{
-  box-sizing: border-box;
   padding:0px;
   margin:0;
+  overflow-x: hidden;
 }
 
 .promotion-bar{
-    background-color: black;
-    color:white;
-    height: 30px;
-    width:100%;
+  background-color: black;
+  color:white;
+  height: 30px;
+  width:100%;
 }
 .promotion-bar p{
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }
 
 .top-nav {
-  display: flex;
-  justify-content: space-between;
-  color: black;
-  height: 350px;
-  margin-top: 20px;
+display: flex;
+justify-content: space-between;
+color: black;
+height: 350px;
+margin-top: 20px;
 }
 
 .brand-name {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 55px;
-  margin-top: 0px;
-  color: #000;
-  text-decoration: none; /* i dont want it to be underlined */
-  margin-left: 550px;
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 55px;
+margin-top: 0px;
+color: #000;
+text-decoration: none; /* i dont want it to be underlined */
+margin-left: 550px;
 }
 
 .top-nav-icons{
-  display: flex;
-  align-items: center;
-  margin-top: -250px;  /*Shift the icons up*/
+display: flex;
+align-items: center;
+margin-top: -250px;  /*Shift the icons up*/
 }
 
 .search-container {
-  position: relative;
+position: relative;
 }
 
 .search-box {
-  display: flex;
-  align-items: center;
+display: flex;
+align-items: center;
 }
 
 .search-input {
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  border-radius: 5px;
+border: 1px solid #ccc;
+padding: 5px 10px;
+border-radius: 5px;
 }
 
 .search-button {
-  background: none;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  outline: none;
-  background-color: transparent;
+background: none;
+border: none;
+padding: 5px 10px;
+cursor: pointer;
+outline: none;
+background-color: transparent;
 }
 
 /* Icon styling */
 .icon-link {
-  text-decoration: none;
-  color: #000;
-  font-size: 30px; /* Adjust size as needed */
-  margin: 0 10px; /* Add space between icons */
+text-decoration: none;
+color: #000;
+font-size: 30px; /* Adjust size as needed */
+margin: 0 10px; /* Add space between icons */
 }
 
 .icon-link:hover {
-  color: #555; /* Change color on hover */
+color: #555; /* Change color on hover */
 }
 
 
@@ -82,313 +82,354 @@
 
 /* Navbar container */
 .navbar {
-    background-color: white;
-    display: flex;
-    justify-content: center; /* Center-align items */
-    margin-top: -240px;
-  }
-  
-  /* Links inside the navbar */
-  .navbar a {
-    float: left;
-    font-size: 28px;
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-    margin: 0 35px; /* Space between the diff categories */
-    font-family: 'Inter Tight', sans-serif;
-  }
-  
-  /* The dropdown container */
-  .dropdown {
-    float: left;
-  }
-  
-  /* Dropdown button */
-  .dropdown .dropbtn {
-    font-size: 28px;
-    border: none;
-    outline: none;
-    color: black;
-    padding: 14px 16px;
-    background-color: white;
-    margin: 0 35px; /* Space between the diff categories */
-    font-family: 'Inter Tight', sans-serif;
-  }
-  
-  /* Add a red background color to navbar links on hover */
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    color: #757575;
-  }
-  
-  /* Dropdown content (hidden by default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Add a grey background color to dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+  background-color: white;
+  display: flex;
+  justify-content: center; /* Center-align items */
+  margin-top: -240px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 28px;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin: 0 35px; /* Space between the diff categories */
+  font-family: 'Inter Tight', sans-serif;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 28px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: white;
+  margin: 0 35px; /* Space between the diff categories */
+  font-family: 'Inter Tight', sans-serif;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color: #757575;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 
 /* Slideshow container */
 .slideshow-container {
-  position: relative;
-  margin: auto;
+position: relative;
+margin: auto;
 }
 
 .slideshow-container img{
-    height: auto;
-    width: 100%;
-  }
+  height: auto;
+  width: 100%;
+}
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
+display: none;
 }
 
 /* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+right: 0;
+border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+background-color: rgba(0,0,0,0.8);
 }
 
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+from {opacity: .4}
+to {opacity: 1}
 }
 
+
+/* FOR THE POP UP */
 /* Popup Overlay */
 .popup-overlay {
-  display: none; /* Hidden by default */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  z-index: 1000; /* Make sure it's on top */
-  justify-content: center;
-  align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.8); /* Dimmed background */
+z-index: 100; /* Ensures the popup is above other content */
 }
 
 /* Popup Content */
 .popup-content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Spacing between form and image */
+background: #fff; /* White background for the popup */
+width: 47%; /* Adjust width as needed */
+max-width: 1044px; /* Maximum width of the popup */
+padding: 2em;
+box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Adds shadow around the popup */
+display: flex;
+justify-content: center; /* Center the content */
+align-items: center; /* Aligns items vertically in the center */
+position: relative; /* Enables absolute positioning for children */
+border: 15px solid #000; /*for black border */
 }
 
 /* Close Button */
 .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  font-size: 24px;
+position: absolute;
+top: 1em;
+right: 1em;
+cursor: pointer;
+font-size: 1.5em;
+background: none;
+border: none;
 }
 
 /* Popup Text Content */
+.popup-text {
+width: 50%; /* Adjust the width as needed */
+display: flex;
+justify-content: center; /* Centers the text content */
+flex-direction: column; /* Stack children vertically */
+}
+
 .popup-text h2 {
-  color: #333;
+font-size: 3em; /* Large font size for the heading */
 }
 
 .popup-text p {
-  color: #666;
+font-size: 1.2em; /* Adjust as needed */
+margin-bottom: 10px; /* Spacing between the paragraph and the form */
+margin-left: 10px;
 }
 
 /* Email Form */
 #email-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+display: flex;
+flex-direction: column; /* Stacks the form elements vertically */
+gap: 0.5em; /* Spacing between form elements */
+}
+
+#email-form input[type=email] {
+padding: 1.3em; /* Spacing inside the input */
+font-size: 1em; /* Text size within the input */
+border: 1px solid #ccc; /* Border around the input */
+border-radius: 5px; /* Rounded corners */
+margin-top: 10px;
 }
 
 #email-form button {
-  padding: 10px 15px;
-  border: none;
-  background-color: #0044cc;
-  color: white;
-  cursor: pointer;
+padding: 1em; /* Spacing inside the button */
+font-size: 1em; /* Text size within the button */
+border: none;
+border-radius: 5px; /* Rounded corners */
+cursor: pointer;
+margin-top: 0.5em; /* Space above the button */
+width: 430px;
 }
 
-#email-form button:hover {
-  background-color: #003399;
+#newsletter-submit {
+background-color: #c997a2; /* Blue background */
+color: white; /* White text */
 }
 
 .no-thanks-btn {
-  background: none;
-  color: #333;
-  text-decoration: underline;
+background: transparent;
+color: #a4bdbf; /* Blue text */
+text-decoration: underline;
 }
 
 /* Popup Image */
-.popup-image img {
-  max-width: 200px; /* Adjust as needed */
+.popup-image {
+width: 40%; /* Decrease width as needed */
+margin-left: auto; /* Pushes the image to the right */
+display: flex;
+justify-content: flex-end; /* Aligns the image to the right */
 }
 
+.popup-image img {
+width: 100%; /* Make the image fill the container */
+height: auto; /* Maintain aspect ratio */
+}
 
+/* Adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+.popup-content {
+  flex-direction: column; /* Stack the content and image on top of each other */
+}
 
-
-
-
+.popup-image img {
+  width: 100%; /* Full width on smaller screens */
+}
+}
 
 
 
 
 
 /* the circle images in index html */
-  .categories-container {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin-top: 80px;
+.categories-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 80px;
 }
 
 .category {
-    display: inline-block;
-    margin: 10px;
-    position: relative;
-    text-align: center;
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+  text-align: center;
 }
 
 .category img {
-    width: 235px; /* Adjust as needed */
-    height: 235px; /* Adjust as needed */
-    border-radius: 50%; /* Makes the image circular */
-    display: block;
-    margin: 0 38px; /* Centers the image */
-    
+  width: 235px; /* Adjust as needed */
+  height: 235px; /* Adjust as needed */
+  border-radius: 50%; /* Makes the image circular */
+  display: block;
+  margin: 0 38px; /* Centers the image */
+  
 }
 .categories-container h2{
-    color: #000;
-    text-decoration: none;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    font-size: 40px;
+  color: #000;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 40px;
 }
 .categories-container h3{
-    color: #000;
-    text-decoration: none;
-    margin-top: 30px;
-    font-size: 30px;
+  color: #000;
+  text-decoration: none;
+  margin-top: 30px;
+  font-size: 30px;
 }
 .category-label { /* this is the text that appears when you hover the circular img */
-    display: block;
-    font-size: 28px;
-    height: 38%; /*Center the text*/
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.3s;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-    color: #000;
+  display: block;
+  font-size: 28px;
+  height: 38%; /*Center the text*/
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  color: #000;
 }
 
 
 /* Hover effect */
 .category a:hover img {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 
 .category a:hover .category-label {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* the products display*/
 .product-carousel h2 , .product span{
-  font-family: Arial, sans-serif;
-  font-size: 40px;
-  margin-bottom: 30px;
-  margin-top: 50px;
+font-family: Arial, sans-serif;
+font-size: 40px;
+margin-bottom: 30px;
+margin-top: 50px;
 }
 .product-carousel {
-  margin:0;
-  text-align: center;
-  width: 100%;
-  height:auto;
-  margin-top: 80px;
+margin:0;
+text-align: center;
+width: 100%;
+height:auto;
+margin-top: 80px;
 }
 
 .product img {
-  width: 100%; /* This ensures the image takes the full width of the .product */
-  height: auto; /* This ensures the image height scales with the width to maintain aspect ratio */
-  vertical-align: middle;
-  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+width: 100%; /* This ensures the image takes the full width of the .product */
+height: auto; /* This ensures the image height scales with the width to maintain aspect ratio */
+vertical-align: middle;
+transition: opacity 0.5s ease; /* Smooth transition for opacity */
 }
 
 .product-info {
-  padding: 10px 0; /* Add padding to create space around the text */
+padding: 10px 0; /* Add padding to create space around the text */
 }
 
 .product-row {
@@ -411,7 +452,6 @@ width: 100%;
 display: none;  /* Hide the image by default  */
 }
 
-
 .product-image.active {
 display: block; /* Show the active image */
 }
@@ -427,7 +467,7 @@ position: relative;
 
 .arrow {
 position: absolute;
-top: 38%; /* The lesser this is, the more up the arrow goes */
+top: 40%; /* The lesser this is, the more up the arrow goes */
 transform: translateY(-50%);
 background-color: transparent;
 border: none;
@@ -443,548 +483,691 @@ right: 10px;
 }
 
 .heart-icon {
-  position: absolute;
-  top: 15px; /* the higher this galue, the more it moves down */
-  right: 15px; /* the higher this value, the more it moves to left */
-  font-size: 20px;
-  cursor: pointer;
-  color: #000; /* Default color */
+position: absolute;
+top: 15px;
+right: 15px;
+font-size: 30px;
+cursor: pointer;
+color: #000; /* Default color */
 }
 
-.heart-icon:hover {
-  color: pink; /* Pink color on hover */
+.heart-icon:hover,
+.heart-icon.clicked {
+color: pink; /* Pink color on hover and when clicked */
 }
+
+
 
 .product-info {
 padding: 10px;
 text-align: center;
 }
 
+/* Add your other styles for product-name, product-price, product-size, and color-options */
+
 .product-name {
 font-size: 23px;
 margin-bottom: 5px;
 }
 .product-price {
-font-size: 21px;
+font-size: 25px;
 color: #555;
 margin-bottom: 5px;
 }
 .product-size{
 font-size: 19px;
 color: #555;
+margin-top: 10px;
 }
 .product-colors{
 margin-bottom: 5px;
 }
 
 .color-options {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px; /* Add some space above the color options */
+display: flex;
+justify-content: center;
+margin-top: 10px; /* Add some space above the color options */
 }
 
 .color-option {
-  width: 16px; /* Size of the color circle */
-  height: 16px; /* Size of the color circle */
-  border-radius: 50%; /* Make it round */
-  margin: 0 5px;
-  cursor: pointer;
-  margin-bottom: 15px;
+width: 16px; /* Size of the color circle */
+height: 16px; /* Size of the color circle */
+border-radius: 50%; /* Make it round */
+margin: 0 5px;
+cursor: pointer;
 }
 
 .color-option:hover {
-  border-color: black; /* Change border color on hover */
+border-color: black; /* Change border color on hover */
 }
 
 .add-to-cart-btn {
-  padding: 11px 5px;
-  background-color: #000; /* or your preferred color */
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-top: 0px; /* Increase this value to push the button down */
-  margin-bottom: 10px; /* Adjust this as needed */
-  border-radius: 5px; /* Optional: if you want rounded corners */
-  font-size: 18px;
-  text-decoration: none;
-  display: block; /* This will make it a block element */
+padding: 11px 5px;
+background-color: #000; /* or your preferred color */
+color: #fff;
+border: none;
+cursor: pointer;
+margin-top: 15px; /* Increase this value to push the button down */
+margin-bottom: 10px; /* Adjust this as needed */
+border-radius: 5px; /* Optional: if you want rounded corners */
+font-size: 18px;
+text-decoration: none;
+display: block; /* This will make it a block element */
 }
 
+.promo-container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
 
-/* PROMOTION IMAGES BELOW THE PRODUCTS IN INDEX PAGE */
+.promo-card {
+  position: relative;
+}
+
+.promo-card img {
+  width: 730px;
+  height: 730px;
+  display: block;
+  margin: 58px;
+}
+
+.promo-code {
+  position: absolute;
+  top: 30px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  font-size: 32px;
+  margin-left: 20px;
+
+}
+
+.promo-link {
+  position: absolute;
+  bottom: 110px; /* Distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 40px;
+  white-space: nowrap; /* Ensure the text does not wrap */
+}
+
+/* Additional responsiveness for smaller screens */
+@media (max-width: 768px) {
   .promo-container {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 20px;
+    flex-direction: column;
   }
   
   .promo-card {
-    position: relative;
+    flex-basis: 100%;
+    margin-bottom: 20px; /* Add space between cards */
   }
-  
-  .promo-card img {
-    width: 730px;
-    height: 730px;
-    display: block;
-    margin: 58px;
-  }
-  
-  .promo-code {
-    position: absolute;
-    top: 30px;
-    background-color: red;
-    color: white;
-    padding: 5px;
-    font-size: 32px;
-    margin-left: 20px;
-
-  }
-  
-  .promo-link {
-    position: absolute;
-    bottom: 140px; /* Distance from the bottom */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    color: white;
-    padding: 5px;
-    text-decoration: none;
-    font-size: 45px;
-    white-space: nowrap; /* Ensure the text does not wrap */
-  }
-  
-  /* Additional responsiveness for smaller screens */
-  @media (max-width: 768px) {
-    .promo-container {
-      flex-direction: column;
-    }
-    
-    .promo-card {
-      flex-basis: 100%;
-      margin-bottom: 20px; /* Add space between cards */
-    }
-  }
- 
-  .above-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-  }
-  
-  .sustainability-mission,
-  .rewards-program {
-    flex: 1; /* Each box will take up an equal amount of space */
-    display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically *//
-  }
-  
-  .learn-more{
-    display: block;
-    background-color: #fff0f7; /* Your choice of color */
-    padding: 78px;
-    font-size: 45px;
-    text-decoration: none;
-    color: #333; /* Your choice of text color */
-    font-weight: bold;
-    margin: 20px;
-  }
-  
-  /* This is for the rewards link to not stretch beyond its content */
-  .rewards-link {
-    display: block;
-    background-color: #ffffe6 ;
-    padding: 78px;
-    font-size: 45px;
-    text-decoration: none;
-    color: #333; /* Your choice of text color */
-    font-weight: bold;
-    margin: 20px;
-  }
-  
-  .about-section {
-    text-align: center;
-    color: black; 
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 250px;
-    font-size: 20px;
-    max-width: 70%;
-  }
-  
-  .about-section h1{
-    font-size: 35px;
-    margin-bottom: 13px;
-    margin-top: 50px;
-  }
-  .about-section p {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 80px;
-    font-size: 22px;
-  }
-  
-  
-  .site-footer {
-    font-family: 'Inter Tight', sans-serif;
-  }
-  
-  .footer-top {
-    text-align: center;
-  }
-  
-  .footer-divider {
-    width: 100%;
-    border: 1px solid #000; /* Adjust the thickness and color as needed */
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-around; /* Spreads out the sections */
-    align-items: start;
-    padding: 20px;
-    margin-left: 55px;
-    margin-top: 20px;
-  }
-  
-  .footer-section h5 {
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-size: 19px;
-    font-weight: bolder;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .footer-section ul li{
-    text-decoration: none;
-    color: #333;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .footer-section ul li:hover {
-    text-decoration: underline;
-  }
-
-  .app-download a {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    border-radius: 20px;
-    background-color: white;
-    text-align: center;
-  }
-  
-  .app-download a img {
-    height: 230px;
-    width: 220px;
-  }
-
-  
-  .qr-code {
-    display: none;
-    position: absolute;
-    width: 20px; 
-    height: 20px; 
-    top: -100%; /* Position the QR code just ABOVE the button */
-    left: 5%; /* Center horizontally */
-    transform: translate(-50%, 0); /* Center based on its own size */
-    transform: translateX(-50%);
-    border-radius: 20px;
-  }
-  
-
-  
-  .footer-section-sign-up h5{
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-size: 19px;
-    font-weight: bolder;
-  }
-
-  .footer-section-sign-up h6{
-    margin-bottom: 10px;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    max-width: 85%;
-    font-weight: lighter;
-  }
-
-  
-  .footer-section-sign-up form {
-    align-items: center; /* Aligns items vertically */
-  }
-  
-  .footer-section-sign-up form input,
-  .footer-section-sign-up form button {
-    margin: 0; /* Removes default margin */
-    padding: 9px;
-  }
-  
-  .footer-section-sign-up form input {
-    margin: 5px; /* Adds some space between the input and the button */
-  }
-
-  .footer-bottom {
-    background: #fff; 
-    border-top: 1px solid #ccc; 
-    padding: 20px 0;
-  }
-  
-  .country-notice {
-    font-size: 20px;
-    margin-left: 0px; /* Adjust the value as needed */
-  }
-  .social-icons {
-    margin-left: 0px;
-    margin-top: 15px;
-  }
-  
-  .social-icon {
-    margin: 8px; /* Adjust the margin as needed */
-  }  
-  
-  .legal-links {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .legal-links p {
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
-  }  
-  
-  .legal-links p:hover {
-    text-decoration: underline;
-  }
-  
-  
-/* Product page's filter bar */
-.filter-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* Aligns items to the start of the cross axis */
-  padding: 15px;
-  font-family: Arial, sans-serif;
 }
 
-/* Container for breadcrumbs and filters */
-.breadcrumbs-and-filters {
+
+.above-footer {
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  gap: 18px; /* Space between breadcrumbs and filters */
-  margin-left: 10px;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.sustainability-mission,
+.rewards-program {
+  flex: 1; /* Each box will take up an equal amount of space */
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically *//
+}
+
+.learn-more{
+  display: block;
+  background-color: #fff0f7; /* Your choice of color */
+  padding: 78px;
+  font-size: 45px;
+  text-decoration: none;
+  color: #333; /* Your choice of text color */
+  font-weight: bold;
+  margin: 20px;
+}
+
+/* This is for the rewards link to not stretch beyond its content */
+.rewards-link {
+  display: block;
+  background-color: #ffffe6 ;
+  padding: 78px;
+  font-size: 45px;
+  text-decoration: none;
+  color: #333; /* Your choice of text color */
+  font-weight: bold;
+  margin: 20px;
+}
+
+.about-section {
+  text-align: center;
+  color: black; 
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 250px;
+  font-size: 20px;
+  max-width: 70%;
+}
+
+.about-section h1{
+  font-size: 35px;
+  margin-bottom: 13px;
+  margin-top: 50px;
+}
+.about-section p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 80px;
+  font-size: 22px;
+}
+
+
+.site-footer {
+  font-family: 'Inter Tight', sans-serif;
+}
+
+.footer-top {
+  text-align: center;
+}
+
+.footer-divider {
+  width: 100%;
+  border: 1px solid #000; /* Adjust the thickness and color as needed */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around; /* Spreads out the sections */
+  align-items: start;
+  padding: 20px;
+  margin-left: 55px;
+  margin-top: 20px;
+}
+
+.footer-section h5 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: bolder;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-section ul li{
+  text-decoration: none;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-section ul li:hover {
+  text-decoration: underline;
+}
+
+.app-download a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.app-download a img {
+  height: 230px;
+  width: 220px;
+}
+
+
+.qr-code {
+  display: none;
+  position: absolute;
+  width: 20px; 
+  height: 20px; 
+  top: -100%; /* Position the QR code just ABOVE the button */
+  left: 5%; /* Center horizontally */
+  transform: translate(-50%, 0); /* Center based on its own size */
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+
+
+.footer-section-sign-up h5{
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: bolder;
+}
+
+.footer-section-sign-up h6{
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  max-width: 85%;
+  font-weight: lighter;
+}
+
+
+.footer-section-sign-up form {
+  align-items: center; /* Aligns items vertically */
+}
+
+.footer-section-sign-up form input,
+.footer-section-sign-up form button {
+  margin: 0; /* Removes default margin */
+  padding: 9px;
+}
+
+.footer-section-sign-up form input {
+  margin: 5px; /* Adds some space between the input and the button */
+}
+
+.footer-bottom {
+  background: #fff; 
+  border-top: 1px solid #ccc; 
+  padding: 20px 0;
+}
+
+.country-notice {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin-left: 0px; /* Adjust the value as needed */
+}
+.social-icons {
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  margin-left: 0px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  margin: 8px; /* Adjust the margin as needed */
+}  
+
+.legal-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.legal-links p {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}  
+
+.legal-links p:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Products display page's code */
+.filter-bar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px;
+font-family: Arial, sans-serif;
 }
 
 .breadcrumbs {
-  margin-bottom: 0; /* Remove margin-bottom if not needed */
-  font-size: 22px;
-  margin-top: 20px; /*Space between nav bar and breadcrumbs*/
-  margin-left: 2px;
+display: flex;
+gap: 10px; /* This creates space between items */
+margin-bottom: 20px; /* Adjusted from 100px to reduce the space */
+font-size: 20px;
 }
 
 .filters {
-  display: flex;
-  gap: 15px; /* Space between filter options */
-  font-size: 10px;
+display: flex;
+gap: 15px; /* This creates space between items */
+font-size: 14px; /* Increased from 10px for better readability */
+/* Removed margin-right: 750px; */
 }
 
 .view-options {
-  display: flex;
-  gap: 15px; /* Space between view options */
-  align-self: flex-end; /* Align to the end of the cross axis */
+display: flex;
+gap: 15px; /* This creates space between items */
+margin-left: auto; /* This will push the view-options to the right */
 }
 
-
 .filters span, .view-options span {
-    cursor: pointer;
-    font-size: 14px;
+cursor: pointer;
+font-size: 14px;
 }
 
 .filters span:hover, .view-options span:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
 
 /* Styling for the 'Next Page' arrow */
 .view-options span:last-child {
-    font-weight: bolder; /* Make the arrow bold */
+font-weight: bolder; /* Make the arrow bold */
 }
 
-.fa fa-angle-down{
-  size: 10px;
+.fa fa-angle-down {
+font-size: 10px; /* Changed from 'size' to 'font-size' */
 }
+
 
 .product-page-product-carousel{ /* diff from the index's product carousel bc index dont need shift up, but in product page need shift up */
-  margin:0;
-  text-align: center;
-  width: 100%;
-  height:auto;
-  margin-top: 20px;
+margin:0;
+text-align: center;
+width: 100%;
+height:auto;
+margin-top: 20px;
 }
 
 /* If there is still a gap, reduce the top margin of NEW LAUNCHES */
 .product-page-product-carousel h2 {
-  font-family: Arial, sans-serif;
-  font-size: 40px;
-  margin-bottom: 30px;
-  margin-top: 20px; /* Reduced from 50px */
+font-family: Arial, sans-serif;
+font-size: 40px;
+margin-bottom: 30px;
+margin-top: 20px; /* Reduced from 50px */
 }
 
 .product-page-product{ /* cause want make it bigger on display purely products page, but i dont want it bigger on index so i make separate */
-  position: relative;
-  width: 365px; /* increase size of the whole thing (eg the image and name and color and size) the whole thing basically */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 0 18px;
-  background: #fff;
-  
+position: relative;
+width: 365px; /* increase size of the whole thing (eg the image and name and color and size) the whole thing basically */
+border: 1px solid #ccc;
+border-radius: 5px;
+margin: 0 18px;
+background: #fff;
+
 }
 
-  
+/* FOR MY SALES PAGE */
+.original-price {
+text-decoration: line-through;
+color: #ff0000; /* Or any color that indicates the price is not current */
+font-size: 21px;;
+margin-left: 10px;
+}
+
+.sale-price {
+color: #009900; /* A color that indicates a sale, usually a type of green or red */
+font-size: 28px;
+}
 
 
-  
+
 /* LOG IN */
 /* Center the login form */
 /* Main container that holds both the image and the form */
 .login-page-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Full height of the viewport */
-  padding: 1rem;
-  box-sizing: border-box;
-  margin-right: 90px; /* shift to the left */
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh; /* Full height of the viewport */
+padding: 1rem;
+box-sizing: border-box;
+margin-right: 90px; /* shift to the left */
 }
 
 /* Container for the image */
 .login-image-container {
-  flex: 1; /* take up half the space */
-  display: flex;
-  align-items: center; /* Center the image vertically */
-  justify-content: center; /* Center the image horizontally */
-  max-width: 50%; /* Adjust the maximum width as needed */
-  padding-right: -5px;
+flex: 1; /* take up half the space */
+display: flex;
+align-items: center; /* Center the image vertically */
+justify-content: center; /* Center the image horizontally */
+max-width: 50%; /* Adjust the maximum width as needed */
+padding-right: -5px;
 }
 
 /* Container for the form */
 .login-form-container {
-  flex: 1; /* take up the other half of the space */
-  display: flex;
-  align-items: center; /* Center the form vertically */
-  justify-content: center; /* Center the form horizontally */
-  max-width: 50%; /* Adjust the maximum width as needed */
+flex: 1; /* take up the other half of the space */
+display: flex;
+align-items: center; /* Center the form vertically */
+justify-content: center; /* Center the form horizontally */
+max-width: 50%; /* Adjust the maximum width as needed */
 }
 
 /* Styles for the image */
 .login-image-container img {
-  width: auto; /* Adjust width as needed */
-  max-height: 100%; /* Full height to maintain aspect ratio */
+width: auto; /* Adjust width as needed */
+max-height: 100%; /* Full height to maintain aspect ratio */
 }
 
 /* Styles for the form */
 .login-form {
-  width: 100%;
-  max-width: 400px; /* Adjust the maximum width as needed */
+width: 100%;
+max-width: 400px; /* Adjust the maximum width as needed */
 }
 
 .login-form h1 {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 85px;
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 85px;
 }
 
 .tagline {
-  margin-bottom: 2rem;
-  color: #555;
+margin-bottom: 2rem;
+color: #555;
 }
 
 .form-group {
-  margin-bottom: 1rem;
+margin-bottom: 1rem;
 }
 
 input[type="text"],
 input[type="password"],
-input[type="email"]
-{
-  width: 100%;
-  padding: 0.95rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 0.5rem;
+input[type="email"]{
+width: 100%;
+padding: 0.95rem;
+border: 1px solid #ddd;
+border-radius: 5px;
+margin-bottom: 0.5rem;
 }
 
 input[type="checkbox"] {
-  margin-right: 0.5rem;
+margin-right: 0.5rem;
 }
 
-.form-group .forgot-password {
-  display: block;
-  text-align: right;
-  margin-bottom: 1rem;
-  color: #0066cc;
-  text-decoration: none;
+.forgot-password {
+display: block;
+text-align: right;
+margin-bottom: 1rem;
+color: #0066cc;
+text-decoration: none;
 }
 
 .sign-in-button {
-  width: 100%;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #0056b3;
-  color: white;
-  cursor: pointer;
+width: 100%;
+padding: 0.75rem;
+border: none;
+border-radius: 5px;
+background-color: #0056b3;
+color: white;
+cursor: pointer;
 }
 
 .sign-in-button:hover {
-  background-color: #003d82;
+background-color: #003d82;
 }
 
 
+
+/* FOR ALL GAMES DISPLAY PAGE */
+.rewards-container {
+text-align: center;
+padding: 50px 0;
+background-color: #fff; /* Assuming a white background */
+color: black; /* Text color */
+font-family: 'Arial', sans-serif; /* Change to your preferred font */
+margin-top: -13px; /* To shift it up */
+}
+
+.text-background {
+background-color: rgba(242, 221, 239, 0.5); /* Light background, you can adjust the opacity as needed */
+display: block; /* Change this to block so it fills the container */
+padding: 80px; /* Adjust the padding to control the space around your text */
+margin: 0 auto; /* Center the block */
+width: 100%; /* so that background covers the whole of width of page */
+box-sizing: border-box; /* Include padding and border in the width and height of the element */
+}
+
+
+h1 {
+font-size: 60px; /* Big, bold text for the header */
+margin-bottom: 40px; /* Space below the header */
+}
+
+.buttons-container {
+margin: 20px 0; /* Space above and below the buttons */
+}
+
+.rewards-button {
+padding: 10px 60px; /* Padding inside the buttons */
+border: none;
+background-color: black; /* Button background color */
+color: white; /* Button text color */
+font-size: 1em; /* Text size inside buttons */
+cursor: pointer; /* Changes the cursor to a pointer on hover */
+text-decoration: none;
+}
+
+.rewards-button:hover {
+background-color: grey; /* Hover effect for the button */
+}
+
+.rewards-footer {
+font-size: 0.75em; /* Smaller text for the footer */
+margin-top: 40px; /* Space above the footer text */
+color: #333; /* Slightly darker text color for the footer */
+}
+
+.games-container {
+text-align: center;
+padding: 50px 0;
+border-radius: 50%;
+}
+
+.games-container h2 {
+margin-bottom: 60px;
+font-size: 50px;
+font-family: 'Arial', sans-serif; /* Change to your preferred font */
+}
+
+.game {
+  display: flex;
+  flex-direction: column; /* Stack the children vertically */
+  align-items: center; /* Horizontally center the children in a column */
+  gap: 20px;
+  text-decoration: none;
+}
+  
+.game img {
+  margin-top: 50px;
+  width: 400px; /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+  border-radius: 50%; /* Make the image round */
+  border: 4px solid black; /* Border for the image */
+  transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.game img:hover{
+  transform: scale(1.1); /* Enlarge the image to 110% of its original size */
+}
+
+.game p {
+display: block;
+margin-top: 10px;
+margin-bottom: 55px;
+font-size: 30px; /* Font size for the text below the image */
+color: #000;
+font-family: 'Arial', sans-serif; /* Change to your preferred font */
+font-weight: 600;
+}
 /*weiying's comp*/
 @media (max-width: 1600px){
-  *{
-    overflow-x: hidden;
-  }
-  .brand-name{
-    font-size: 10px;
-    color:pink;
-  }
-  .categories-container {
-    display: flex;
-    flex-direction: row; /* Align children (categories) horizontally */
-    justify-content: center; /* Center children horizontally */
-    flex-wrap: wrap; /* Allows categories to wrap to next line if they don't fit */
-    text-align: center; /* Center text for all child elements */
-  }
+*{
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding:0;
+  margin: 0;
+}
+.social-icons {
+  margin-left: 0px;
+  margin-top: 15px;
+}
+.brand-name{
+  margin-left: 30%;
+}
+.categories-container {
+  display: flex;
+  flex-direction: row; /* Align children (categories) horizontally */
+  justify-content: center; /* Center children horizontally */
+  flex-wrap: wrap; /* Allows categories to wrap to next line if they don't fit */
+  text-align: center; /* Center text for all child elements */
+}
 
-  .categories-container h2 {
-    width: 100%; /* Make the header full width to force categories to the next line */
-    order: -1; /* Place the header above the categories */
-  }
+.categories-container h2 {
+  width: 100%; /* Make the header full width to force categories to the next line */
+  order: -1; /* Place the header above the categories */
+}
 
-  .category {
-    display: flex; /* Use flexbox for category alignment */
-    flex-direction: column; /* Align the category image and text vertically */
-    align-items: center; /* Center-align items within each category */
-    margin: 10px; /* Adjust margin for spacing between categories */
-  }
+.category {
+  display: flex; /* Use flexbox for category alignment */
+  flex-direction: column; /* Align the category image and text vertically */
+  align-items: center; /* Center-align items within each category */
+  margin: 10px; /* Adjust margin for spacing between categories */
+}
 
-  .category img {
-    width: 200px; /* Adjust width as necessary */
-    height: 200px; /* Adjust height as necessary */
-    margin-bottom: 10px; /* Space between the image and the text label */
-  }
+.category img {
+  width: 200px; /* Adjust width as necessary */
+  height: 200px; /* Adjust height as necessary */
+  margin-bottom: 10px; /* Space between the image and the text label */
+}
 
-  .category h3 {
-    margin-top: 0; /* Adjust top margin for the text label if necessary */
+.category h3 {
+  margin-top: 0; /* Adjust top margin for the text label if necessary */
+}
+.sign-up-container{
+  margin:0;
+  width:60%;
+  height:auto;
+}
+.social-icon{
+  height: 50px;
+  width:auto;
+}
+.button{
+  overflow: hidden;
+}
+.sign-up-container{
+  width:90%;
+  height:auto;
+}
+.login-page-container{
+  overflow-y: hidden;
+}
+.buttons-container{
+  overflow-y: hidden;
+}
+}
+
+/* weiying's monitor*/
+@media (min-width: 1608px){
+  .social-icon{
+    overflow-y: hidden;
+  }
+  .buttons-container{
+    overflow-y: hidden;
   }
 }

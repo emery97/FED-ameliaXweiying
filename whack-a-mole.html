@@ -22,8 +22,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+
     <!--ICON LINK-->
     <script src="https://kit.fontawesome.com/85b6a0f764.js" crossorigin="anonymous"></script>
+
     <title>Whack A Mole</title>
     <!--FAVICON-->
     <link rel="icon" type="image/png" href="image/index/favicon.png" sizes="17x17 40x40">
@@ -48,6 +54,7 @@
             <a href="#" class="icon-link"><i class="far fa-heart"></i></a>
             <a href="login2.html" class="icon-link"><i class="fas fa-user"></i></a>
             <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i></a>
+            <a href="all-games.html" class="icon-link"><i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i></a>
         </div>
     </div>
 
@@ -55,7 +62,7 @@
   
 
     <div class="navbar">
-        <a href="new-products.html">NEW</a>
+        <a href="new_products.html">NEW</a>
         <div class="dropdown">
             <button class="dropbtn">
                 TOPS
@@ -98,18 +105,28 @@
     </div>
 
     <div class = "wack-a-mole-container">
-        <div id="gameOverModal" class="modal">
+
+        <div class="modal" id="gameOverModal">
             <div class="modal-content">
                 <span class="modal-header">
-                    <img class = "logo-no-bg" src = "whack-a-mole-assets/logo-no-bg.png">
-                GAME OVER
+                    <img class = "logo-no-bg" src = "whack-a-mole-assets/logo-no-bg.png"><br>
+                    <h3>GAME OVER</h3>
                 </span>
-              <p class="modal-body">Do you like these kinds of fast coding tutorials? Let me know in the comments section below. 😊</p>
-              <button class="modal-close-btn" onclick="restartGame()">Close</button>
+                <div class = "modal-body" h6></div><br> <!--this is for the score-->
+              <button class="modal-close-btn" onclick="startGame()">Close</button>
             </div>
         </div>
-          
-        <h1 class="score">SCORE: <span>00</span></h1>
+        <div class = "score-countdown-container">
+            <h1 class="score">
+                SCORE: 
+                <span>
+                    00 
+                </span>
+            </h1>
+            <h1 id = "countdown"> 
+                1:00
+            </h1>
+        </div>
         <div class="board">
             <div class="hole"></div>
             <div class="hole"></div>
@@ -124,6 +141,102 @@
         <br>
         <br>
     </div>
+    
+    <footer class="site-footer">
+            <div class="footer-top">
+              <hr class="footer-divider" /> <!-- for the ---- to separate footer and main stuff -->
+            </div>
+            <div class="footer-content">
+              <div class="footer-section">
+                <h5>QUICK LINKS</h5>
+                <ul>
+                  <li>FAQ</li>
+                  <li>Track Order</li>
+                  <li>Shipping</li>
+                  <li>Returns</li>
+                  <li>Sizing</li>
+                  <li>Afterpay</li>
+                  <li>Klarna</li>
+                  <li>Shop Pay</li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h5>MORE ABOUT US</h5>
+                <ul>
+                  <li>Gift Cards</li>
+                  <li>Rewards</li>
+                  <li>Give & Recieve</li>
+                  <li>Blogs</li>
+                  <li>Promotions</li>
+                  <li>Reviews</li>
+                  <li>About Us</li>
+                  <li>Careers</li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h5>LOWER IMPACT</h5>
+                <ul>
+                  <li>Our Mission</li>
+                  <li>Ethical Sourcing</li>
+                  <li>About Lower Impact</li>
+                  <li>Sustainability & Environment</li>
+                  <li>Equality & Community</li>
+                  <li>Singapore's Act of Transparency</li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h5>GET IN TOUCH</h5>
+                <ul>
+                  <li>Contact Us</li>
+                  <li>Collaborations</li>
+                  <li>College Ambassador</li>
+                  <li>Afiiliate Program</li>
+                  <li>Retail Store</li>
+                  <li>Accessibility</li>
+                  <li>Cookies Settings</li>
+                </ul>
+              </div>              
+              <div class="footer-section download-app">
+                <h5>DOWNLOAD OUR APP</h5>
+                <div class="app-download">
+                    <a href="#" class="app-store" onclick="toggleQRCode(event)">
+                      <img src="image/index/new_for_you/app1.jpg" alt="App Store"/>
+                      <div class="qr-code" id="qrCode">
+                        <img src="image/index/new_for_you/qrcode.jpg" alt="QR Code"/>
+                      </div>
+                    </a>
+                  </div>                                                  
+              </div>
+              <div class="footer-section-sign-up">
+                <h5>SIGN UP FOR</h5>
+                <h6>Your mystery discount + the chance to win a $500 gift card</h6>
+                <form action="#">
+                  <input type="text" placeholder="ENTER PHONE NUMBER">
+                </form>
+              </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                  <div class="footer-bottom-content">
+                    <span class="country-notice">YOU'RE ON OUR SG STORE - CHANGE TO SGD HERE</span>
+                    <div class="social-icons">
+                        <i class="fa fa-snapchat-ghost fa-2x social-icon" aria-hidden="true"></i>
+                        <i class="fa fa-facebook fa-2x social-icon" aria-hidden="true"></i>
+                        <i class="fa fa-instagram fa-2x social-icon" aria-hidden="true"></i>
+                        <i class="fa fa-twitter-square fa-2x social-icon" aria-hidden="true"></i>
+                        <i class="fa fa-pinterest fa-2x social-icon" aria-hidden="true"></i>
+                        <i class="fa fa-spotify fa-2x social-icon" aria-hidden="true"></i>                     
+                    </div>
+                    <div class="legal-links">
+                      <p>AMELIAXWEIYING SG | TERMS OF SALE | TERMS OF USE  | PRIVACY POLICY  | SITEMAP</p> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+
+          
+
 
     <div class="cursor"></div>
     <script src="whack-a-mole.js"></script>
