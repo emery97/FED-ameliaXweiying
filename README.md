@@ -104,6 +104,7 @@ In a delightful contrast to our bold aesthetic, we introduce cute mini-games. Th
 
 - Website Design Inspiration: [Princess Polly](https://us.princesspolly.com/)
 - The wack a mole game code is contributed by [0shuvo0](https://github.com/0shuvo0/whack-a-mole.git)
+- The dinosaur game is contributed by [georgephillips](https://github.com/CloudCannon/Dinosaur-Chrome-Game)
 
 
 
