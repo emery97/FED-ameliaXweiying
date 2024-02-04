@@ -138,6 +138,8 @@ In a delightful contrast to our bold aesthetic, we introduce cute mini-games. Th
    4. OMG!
       1. [Picture 1](https://us.princesspolly.com/cdn/shop/products/0-modelinfo-margaret-us2_jpg_3993971e-5b63-4f0b-bf5b-e20bb7298523.jpg?v=1657499338&width=1800)
       2. [Picture 2](https://us.princesspolly.com/cdn/shop/products/1-modelinfo-margaret-us2_d8f492a3-fb1b-4721-8d87-38198bf347bd.jpg?v=1657499338&width=1800)
+10. All Games
+    3. [Spped Typing Game](https://i.pinimg.com/564x/61/29/40/61294096066dcecd6f389b2d13703e2e.jpg)
         
 #### [Login Page](https://i.pinimg.com/564x/22/0a/74/220a74c6f58c555d3341efed2b15dd47.jpg)
 
