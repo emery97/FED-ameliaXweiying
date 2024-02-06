@@ -1,3 +1,9 @@
+// Define your API key
+const APIKEY = "65b334a346893806b17bde81";
+
+// Define the base URL for your API
+const apiUrl = "https://fedpairassgn-14ba.restdb.io/rest/customer";
+
 // ******************** LINKING OF USER LOG IN  ETC ETC ***************************************
 // This function displays the welcome message on the page
 function displayWelcome(userName) {
@@ -26,103 +32,55 @@ function onSignIn(userId, userName, userEmail) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const APIKEY = "65b334a346893806b17bde81"; // Replace with your actual API key
-  let apiUrl = "https://fedpairassgn-14ba.restdb.io/rest/customer"; // Replace with your actual URL
-
-  if (sessionStorage.getItem('userName')) {
-    displayWelcome(sessionStorage.getItem('userName'));
-  }
-
-  // Sign In Event Listener
+  // Check if either sign-in-button or sign-up-button exists
   const signInButton = document.getElementById("sign-in-button");
-  if (signInButton) {
-    signInButton.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      let userName = document.getElementById("user-name").value;
-      let userEmail = document.getElementById("user-email").value;
-      let userPwd = document.getElementById("user-pwd").value;
-
-      let jsondata = {
-        "user-name": userName,
-        "user-email": userEmail,
-        "user-pwd": userPwd,
-        "user-points": 0
-      };
-
-      let settings = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-apikey": APIKEY,
-          "Cache-Control": "no-cache"
-        },
-        body: JSON.stringify(jsondata)
-      };
-
-      fetch(apiUrl, settings)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then(data => {
-          console.log(data);
-          alert("Sign Up success!");
-          document.getElementById("user-form").reset();
-        })
-        .catch(error => {
-          console.error("Error:", error);
-          alert("There was an error creating the account.");
-        });
-    });
-  }
-
-  // Sign Up Event Listener
   const signUpButton = document.getElementById("sign-up-button");
-  if (signUpButton) {
-    signUpButton.addEventListener("click", function (e) {
-      e.preventDefault();
 
-      let userName = document.getElementById("user-name").value;
-      let userEmail = document.getElementById("user-email").value;
-      let userPwd = document.getElementById("user-pwd").value;
+  if (signInButton || signUpButton) {
+      // Use the sign-in or sign-up button reference based on which one is present
+      const button = signInButton ? signInButton : signUpButton;
 
-      let jsondata = {
-        "user-name": userName,
-        "user-email": userEmail,
-        "user-pwd": userPwd,
-        "user-points": 0
-      };
+      button.addEventListener("click", function (e) {
+          e.preventDefault();
 
-      let settings = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-apikey": APIKEY,
-          "Cache-Control": "no-cache"
-        },
-        body: JSON.stringify(jsondata)
-      };
+          let userName = document.getElementById("user-name").value;
+          let userEmail = document.getElementById("user-email").value;
+          let userPwd = document.getElementById("user-pwd").value;
 
-      fetch(apiUrl, settings)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then(data => {
-          console.log(data);
-          alert("Sign Up success!");
-          document.getElementById("user-form").reset();
-        })
-        .catch(error => {
-          console.error("Error:", error);
-          alert("There was an error creating the account.");
-        });
-    });
+          let jsondata = {
+              "user-name": userName,
+              "user-email": userEmail,
+              "user-pwd": userPwd,
+              "user-points": 0
+          };
+
+          let settings = {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+                  "x-apikey": APIKEY,
+                  "Cache-Control": "no-cache"
+              },
+              body: JSON.stringify(jsondata)
+          };
+
+          fetch(apiUrl, settings)
+              .then(response => {
+                  if (!response.ok) {
+                      throw new Error(`HTTP error! Status: ${response.status}`);
+                  }
+                  return response.json();
+              })
+              .then(data => {
+                  console.log(data);
+                  alert("Sign Up success!");
+                  document.getElementById("user-form").reset();
+              })
+              .catch(error => {
+                  console.error("Error:", error);
+                  alert("There was an error creating the account.");
+              });
+      });
   }
 });
 
@@ -145,11 +103,11 @@ function onGameEnd() {
 
 // This function updates the user's points in the database
 function updatePoints(userId, pointsEarned) {
-  const APIKEY = "65b334a346893806b17bde81";
-  let apiUrl = `https://fedpairassgn-14ba.restdb.io/rest/customer/${userId}`;
+  // Construct the complete URL for the user's data
+  let userUrl = `${apiUrl}/${userId}`;
 
   // Fetch the current user data
-  fetch(apiUrl, {
+  fetch(userUrl, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -168,7 +126,7 @@ function updatePoints(userId, pointsEarned) {
     let newPoints = userData['user-points'] + pointsEarned;
 
     // PUT request to update the user's points
-    return fetch(apiUrl, {
+    return fetch(userUrl, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
