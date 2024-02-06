@@ -38,7 +38,7 @@ quoteInputElement.addEventListener('input', () => {
   }
 });
 function showModal(score){
-  document.querySelector('.modal-body h6').textContent = `YOUR SCORE IS ${score}`;
+  document.querySelector('.modal-body h6').textContent = `YOUR FINAL SCORE IS: ${score}`;
   document.getElementById('gameOverModal').style.display = 'block';
 }
 function closeModal(){

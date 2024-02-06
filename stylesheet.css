@@ -1348,8 +1348,16 @@ font-weight: 600;
   color: red;
   text-decoration: underline;
 }
-
-
+/* "you have reached the limit of 10 plays per day" message */
+#speed-typing-modal-header p {
+  font-size: 16px;
+  color:red;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom:10px;
+}
+#speed-typing-score h6{
+  font-size: 20px;
+}
 /*FOR ALL GAMES*/
 /*GAME OVER MODAL*/
 .modal {
