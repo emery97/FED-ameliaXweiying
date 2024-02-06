@@ -34,97 +34,98 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Sign In Event Listener
-// ... existing code ...
+  const signInButton = document.getElementById("sign-in-button");
+  if (signInButton) {
+    signInButton.addEventListener("click", function (e) {
+      e.preventDefault();
 
-// Sign In Event Listener
-document.getElementById("sign-in-button").addEventListener("click", function (e) {
-  e.preventDefault();
+      let userName = document.getElementById("user-name").value;
+      let userEmail = document.getElementById("user-email").value;
+      let userPwd = document.getElementById("user-pwd").value;
 
-  let userName = document.getElementById("user-name").value;
-  let userEmail = document.getElementById("user-email").value;
-  let userPwd = document.getElementById("user-pwd").value;
+      let jsondata = {
+        "user-name": userName,
+        "user-email": userEmail,
+        "user-pwd": userPwd,
+        "user-points": 0
+      };
 
-  // Construct the query URL
-  let signInUrl = `https://fedpairassgn-14ba.restdb.io/rest/customer?q={"user-email": "${userEmail}", "user-pwd": "${userPwd}"}`;
+      let settings = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-apikey": APIKEY,
+          "Cache-Control": "no-cache"
+        },
+        body: JSON.stringify(jsondata)
+      };
 
-  let settings = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "x-apikey": APIKEY,
-      "Cache-Control": "no-cache"
-    }
-  };
-
-  fetch(signInUrl, settings)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      // Check if any user data is returned
-      if (data && data.length > 0) {
-        let user = data[0];
-        onSignIn(user['_id'], user['user-name'], user['user-email']); // Call onSignIn with the user ID
-      } else {
-        alert("Incorrect username or password or no such user exists.");
-      }
-    })
-    .catch(error => {
-      console.error("Error during sign in:", error);
-      alert("There was an error during the sign in process.");
+      fetch(apiUrl, settings)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log(data);
+          alert("Sign Up success!");
+          document.getElementById("user-form").reset();
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          alert("There was an error creating the account.");
+        });
     });
-});
+  }
 
-// ... rest of your code ...
-  
   // Sign Up Event Listener
-  document.getElementById("sign-up-button").addEventListener("click", function (e) {
-    e.preventDefault();
+  const signUpButton = document.getElementById("sign-up-button");
+  if (signUpButton) {
+    signUpButton.addEventListener("click", function (e) {
+      e.preventDefault();
 
-    let userName = document.getElementById("user-name").value;
-    let userEmail = document.getElementById("user-email").value;
-    let userPwd = document.getElementById("user-pwd").value;
+      let userName = document.getElementById("user-name").value;
+      let userEmail = document.getElementById("user-email").value;
+      let userPwd = document.getElementById("user-pwd").value;
 
-    let jsondata = {
-      "user-name": userName,
-      "user-email": userEmail,
-      "user-pwd": userPwd,
-      "user-points": 0
-    };
+      let jsondata = {
+        "user-name": userName,
+        "user-email": userEmail,
+        "user-pwd": userPwd,
+        "user-points": 0
+      };
 
-    let settings = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-apikey": APIKEY,
-        "Cache-Control": "no-cache"
-      },
-      body: JSON.stringify(jsondata)
-    };
+      let settings = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-apikey": APIKEY,
+          "Cache-Control": "no-cache"
+        },
+        body: JSON.stringify(jsondata)
+      };
 
-    fetch(apiUrl, settings)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log(data);
-        alert("Sign Up success!");
-        document.getElementById("user-form").reset();
-      })
-      .catch(error => {
-        console.error("Error:", error);
-        alert("There was an error creating the account.");
-      });
-  });
+      fetch(apiUrl, settings)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log(data);
+          alert("Sign Up success!");
+          document.getElementById("user-form").reset();
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          alert("There was an error creating the account.");
+        });
+    });
+  }
 });
 
-// ... (rest of your code)
 
 // Function to call when the game ends to update the user's points
 function onGameEnd() {
@@ -195,10 +196,11 @@ function updatePoints(userId, pointsEarned) {
 
 // Ensure that onGameEnd is called when the game ends
 // For example, if you have a game over button, you could add:
-document.getElementById('game-over-button').addEventListener('click', onGameEnd);
-
-
-
-// You would call this onGameEnd function when the game logic determines that the game is over
-// This might be tied to a 'Game Over' button click, a timeout, or another event in your game
-
+document.addEventListener("DOMContentLoaded", function () {
+  // Check if the game-over-button element exists
+  const gameOverButton = document.getElementById('game-over-button');
+  if (gameOverButton) {
+    // Add event listener only if the element exists
+    gameOverButton.addEventListener('click', onGameEnd);
+  }
+});
