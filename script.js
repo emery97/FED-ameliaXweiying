@@ -60,51 +60,60 @@ if (slideshowContainer) {
 
 // SIGN UP FOR NEWS LETTER
 // Function to show the popup
-function showPopup() {
-  document.getElementById('popup-overlay').style.display = 'flex';
-}
 
-// Function to close the popup
-function closePopup() {
-  document.getElementById('popup-overlay').style.display = 'none';
-}
-
-// Add event listener for the form submission
-document.getElementById('email-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  var email = document.getElementById('email-input').value;
-  // Validate the email and handle the signup process
-  console.log('Email:', email);
-  // After handling the signup, close the popup
-  closePopup();
-});
-
-// Call showPopup to display the popup when needed
-showPopup();
-
-//Home page hovering images
-document.addEventListener("DOMContentLoaded", function() {
-  var productImages = document.querySelectorAll('.product-image');
-
-  productImages.forEach(function(img) {
-    // Preload hover images to reduce flickering on hover
-    const hoverImageSrc = img.getAttribute('data-hover');
-    if (hoverImageSrc) {
-      const hoverImage = new Image();
-      hoverImage.src = hoverImageSrc;
-
-      var originalSrc = img.src;
-
-      img.addEventListener('mouseenter', function() {
-        img.src = hoverImageSrc;
-      });
-
-      img.addEventListener('mouseleave', function() {
-        img.src = originalSrc;
-      });
+// Check if the popup-overlay element exists before running the functions related to the popup
+const popupOverlay = document.getElementById('popup-overlay');
+if (popupOverlay) {
+    // Function to show the popup
+    function showPopup() {
+        popupOverlay.style.display = 'flex';
     }
-  });
-});
+
+    // Function to close the popup
+    function closePopup() {
+        popupOverlay.style.display = 'none';
+    }
+
+    // Add event listener for the form submission
+    document.getElementById('email-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var email = document.getElementById('email-input').value;
+        // Validate the email and handle the signup process
+        console.log('Email:', email);
+        // After handling the signup, close the popup
+        closePopup();
+    });
+
+    // Call showPopup to display the popup when needed
+    showPopup();
+}
+
+// Check if the popup-overlay element exists before running the hovering images code
+if (popupOverlay) {
+    //Home page hovering images
+    document.addEventListener("DOMContentLoaded", function() {
+        var productImages = document.querySelectorAll('.product-image');
+
+        productImages.forEach(function(img) {
+            // Preload hover images to reduce flickering on hover
+            const hoverImageSrc = img.getAttribute('data-hover');
+            if (hoverImageSrc) {
+                const hoverImage = new Image();
+                hoverImage.src = hoverImageSrc;
+
+                var originalSrc = img.src;
+
+                img.addEventListener('mouseenter', function() {
+                    img.src = hoverImageSrc;
+                });
+
+                img.addEventListener('mouseleave', function() {
+                    img.src = originalSrc;
+                });
+            }
+        });
+    });
+}
 
   //Footer press app and qr code shows
   function toggleQRCode(event) {
