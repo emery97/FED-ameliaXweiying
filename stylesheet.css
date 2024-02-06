@@ -1358,6 +1358,25 @@ font-weight: 600;
 #speed-typing-score h6{
   font-size: 20px;
 }
+/*DINOSAUR GAME PAGE*/
+.dinosaur-game-container {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: 0 auto;
+  justify-content: baseline;
+  margin-top: 50px; /* Adjust this value as needed to push the canvas down */
+}
+canvas {
+	width:100%;
+	background: #eee;
+	margin-top: 200px;
+	/*background: #fff;*/
+}
+.controls {
+	text-align: right;
+	color: #aaa;
+}
 /*FOR ALL GAMES*/
 /*GAME OVER MODAL*/
 .modal {

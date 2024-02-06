@@ -4,7 +4,7 @@
 		<title>Dinosaur Game</title>
         <!--FAVICON-->
         <link rel="icon" type="image/png" href="../image/index/favicon.png" sizes="17x17 40x40">
-      <link rel = "stylesheet" href = "../stylesheet.css" type = "text/css">
+        <link rel = "stylesheet" href = "../stylesheet.css" type = "text/css">
 
         <!--FONT-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,14 +25,15 @@
 
         <!--ICON LINK-->
         <script src="https://kit.fontawesome.com/85b6a0f764.js" crossorigin="anonymous"></script>
-
-		<link rel="stylesheet" href="style.css"> 
 	</head>
 	<body >
 		<div class = "promotion-bar">
             <p>FREE SHIPPING ON ORDERS OVER $50</p>
         </div>
-
+        
+      <div class="top-left-container">
+        <span id="welcome-message"></span>
+    </div>   
         <div class="top-nav">
           <a href="../index.html" class="brand-name"> <h2> AMELIAXWEIYING </h2> </a>
           <div class="top-nav-icons">
@@ -97,7 +98,7 @@
 
 			Making the canvas white will make our work space really obvious.
 		-->
-		<div class = "game-container">
+		<div class = "dinosaur-game-container">
 			<canvas id="game" height="200" width="800"></canvas>
 			<p class="controls">press space bar to start</p>	
 		</div>
@@ -207,6 +208,7 @@
 			});
         </script>
         <script src = "../script.js"></script>
+        <script src="../login-api.js"></script>
 
 	</body>
 </html>
