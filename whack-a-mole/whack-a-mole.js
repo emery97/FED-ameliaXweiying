@@ -29,7 +29,7 @@ function startCountdown(duration) {
 
 function showGameOverModal() {
     gameActive = false;
-    finalScore.textContent = `Your score is ${score}`; // Update the final score text
+    finalScore.textContent = `YOUR FINAL SCORE IS: ${score}`; // Update the final score text
     modal.style.display = 'block'; // Show the game over modal
 }
 
