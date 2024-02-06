@@ -33,6 +33,11 @@
             <p>FREE SHIPPING ON ORDERS OVER $50</p>
         </div>
 
+        <div class="top-left-container">
+            <span id="welcome-message"></span>
+        </div>
+        
+
         <div class="top-nav">
           <a href="index.html" class="brand-name"> <h2> AMELIAXWEIYING </h2> </a>
           <div class="top-nav-icons">
@@ -44,7 +49,6 @@
                       </button>
                   </div>
               </div>
-              <a href="#" class="icon-link"><i class="far fa-heart"></i></a>
               <a href="login2.html" class="icon-link"><i class="fas fa-user"></i></a>
               <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i></a>
               <a href="all-games.html" class="icon-link"><i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i></a>
@@ -93,38 +97,40 @@
         </div>
 
     <!-- Login Form Container -->
-    <div class="login-page-container">
-        <!-- Image Container -->
-        <div class="login-image-container">
-            <!-- Replace with your actual image source -->
-            <img src="image/index/new_for_you/login.jpg" alt="Shipping Image">
-        </div>
-        <div class="login-form">
-            <h1>JOIN THE FAMILY</h1>
-            <p class="tagline">where fashion & luxuries merge into one!</p>
-            <form id = "add-contact-form">
-                <div class="form-group">
-                    <input type="text" id="user-name" placeholder="Username">
-                </div>
-                <div class="form-group">
-                  <input type="email" id="user-email" placeholder="Email">
-              </div>
-                <div class="form-group">
-                    <input type="password" id="user-pwd" placeholder="Password">
-                </div>
-                <div class="form-group form-remember-me">
-                    <input type="checkbox" id="rememberMe">
-                    <label for="rememberMe">Remember Me</label>
-                </div>
-                <div class="form-group">
-                    <div class="forgot-password">Forgot Password?</div>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="sign-in-button" id="contact-submit">Sign in</button>
-                </div>
-            </form>
-        </div>
+<!-- Login Form Container -->
+<div class="login-page-container">
+    <!-- Image Container -->
+    <div class="login-image-container">
+        <!-- Replace with your actual image source -->
+        <img src="image/index/new_for_you/login.jpg" alt="Shipping Image">
     </div>
+    <div class="login-form">
+        <h1>JOIN THE FAMILY</h1>
+        <p class="tagline">where fashion & luxuries merge into one!</p>
+        <form id="user-form">
+            <div class="form-group">
+                <input type="text" id="user-name" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="user-email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="user-pwd" placeholder="Password" required>
+            </div>
+            <div class="form-group form-remember-me">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+            <div class="form-group">
+                <div class="forgot-password">Forgot Password?</div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="sign-in-button" id="sign-in-button">Sign in</button>
+                <button type="button" class="sign-up-button" id="sign-up-button">Sign up</button>
+            </div>
+        </form>
+    </div>
+</div>
 
     <footer class="site-footer">
       <div class="footer-top">
@@ -222,5 +228,6 @@
 
     <script src="login-api.js"></script>
     <script src="script.js"></script>
+    <script src="whack-a-mole.js"></script>
 </body>
 </html>

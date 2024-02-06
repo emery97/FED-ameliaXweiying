@@ -40,8 +40,12 @@
         <p>FREE SHIPPING ON ORDERS OVER $50</p>
     </div>
 
+    <div class="top-left-container">
+      <span id="welcome-message"></span>
+  </div>
+
     <div class="top-nav">
-        <a href="index.html" class="brand-name"> <h2> AMELIAXWEIYING </h2> </a>
+        <a href="../index.html" class="brand-name"> <h2> AMELIAXWEIYING </h2> </a>
         <div class="top-nav-icons">
             <div class="search-container">
                 <div class="search-box">
@@ -51,59 +55,53 @@
                     </button>
                 </div>
             </div>
-            <a href="#" class="icon-link"><i class="far fa-heart"></i></a>
-            <a href="login2.html" class="icon-link"><i class="fas fa-user"></i></a>
-            <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i></a>
-            <a href="all-games.html" class="icon-link"><i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i></a>
+            <a href="../login2.html" class="icon-link"><i class="fas fa-user"></i></a>
+            <a href="../cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i></a>
+            <a href="../all-games.html" class="icon-link"><i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i></a>
         </div>
     </div>
 
   
   
-
     <div class="navbar">
-        <a href="new_products.html">NEW</a>
-        <div class="dropdown">
-            <button class="dropbtn">
-                TOPS
-            </button>
-            <div class="dropdown-content">
-                <a href="tops_page.html">Crop Tops</a>
-                <a href="tops_page.html">Shirts & Blouses</a>
-                <a href="tops_page.html">Tanks & Strapless Tops</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">
-                DRESSES
-            </button>
-            <div class="dropdown-content">
-                <a href="dresses_page.html">Mini Dresses</a>
-                <a href="dresses_page.html">Midi Dresses</a>
-                <a href="dresses_page.html">Strapless Dresses</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">
-                SKIRTS
-            </button>
-            <div class="dropdown-content">
-                <a href="bottoms_page.html">Skorts</a>
-                <a href="bottoms_page.html">Denim Skirts</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">
-                JEANS
-            </button>
-            <div class="dropdown-content">
-                <a href="bottoms_page.html">Straight Leg Jeans</a>
-                <a href="bottoms_page.html">Cargo Jeans</a>
-            </div>
-        </div>
-        <a href="#Sale">SALE</a>
-    </div>
-    
+      <a href="../new-products.html">NEW</a>
+      <div class="dropdown">
+          <button class="dropbtn">
+              TOPS
+          </button>
+          <div class="dropdown-content">
+              <a href="../croptop.html">Crop Tops</a>
+              <a href="../strapless&tank.html">Tanks & Strapless Tops</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn">
+              DRESSES
+          </button>
+          <div class="dropdown-content">
+              <a href="../midi-dress.html">Midi Dresses</a>
+              <a href="../strapless-dress.html">Strapless Dresses</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn">
+              SKIRTS
+          </button>
+          <div class="dropdown-content">
+              <a href="../denim-skirts.html">Denim Skirts</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn">
+              JEANS
+          </button>
+          <div class="dropdown-content">
+              <a href="../cargo-jeans.html">Cargo Jeans</a>
+          </div>
+      </div>
+      <a href="../sale.html">SALE</a>
+  </div>
+
     <!--WHACK A MOLE GAME-->
     <div class = "wack-a-mole-container">
         <div class="modal" id="gameOverModal">
@@ -124,7 +122,7 @@
                 </span>
             </h1>
             <h1 id = "countdown"> 
-                1:00
+                01:00
             </h1>
         </div>
         <div class="board">
@@ -200,9 +198,9 @@
                 <h5>DOWNLOAD OUR APP</h5>
                 <div class="app-download">
                     <a href="#" class="app-store" onclick="toggleQRCode(event)">
-                      <img src="image/index/new_for_you/app1.jpg" alt="App Store"/>
+                      <img src="../image/index/new_for_you/app1.jpg" alt="App Store"/>
                       <div class="qr-code" id="qrCode">
-                        <img src="image/index/new_for_you/qrcode.jpg" alt="QR Code"/>
+                        <img src="../image/index/new_for_you/qrcode.jpg" alt="QR Code"/>
                       </div>
                     </a>
                   </div>                                                  
@@ -240,5 +238,8 @@
 
     <div class="cursor"></div>
     <script src="whack-a-mole.js"></script>
+    <script src="login-api.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>

@@ -6,23 +6,26 @@ let score = 0;
 const sound = new Audio("whack-a-mole-assets/smash.mp3");
 let gameTimer;
 let gameActive = false;
-
+let countdown; // keep track of countdown interval
 const finalScore = document.querySelector('.modal-body'); // Update this line
 
-// CURSOR 
-document.addEventListener('DOMContentLoaded', function () {
-    const cursor = document.querySelector('.cursor');
-    const modal = document.querySelector('.modal');
+function startCountdown(duration) {
+    let timer = duration, minutes, seconds;
+    countdown = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-    modal.addEventListener('mouseenter', function () {
-        cursor.classList.add('inside-modal');
-    });
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    modal.addEventListener('mouseleave', function () {
-        cursor.classList.remove('inside-modal');
-    });
-});
+        document.getElementById('countdown').textContent = minutes + ":" + seconds;
 
+        if (--timer < 0) {
+            clearInterval(countdown);
+            showGameOverModal();
+        }
+    }, 1000);
+}
 
 function showGameOverModal() {
     gameActive = false;
@@ -39,8 +42,11 @@ function startGame() {
     score = 0; // Reset score
     scoreEl.textContent = score; // Update score display
     clearTimeout(gameTimer); // Clear any existing game timer
+    clearInterval(countdown);
     gameActive = true;
 
+    // start the countdown 1min = 60s
+    startCountdown(60);
     function run() {
         if (!gameActive) return; // Stop if game is not active
 
@@ -76,7 +82,7 @@ function startGame() {
     run();
 
     // Set a timeout to end the game after 5 minutes
-    gameTimer = setTimeout(showGameOverModal, 3000); // 1 minutes in milliseconds = 60000
+    gameTimer = setTimeout(showGameOverModal, 60000); // 1 minutes in milliseconds = 60000
 }
 
 // Event listener for the close button on the modal

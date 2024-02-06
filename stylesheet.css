@@ -21,7 +21,6 @@ display: flex;
 justify-content: space-between;
 color: black;
 height: 350px;
-margin-top: 20px;
 }
 
 .brand-name {
@@ -75,8 +74,16 @@ margin: 0 10px; /* Add space between icons */
 color: #555; /* Change color on hover */
 }
 
-
-
+/* Welcome, username styling */
+.top-left-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 90px;
+  background-color: pink; /* or any other color that fits your design */
+  color: #000;
+  font-size: 30px;
+}
 
 
 
@@ -151,6 +158,9 @@ color: #555; /* Change color on hover */
   display: block;
 }
 
+#user-points{
+  display: none;
+}
 
 /* Slideshow container */
 .slideshow-container {

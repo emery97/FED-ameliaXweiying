@@ -5,6 +5,7 @@
 
 html, body {
   height: 100%;
+  width:100%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -31,7 +32,6 @@ body {
 .top-nav, .navbar {
   position: relative;
 }
-
 /* Adjust the top-nav-icons */
 .top-nav-icons {
   display: flex;
@@ -39,10 +39,6 @@ body {
   margin-right: 20px; /* Align to the right */
 }
 
-/* Adjust the navbar */
-.navbar {
-  position: relative; /* Ensure it's in the normal flow */
-}
 
 /* Ensure the game container is below the top navigation */
 .wack-a-mole-container {
@@ -523,3 +519,7 @@ color: #555; /* Change color on hover */
   text-decoration: underline;
 }
 
+/*weiying's comp*/
+@media (max-width: 1600px){
+
+}
