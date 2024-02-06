@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="whack-a-mole.css">
+
 
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,21 +109,20 @@
         <div class="modal" id="gameOverModal">
             <div class="modal-content">
                 <span class="modal-header">
-                    <img class = "logo-no-bg" src = "whack-a-mole-assets/logo-no-bg.png"><br>
                     <h3>GAME OVER</h3>
                 </span>
                 <div class = "modal-body" h6></div><br> <!--this is for the score-->
               <button class="modal-close-btn" onclick="startGame()">Close</button>
             </div>
         </div>
-        <div class = "score-countdown-container">
+        <div class = "whack-a-mole-score-countdown-container">
             <h1 class="score">
                 SCORE: 
                 <span>
-                    00 
+                  00 
                 </span>
             </h1>
-            <h1 id = "countdown"> 
+            <h1 id = "countdown" class = "whack-a-mole-countdown"> 
                 01:00
             </h1>
         </div>
