@@ -37,13 +37,14 @@ quoteInputElement.addEventListener('input', () => {
     }
   }
 });
-function showModal(score){
+
+function showModal(score) {
   document.querySelector('.modal-body h6').textContent = `YOUR FINAL SCORE IS: ${score}`;
   document.getElementById('gameOverModal').style.display = 'block';
 }
-function closeModal(){
-  document.getElementById('gameOverModal').style.display = 'none';
 
+function closeModal() {
+  document.getElementById('gameOverModal').style.display = 'none';
 }
 
 async function renderNewQuote() {
@@ -56,7 +57,7 @@ async function renderNewQuote() {
   });
   quoteInputElement.value = null;
   startTimer();
-  score+=10;
+  score += 10;
 }
 
 function startTimer() {
@@ -99,3 +100,13 @@ function getRandomQuote() {
 }
 
 renderNewQuote();
+
+// Set MIME type for CSS files
+document.addEventListener("DOMContentLoaded", function() {
+  var links = document.getElementsByTagName("link");
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].getAttribute("rel") === "stylesheet") {
+      links[i].type = "text/css";
+    }
+  }
+});
