@@ -4,6 +4,8 @@
   overflow-x: hidden;
 }
 
+/* STYLE FOR ALL PAGES*/
+/*PROMOTION BAR*/
 .promotion-bar{
   background-color: black;
   color:white;
@@ -15,14 +17,23 @@
   font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
-
+/*WELCOME USER STYLE*/
+.top-left-container {
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 50px;
+  background-color: pink; /* or any other color that fits your design */
+  color: #000;
+  font-size: 30px;
+}
 .top-nav {
 display: flex;
 justify-content: space-between;
 color: black;
 height: 350px;
 }
-
 .brand-name {
 font-family: 'Roboto Condensed', sans-serif;
 font-size: 55px;
@@ -37,11 +48,9 @@ display: flex;
 align-items: center;
 margin-top: -250px;  /*Shift the icons up*/
 }
-
 .search-container {
 position: relative;
 }
-
 .search-box {
 display: flex;
 align-items: center;
@@ -62,7 +71,7 @@ outline: none;
 background-color: transparent;
 }
 
-/* Icon styling */
+/* FOR ICONS ON TOP NAV*/
 .icon-link {
 text-decoration: none;
 color: #000;
@@ -74,20 +83,7 @@ margin: 0 10px; /* Add space between icons */
 color: #555; /* Change color on hover */
 }
 
-/* Welcome, username styling */
-.top-left-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 90px;
-  background-color: pink; /* or any other color that fits your design */
-  color: #000;
-  font-size: 30px;
-}
-
-
-
-/* Navbar container */
+/* FOR NAVBAR  */
 .navbar {
   background-color: white;
   display: flex;
@@ -123,7 +119,6 @@ color: #555; /* Change color on hover */
   font-family: 'Inter Tight', sans-serif;
 }
 
-/* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
   color: #757575;
 }
@@ -161,8 +156,156 @@ color: #555; /* Change color on hover */
 #user-points{
   display: none;
 }
+/* FOOTER */
+.site-footer {
+  font-family: 'Inter Tight', sans-serif;
+}
 
-/* Slideshow container */
+.footer-top {
+  text-align: center;
+}
+
+.footer-divider {
+  width: 100%;
+  border: 1px solid #000; /* Adjust the thickness and color as needed */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around; /* Spreads out the sections */
+  align-items: start;
+  padding: 20px;
+  margin-left: 55px;
+  margin-top: 20px;
+}
+
+.footer-section h5 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: bolder;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-section ul li{
+  text-decoration: none;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-section ul li:hover {
+  text-decoration: underline;
+}
+
+.app-download a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.app-download a img {
+  height: 230px;
+  width: 220px;
+}
+
+
+.qr-code {
+  display: none;
+  position: absolute;
+  width: 20px; 
+  height: 20px; 
+  top: -100%; /* Position the QR code just ABOVE the button */
+  left: 5%; /* Center horizontally */
+  transform: translate(-50%, 0); /* Center based on its own size */
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+.footer-section-sign-up h5{
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: bolder;
+}
+
+.footer-section-sign-up h6{
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  max-width: 85%;
+  font-weight: lighter;
+}
+
+.footer-section-sign-up form {
+  align-items: center; /* Aligns items vertically */
+  max-width: 300px; /* Adjust the value as needed */
+  margin: 0 auto; /* Center the form horizontally */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Align items vertically */
+}
+
+.footer-section-sign-up form input,
+.footer-section-sign-up form button {
+  margin: 5px 0; /* Adds some space between the input and the button */
+  padding: 9px;
+}
+
+.footer-section-sign-up form input {
+  margin: 5px; /* Adds some space between the input and the button */
+}
+
+.footer-bottom {
+  background: #fff; 
+  border-top: 1px solid #ccc; 
+  padding: 20px 0;
+}
+
+.country-notice {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin-left: 0px; /* Adjust the value as needed */
+}
+.social-icons {
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  margin-left: 0px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  margin: 8px; /* Adjust the margin as needed */
+}  
+
+.legal-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.legal-links p {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}  
+
+.legal-links p:hover {
+  text-decoration: underline;
+}
+
+
+/* INDEX PAGE : MAIN SLIDESHOW  */
 .slideshow-container {
 position: relative;
 margin: auto;
@@ -232,9 +375,7 @@ from {opacity: .4}
 to {opacity: 1}
 }
 
-
-/* FOR THE POP UP */
-/* Popup Overlay */
+/* INDEX PAGE : FOR THE POP UP */
 .popup-overlay {
 display: flex;
 justify-content: center;
@@ -291,7 +432,6 @@ margin-bottom: 10px; /* Spacing between the paragraph and the form */
 margin-left: 10px;
 }
 
-/* Email Form */
 #email-form {
 display: flex;
 flex-direction: column; /* Stacks the form elements vertically */
@@ -327,7 +467,6 @@ color: #a4bdbf; /* Blue text */
 text-decoration: underline;
 }
 
-/* Popup Image */
 .popup-image {
 width: 40%; /* Decrease width as needed */
 margin-left: auto; /* Pushes the image to the right */
@@ -340,7 +479,7 @@ width: 100%; /* Make the image fill the container */
 height: auto; /* Maintain aspect ratio */
 }
 
-/* the circle images in index html */
+/*INDEX PAGE: CIRCLES FOR SHOP BY CATEGORY*/
 .categories-container {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -390,18 +529,15 @@ height: auto; /* Maintain aspect ratio */
   color: #000;
 }
 
-
 /* Hover effect */
 .category a:hover img {
   opacity: 0.9;
 }
-
-
 .category a:hover .category-label {
   opacity: 1;
 }
 
-/* the products display*/
+/* INDEX PAGE: PRODUCT DISPLAY , UNDER NEW FOR YOU*/
 .product-carousel h2 , .product span{
 font-family: Arial, sans-serif;
 font-size: 40px;
@@ -491,14 +627,10 @@ color: #000; /* Default color */
 color: pink; /* Pink color on hover and when clicked */
 }
 
-
-
 .product-info {
 padding: 10px;
 text-align: center;
 }
-
-/* Add your other styles for product-name, product-price, product-size, and color-options */
 
 .product-name {
 font-size: 23px;
@@ -525,31 +657,30 @@ margin-top: 10px; /* Add some space above the color options */
 }
 
 .color-option {
-width: 16px; /* Size of the color circle */
-height: 16px; /* Size of the color circle */
+width: 20px; /* Size of the color circle */
+height: 20px; /* Size of the color circle */
 border-radius: 50%; /* Make it round */
 margin: 0 5px;
 cursor: pointer;
 }
-
-.color-option:hover {
-border-color: black; /* Change border color on hover */
+.color-option:hover{
+  border: 2px solid black;
 }
 
 .add-to-cart-btn {
 padding: 11px 5px;
-background-color: #000; /* or your preferred color */
+background-color: #000;
 color: #fff;
 border: none;
 cursor: pointer;
 margin-top: 15px; /* Increase this value to push the button down */
-margin-bottom: 10px; /* Adjust this as needed */
-border-radius: 5px; /* Optional: if you want rounded corners */
+margin-bottom: 10px; 
+border-radius: 5px; 
 font-size: 18px;
 text-decoration: none;
-display: block; /* This will make it a block element */
+display: block; 
 }
-
+/* INDEX PAGE: PROMO CONTAINER*/
 .promo-container {
   display: flex;
   align-items: flex-start;
@@ -590,7 +721,7 @@ display: block; /* This will make it a block element */
   font-size: 40px;
   white-space: nowrap; /* Ensure the text does not wrap */
 }
-
+/* INDEX PAGE: ABOVE FOOTER*/
 .above-footer {
   display: flex;
   align-items: center;
@@ -651,156 +782,8 @@ display: block; /* This will make it a block element */
   font-size: 22px;
 }
 
-
-.site-footer {
-  font-family: 'Inter Tight', sans-serif;
-}
-
-.footer-top {
-  text-align: center;
-}
-
-.footer-divider {
-  width: 100%;
-  border: 1px solid #000; /* Adjust the thickness and color as needed */
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-around; /* Spreads out the sections */
-  align-items: start;
-  padding: 20px;
-  margin-left: 55px;
-  margin-top: 20px;
-}
-
-.footer-section h5 {
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-size: 19px;
-  font-weight: bolder;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  font-size: 14px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.footer-section ul li{
-  text-decoration: none;
-  color: #333;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.footer-section ul li:hover {
-  text-decoration: underline;
-}
-
-.app-download a {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  border-radius: 20px;
-  background-color: white;
-  text-align: center;
-}
-
-.app-download a img {
-  height: 230px;
-  width: 220px;
-}
-
-
-.qr-code {
-  display: none;
-  position: absolute;
-  width: 20px; 
-  height: 20px; 
-  top: -100%; /* Position the QR code just ABOVE the button */
-  left: 5%; /* Center horizontally */
-  transform: translate(-50%, 0); /* Center based on its own size */
-  transform: translateX(-50%);
-  border-radius: 20px;
-}
-
-
-
-.footer-section-sign-up h5{
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-size: 19px;
-  font-weight: bolder;
-}
-
-.footer-section-sign-up h6{
-  margin-bottom: 10px;
-  font-size: 15px;
-  font-family: 'Poppins', sans-serif;
-  max-width: 85%;
-  font-weight: lighter;
-}
-
-
-.footer-section-sign-up form {
-  align-items: center; /* Aligns items vertically */
-}
-
-.footer-section-sign-up form input,
-.footer-section-sign-up form button {
-  margin: 0; /* Removes default margin */
-  padding: 9px;
-}
-
-.footer-section-sign-up form input {
-  margin: 5px; /* Adds some space between the input and the button */
-}
-
-.footer-bottom {
-  background: #fff; 
-  border-top: 1px solid #ccc; 
-  padding: 20px 0;
-}
-
-.country-notice {
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  margin-left: 0px; /* Adjust the value as needed */
-}
-.social-icons {
-  overflow-y: hidden;
-  display: flex;
-  justify-content: center;
-  margin-left: 0px;
-  margin-top: 15px;
-}
-
-.social-icon {
-  margin: 8px; /* Adjust the margin as needed */
-}  
-
-.legal-links {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.legal-links p {
-  text-decoration: none;
-  color: #000;
-  font-size: 14px;
-}  
-
-.legal-links p:hover {
-  text-decoration: underline;
-}
-
-
-
-/* Products display page's code */
+/*FOR ALL PRODUCT PAGES*/
+/*for product page breadcrumbs and filter*/
 .filter-bar {
 display: flex;
 justify-content: space-between;
@@ -846,8 +829,7 @@ font-weight: bolder; /* Make the arrow bold */
 .fa fa-angle-down {
 font-size: 10px; /* Changed from 'size' to 'font-size' */
 }
-
-
+/*for product page product showcase*/
 .product-page-product-carousel{ /* diff from the index's product carousel bc index dont need shift up, but in product page need shift up */
 margin:0;
 text-align: center;
@@ -874,7 +856,7 @@ background: #fff;
 
 }
 
-/* FOR MY SALES PAGE */
+/* SALES PAGE */
 .original-price {
 text-decoration: line-through;
 color: #ff0000; /* Or any color that indicates the price is not current */
@@ -887,10 +869,7 @@ color: #009900; /* A color that indicates a sale, usually a type of green or red
 font-size: 28px;
 }
 
-
-
-/* LOG IN */
-/* Center the login form */
+/* LOGIN PAGE */
 /* Main container that holds both the image and the form */
 .login-page-container {
 display: flex;
@@ -943,8 +922,12 @@ margin-bottom: 2rem;
 color: #555;
 }
 
-.form-group {
-margin-bottom: 1rem;
+#buttons {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 input[type="text"],
@@ -962,14 +945,19 @@ margin-right: 0.5rem;
 }
 
 .forgot-password {
-display: block;
-text-align: right;
-margin-bottom: 1rem;
-color: #0066cc;
-text-decoration: none;
+  display: block;
+  text-align: right;
+  margin-bottom: 1rem;
+  color: #0066cc;
+  text-decoration: none;
+}
+.forgot-password:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.sign-in-button {
+.sign-in-button,
+.sign-up-button {
 width: 100%;
 padding: 0.75rem;
 border: none;
@@ -978,59 +966,61 @@ background-color: #0056b3;
 color: white;
 cursor: pointer;
 }
-
-.sign-in-button:hover {
+.sign-up-button{
+  background-color: #1B2CC1;
+}
+.sign-in-button:hover,
+.sign-up-button:hover {
 background-color: #003d82;
 }
 
-
-
-/* FOR ALL GAMES DISPLAY PAGE */
+/* ALL GAMES PAGE */
 .rewards-container {
-text-align: center;
-padding: 50px 0;
-background-color: #fff; /* Assuming a white background */
-color: black; /* Text color */
-font-family: 'Arial', sans-serif; /* Change to your preferred font */
-margin-top: -13px; /* To shift it up */
+  text-align: center;
+  padding: 50px 0;
+  background-color: #fff; /* Assuming a white background */
+  color: black; /* Text color */
+  font-family: 'Arial', sans-serif; /* Change to your preferred font */
+  margin-top: -13px; /* To shift it up */
 }
 
 .text-background {
-background-color: rgba(242, 221, 239, 0.5); /* Light background, you can adjust the opacity as needed */
-display: block; /* Change this to block so it fills the container */
-padding: 80px; /* Adjust the padding to control the space around your text */
-margin: 0 auto; /* Center the block */
-width: 100%; /* so that background covers the whole of width of page */
-box-sizing: border-box; /* Include padding and border in the width and height of the element */
+  background-color: rgba(242, 221, 239, 0.5); /* Light background, you can adjust the opacity as needed */
+  display: block; /* Change this to block so it fills the container */
+  padding: 80px; /* Adjust the padding to control the space around your text */
+  margin: 0 auto; /* Center the block */
+  width: 100%; /* so that background covers the whole of width of page */
+  box-sizing: border-box; /* Include padding and border in the width and height of the element */
 }
-
 
 h1 {
 font-size: 60px; /* Big, bold text for the header */
 margin-bottom: 40px; /* Space below the header */
 }
-
 .buttons-container {
-margin: 20px 0; /* Space above and below the buttons */
+  height: 100px;
+  display: flex;
+  justify-content: center; /* Aligns content horizontally in the center */
+  align-items: center; /* Aligns content vertically in the center */
 }
 
 .rewards-button {
-padding: 10px 60px; /* Padding inside the buttons */
-border: none;
-background-color: black; /* Button background color */
-color: white; /* Button text color */
-font-size: 1em; /* Text size inside buttons */
-cursor: pointer; /* Changes the cursor to a pointer on hover */
-text-decoration: none;
+  padding: 10px 60px; /* Padding inside the buttons */
+  border: none;
+  background-color: black; /* Button background color */
+  color: white; /* Button text color */
+  font-size: 1em; /* Text size inside buttons */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  text-decoration: none;
 }
 
 .rewards-button:hover {
-background-color: grey; /* Hover effect for the button */
+  background-color: grey; /* Hover effect for the button */
 }
 
 .rewards-footer {
 font-size: 0.75em; /* Smaller text for the footer */
-margin-top: 40px; /* Space above the footer text */
+margin-top: 20px; /* Space above the footer text */
 color: #333; /* Slightly darker text color for the footer */
 }
 
@@ -1076,10 +1066,8 @@ color: #000;
 font-family: 'Arial', sans-serif; /* Change to your preferred font */
 font-weight: 600;
 }
-/*TRIVIA QUIZ*/
-.trivia-top-nav{
-  background-color: white;
-}
+
+/*TRIVIA QUIZ PAGE*/
 :root{
   --light-purple-color: #8854C0;
   --light-color: #fff;
@@ -1088,6 +1076,7 @@ font-weight: 600;
   --transition: all 300ms ease-in-out;
 }
 .quiz-container{
+  min-height:900px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1103,11 +1092,10 @@ font-weight: 600;
   box-shadow: 0 4px 6px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 10%);
   background-color:#FEF9FF;
 }
-.quiz-title{
+.countdown{
   text-align: center;
   font-size: 4rem;
 }
-
 .quiz-score{
   text-align: center;
   font-weight: 600;
@@ -1159,55 +1147,55 @@ font-weight: 600;
 .quiz-options li:active{
     transform: scale(0.97);
 }
-/* js related */
+/* FOR TRIVIA QUIZ JS*/
 .selected{
-    background-color: var(--grey-color)!important;
-    color: var(--dark-color)!important;
-    border-color: var(--grey-color)!important;
-    box-shadow: 0 4px 0 0 #bbbbbb!important;
+  background-color: var(--grey-color)!important;
+  color: var(--dark-color)!important;
+  border-color: var(--grey-color)!important;
+  box-shadow: 0 4px 0 0 #bbbbbb!important;
 }
 .quiz-foot button{
-    border: none;
-    border-radius: 0.5rem;
-    outline: 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding: .5rem 1rem;    
-    margin: 0 auto 0 auto;
-    text-transform: uppercase;
-    cursor: pointer;
-    display: block;
-    letter-spacing: 2px;
-    transition: var(--transition);
-    background-color: #EACBD2;
+  border: none;
+  border-radius: 0.5rem;
+  outline: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: .5rem 1rem;    
+  margin: 0 auto 0 auto;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+  letter-spacing: 2px;
+  transition: var(--transition);
+  background-color: #EACBD2;
 }
 .quiz-foot button:hover{
-    background-color: #DFAEB4;
+  background-color: #DFAEB4;
 }
 .quiz-foot button:active{
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 #play-again{
-    display: none;
+  display: none;
 }
 #result{
-    padding: .7rem 0;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.3rem;
+  padding: .7rem 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
 }
 #result i{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    line-height: 30px;
-    margin-right: .5rem;
-    margin-bottom: .5rem;
-    background-color: var(--light-purple-color);
-    color: var(--light-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+  background-color: var(--light-purple-color);
+  color: var(--light-color);
 }
-
+/*FOR ALL GAMES*/
 .modal {
   border-radius: 10px;
   display: flex; /* for responsiveness*/
