@@ -76,7 +76,7 @@ function startGame() {
         timer = setTimeout(() => {
             hole.removeChild(img);
             run();
-        }, 1500);
+        }, 760);
     }
 
     run();
