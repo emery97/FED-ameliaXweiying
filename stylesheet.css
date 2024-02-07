@@ -1662,32 +1662,38 @@ canvas {
   }
 
   /* Align the Add to Cart button at the bottom */
-  .product-page-product-carousel .add-to-cart-btn {
-    margin-top: auto; /* Push the button to the bottom */
-  }
   .product-page-product {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* This will push the button to the bottom */
-    /* Other styles remain the same */
+    justify-content: space-between;
+    height: 100%; /* New line */
+    margin-bottom: 20px; /* Added space between products */
   }
+
   .product-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distributes space between product details and button */
-    flex: 1; /* Allows this container to grow and take up any available space */
-    /* Other styles remain the same */
+    justify-content: space-between;
+    height: calc(100% - 50px); /* New line, adjust as needed */
   }
-  
+
   .add-to-cart-btn {
-    position: absolute;
-    bottom: 10px; /* adjust this value to move the button up or down */
-    left: 50%;
-    transform: translateX(-50%); /* this will center the button */
-    width: 90%; /* or the width you prefer */
-    align-self: flex-end;
+    margin-top: auto; /* New line */
+    width: 100%; /* To ensure it spans the full width of the container */
   }
-  
+
+  .color-options {
+    display: flex; /* Ensure color options are in a row */
+    justify-content: center; /* Center the color options */
+    margin-bottom: 10px; /* Space above the 'Add to Cart' button */
+  }
+
+  .color-option {
+    margin: 0 5px; /* Space between color options */
+    width: 20px; /* Size of color options */
+    height: 20px; /* Size of color options */
+    border-radius: 50%; /* Make them circular */
+  }
   /* MOBILE: INDEX PAGE*/
   /*index pop up*/
   .popup-content{
@@ -1723,15 +1729,26 @@ canvas {
     height:40%;
   }
   /* index product page*/
+  .product-carousel .product {
+    flex: 0 0 calc(50% - 10px); /* Adjusts the width to be half of the container minus some margin */
+    margin: 5px; /* Provides space between the products */
+  }
   .product-carousel .product-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-
-  .product-carousel .product {
-    flex: 0 0 calc(50% - 10px); /* Adjusts the width to be half of the container minus some margin */
-    margin: 5px; /* Provides space between the products */
+  .product-info{
+    height:250px;
+  }
+  
+  /*index promo container*/
+  .promo-card img{
+    width:80%;
+    height:auto;
+  }
+  .promo-code, .promo-card a{
+    font-size: 20px;
   }
   /*index promo container*/
   .promo-card img{
@@ -1741,7 +1758,9 @@ canvas {
   .promo-code, .promo-card a{
     font-size: 20px;
   }
-
+  .product{
+    position: relative;
+  }
 
   /* Modal content */
   .modal-content {
