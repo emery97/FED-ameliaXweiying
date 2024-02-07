@@ -6,7 +6,7 @@
 
 /* STYLE FOR ALL PAGES*/
 /*MOBILE VERSION HAMBURGER*/
-#menuToggle,.mobile-icons,#mobile-brand-name{
+#menuToggle,.mobile-icons,#mobile-brand-name,.mobile-lottie-background{
   display: none;
 }
 /*PROMOTION BAR*/
@@ -38,6 +38,7 @@ justify-content: space-between;
 color: black;
 height: 350px;
 }
+
 .brand-name {
 font-family: 'Roboto Condensed', sans-serif;
 font-size: 55px;
@@ -134,7 +135,7 @@ color: #555; /* Change color on hover */
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 2001;
 }
 
 /* Links inside the dropdown */
@@ -312,7 +313,6 @@ color: #555; /* Change color on hover */
 /* INDEX PAGE : MAIN SLIDESHOW  */
 .slideshow-container {
 position: relative;
-margin: auto;
 }
 
 .slideshow-container img{
@@ -1404,7 +1404,42 @@ canvas {
   height: 100%;
   z-index: -1; /* Ensures the animation is behind the quiz content */
 }
+/*SNAKE GAME PAGE*/
 
+.snake-game-container {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Added for score positioning */
+}
+.snake-game-container {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Added for score positioning */
+  max-width: 400px; /* Set the max-width to match the canvas width to prevent overflow */
+  margin: auto; /* Center the container on the page */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.snake-game-canvas {
+  margin-top: 0;
+  background-color: black;
+  border:1px solid white;
+}
+
+#score {
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+  margin: 0;
+}
 /*GAME OVER MODAL*/
 .modal {
   border-radius: 10px;
@@ -1466,11 +1501,11 @@ canvas {
     align-items: center;
   }
    /* PROMOTION BAR */
-   .promotion-bar {
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 100%; /* Ensure the container takes up the full height of its parent */
+  .promotion-bar {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100%; /* Ensure the container takes up the full height of its parent */
   }
   
   .promotion-bar p {
@@ -1481,6 +1516,7 @@ canvas {
   }
   .brand-name h2{
     font-size: 35px;
+    word-wrap: break-word;
   }
   /*HAMBURGER*/
   /*hamburger outlook*/
@@ -1500,7 +1536,6 @@ canvas {
     font-family: 'Inter Tight', sans-serif;
     text-decoration: none;
     color: #232323;
-    margin-left: 20px;
     transition: color 0.3s ease;
   }
   #menuToggle a:hover
@@ -1519,6 +1554,7 @@ canvas {
     opacity: 0; /* hide this */
     z-index: 3; /* and place it over the hamburger */
   }
+  /**TRY OUT/
   
   /*
    * Just a quick hamburger
@@ -1528,7 +1564,6 @@ canvas {
     display: block;
     width: 33px;
     height: 4px;
-    margin-bottom: 5px;
     position: relative;
     background: black;
     border-radius: 3px;
@@ -1599,6 +1634,7 @@ canvas {
   {
     padding: 10px 0;
     font-size: 22px;
+    margin-left: 20px;
   }
   
   /*
@@ -1620,6 +1656,7 @@ canvas {
     display: block;
     margin-top: 10px;
   }
+
   /* FOOTER CONTENT  */
   .about-section{
     margin:0;
@@ -1710,16 +1747,13 @@ canvas {
     font-size: 30px;
     word-wrap: break-word;
   }
-  .no-thanks-btn{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
+  
   #newsletter-submit{
     display: flex;
     justify-content:center;
     max-width: 100%;
   }
+
   /* Slideshow container */
   .slideshow-container {
     margin-top: 30px;
@@ -1850,13 +1884,19 @@ canvas {
   height: auto;
   padding: 1rem;
 }
-
 /* Quiz elements */
 .quiz-title,
 .quiz-question,
 .quiz-options li {
   font-size: smaller;
 }
+.lottie-background{
+  display: none;
+}
+.quiz-container{
+  position: relative;
+}
+
 }
 /*WEIYING'S COMP*/
 @media (max-width: 1600px) {
@@ -1986,7 +2026,8 @@ canvas {
       display: none; /* make the original topnav disappear*/
     }
     .brand-name h2{
-      font-size: 35px;
+      font-size: 60px;
+      margin-left: 20px;
     }
     /*HAMBURGER*/
     /*hamburger outlook*/
@@ -2105,6 +2146,7 @@ canvas {
     {
       padding: 10px 0;
       font-size: 22px;
+      margin-left: 20px;
     }
     
     /*
