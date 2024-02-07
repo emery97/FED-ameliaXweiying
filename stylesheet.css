@@ -1076,6 +1076,8 @@ font-weight: 600;
   --transition: all 300ms ease-in-out;
 }
 .quiz-container{
+  width:100%;
+  position: relative;
   min-height:900px;
   display: flex;
   align-items: center;
@@ -1085,8 +1087,6 @@ font-weight: 600;
   overflow-y: hidden;
   font-family: 'Poppins', sans-serif;
   padding: 1.5rem 4rem 3rem 4rem;
-  width: 600px;
-  height: 700px;
   position: relative;
   border-radius: 10%;
   box-shadow: 0 4px 6px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 10%);
@@ -1278,7 +1278,19 @@ font-weight: 600;
   background-color: transparent;
 }
 /*SPEED TYPING PAGE*/
+.entire-game-area{
+  position:relative;
+  width:100%;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 .speed-typing-game-container {
+  width: 60%; 
+  min-height: 50vh;
+  display:flex;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color:#181D27;
   font-weight: bold;
@@ -1286,18 +1298,12 @@ font-weight: 600;
   flex-direction: column;
   background-color: #DBF7EE;
   border-radius: .5rem;
-  min-height: 50vh; /* or 50% of the viewport's height */
-  width: 60%; 
-  display: flex;
-  margin-top: 20px;
-  margin-left: 20%;
 }
 /* container for user input*/
 .quote-container {
   background-color: #F9DAE7;
   padding: 1rem;
   border-radius: .5rem;
-  width: 700px;
   max-width: 90%;
   margin: auto; /* This will center the container if its width is less than 100% of its parent */
   display: flex;
@@ -1313,7 +1319,6 @@ font-weight: 600;
   color: #E8AEB7;
   font-weight: bold;
 }
-
 .quote-display {
   margin-bottom: 1rem;
   margin-left: calc(1rem + 2px);
@@ -1376,7 +1381,17 @@ canvas {
 	text-align: right;
 	color: #aaa;
 }
-/*FOR ALL GAMES*/
+/*ALL GAMES SAME*/
+/*LOTTIE BACKGROUND*/
+.lottie-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensures the animation is behind the quiz content */
+}
+
 /*GAME OVER MODAL*/
 .modal {
   border-radius: 10px;
