@@ -427,7 +427,8 @@ flex-direction: column; /* Stack children vertically */
 }
 
 .popup-text h2 {
-font-size: 3em; /* Large font size for the heading */
+font-size: 32px; /* Large font size for the heading */
+word-wrap: break-word;
 }
 
 .popup-text p {
@@ -463,7 +464,11 @@ width: 430px;
 #newsletter-submit {
 background-color: #c997a2; /* Blue background */
 color: white; /* White text */
+display: flex;
+justify-content:center;
+max-width: 100%;
 }
+
 
 .no-thanks-btn {
 background: transparent;
@@ -1637,6 +1642,51 @@ canvas {
   .app-download a img {
     height: 150px;
   }
+  /*MOBILE: FOR ALL PRODUCT PAGES*/
+  .filter-bar{
+    display: none;
+  }
+   /* Adjust the product items to be two in a row on mobile */
+   .product-page-product-carousel .product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust if you want more or less space between items */
+  }
+
+  .product-page-product-carousel .product-page-product {
+    width: calc(50% - 10px); /* Take up half the width minus the margin */
+    margin: 5px; /* Half of the actual space between items */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Align children with space between */
+  }
+
+  /* Align the Add to Cart button at the bottom */
+  .product-page-product-carousel .add-to-cart-btn {
+    margin-top: auto; /* Push the button to the bottom */
+  }
+  .product-page-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will push the button to the bottom */
+    /* Other styles remain the same */
+  }
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space between product details and button */
+    flex: 1; /* Allows this container to grow and take up any available space */
+    /* Other styles remain the same */
+  }
+  
+  .add-to-cart-btn {
+    position: absolute;
+    bottom: 10px; /* adjust this value to move the button up or down */
+    left: 50%;
+    transform: translateX(-50%); /* this will center the button */
+    width: 90%; /* or the width you prefer */
+    align-self: flex-end;
+  }
   
   /* MOBILE: INDEX PAGE*/
   /*index pop up*/
@@ -1645,11 +1695,17 @@ canvas {
   }
   .popup-text h2{
     font-size: 30px;
+    word-wrap: break-word;
   }
   .no-thanks-btn{
     display: flex;
     justify-content: center;
     text-align: center;
+  }
+  #newsletter-submit{
+    display: flex;
+    justify-content:center;
+    max-width: 100%;
   }
   /* Slideshow container */
   .slideshow-container {
