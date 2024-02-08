@@ -29,40 +29,46 @@ In a delightful contrast to our bold aesthetic, we introduce cute mini-games. Th
 ## Gamification Features:
 
 #### 1. Loyalty Points System:
-   - Earn 1 point for every dollar spent.
-   - Membership Tiers: Gold, Silver, Bronze (Gold being the highest).
-   - Unlock exclusive promotions and access to product launches with higher tiers.
+- Earn 1 point for every dollar spent.
+- Membership Tiers: Gold, Silver, Bronze (Gold being the highest).
+- Unlock exclusive promotions and access to product launches with higher tiers.
 
-   **Purpose:** Encourages increased spending, contributing to higher profit earnings.
+**Purpose:** Encourages increased spending, contributing to higher profit earnings.
 
 #### 2. Leaderboard:
-   - Updated 24/7.
-   - Top-ranking customer stands a chance to win the latest iPhone 15.
+- Updated 24/7.
+- Top-ranking customer stands a chance to win the latest iPhone 15.
 
-   **Purpose:** Promotes regular visits to the website and incentivizes customers to spend more for a chance to top the leaderboard.
+**Purpose:** Promotes regular visits to the website and incentivizes customers to spend more for a chance to top the leaderboard.
 
-#### 3. Spin the Wheel:
-   - Spin for vouchers and small gifts.
+#### 3. Whack A Mole:
+- Users need to press on the mole; it can appear anywhere on the 9 holes on the page.
+- Top 3 customers will receive a 10% voucher each.
 
-   **Purpose:** Adds a fun element to the shopping experience, leaving customers with a positive impression of our brand, encouraging repeat visits, and fostering word-of-mouth promotion.
+**Purpose:** This monthly game aims to engage users and entice them to return to our website repeatedly.
 
-#### 4. Whack A Mole:
-   - Users need to press on the mole; it can appear anywhere on the 9 holes on the page.
-   - Top 3 customers will receive a 10% voucher each.
+#### 4. Speed Typing Game:
+- Users need to type out the given quote as fast as they can, with a countdown clock tracking their time.
+- Users can play this game a maximum of 10 times per day to limit the points they can earn.
 
-   **Purpose:** This monthly game aims to engage users and entice them to return to our website repeatedly.
+**Purpose:** A unique and engaging way for our brand to interact with customers. This distinctive gamification strategy sets us apart, providing an enjoyable experience for our audience.
 
-#### 5. Flappy Bird:
-   - Users need to press on the screen repeatedly to keep the bird flying, avoiding obstructions.
-   - Top 3 customers will receive a 10% voucher each.
+#### 5. Snake Game:
+- Users will control the snake to eat as many apples (red boxes) as possible.
+- Points earned are recorded in the corner of the game screen.
 
-   **Purpose:** Another monthly game to create an entertaining experience and encourage users to visit our website regularly.
+**Purpose:** Including this childhood favorite game on our website aims to spark nostalgic memories and strengthen ties with our customers.
 
 #### 6. Trivia Quiz:
-   - Users need to answer questions correctly.
-   - Achieve a perfect score (10/10) to receive a 20% off voucher.
+- Users need to answer questions correctly.
+- Achieve a perfect score (10/10) to receive a 20% off voucher.
 
-   **Purpose:** A unique and engaging way for our brand to interact with customers. This distinctive gamification strategy sets us apart, providing an enjoyable and educational experience for our audience.
+**Purpose:** A unique and engaging way for our brand to interact with customers, providing an enjoyable and educational experience.
+
+#### 7. Dinosaur Game:
+- Control the dinosaur to avoid obstructions.
+
+**Purpose:** An additional game for users' enjoyment; no points can be earned. Added for its iconic status as the Google "no wifi" game, enhancing our list of games.
 
 
 ## Technologies Used
