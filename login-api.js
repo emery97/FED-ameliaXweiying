@@ -138,5 +138,3 @@ document.addEventListener("DOMContentLoaded", function () {
     logOutButton.addEventListener("click", onSignOut);
   }
 });
-  
-      

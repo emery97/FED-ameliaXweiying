@@ -1,4 +1,4 @@
-
+// Declaration of constants and variables
 const cursor = document.querySelector('.cursor');
 const holes = [...document.querySelectorAll('.hole')];
 const scoreEl = document.querySelector('.score span');
@@ -10,6 +10,7 @@ let gameActive = false;
 let countdown; // keep track of countdown interval
 const finalScore = document.querySelector('.modal-body'); // Update this line
 
+// Function to start the countdown
 function startCountdown(duration) {
     let timer = duration, minutes, seconds;
     countdown = setInterval(function () {
@@ -27,8 +28,10 @@ function startCountdown(duration) {
         }
     }, 1000);
 }
+
 let scoreUpdateAttempted = false; // Flag to track if the score update was already attempted
 
+// Function to update the player's score
 function updatePlayerScore(newScore) {
     // Check if we already attempted to update the score to avoid double alerts
     if (scoreUpdateAttempted) {
@@ -113,10 +116,13 @@ function showGameOverModal() {
         updatePlayerScore(score);
     }
 }
+
+// Function to close the game over modal
 function closeGameOverModal() {
-    modal.style.display = 'none'; // Hide the game over modal
+    modal.style.display = 'none';
 }
 
+// Function to start the game
 function startGame() {
     closeGameOverModal();
     score = 0; // Reset score
@@ -166,12 +172,7 @@ function startGame() {
     gameTimer = setTimeout(showGameOverModal, 60000); // 1 minutes in milliseconds = 60000
 }
 
-// Make sure to properly handle game restarts and modal closure to avoid re-triggering end game logic
-// Remove this part from your current code
-document.querySelector('.modal-close-btn').addEventListener('click', () => {
-});
-
-
+// Event listeners for cursor movement and mouse click
 window.addEventListener('mousemove', e => {
     cursor.style.top = e.pageY + 'px';
     cursor.style.left = e.pageX + 'px';
@@ -185,10 +186,7 @@ window.addEventListener('mouseup', () => {
     cursor.classList.remove('active');
 });
 
-
-
-
-// -------------------------------------- WHACK A MOLE POP UP INSTRUCTIONS ----------------------------------------------
+// WHACK A MOLE POP UP INSTRUCTIONS
 window.addEventListener('DOMContentLoaded', (event) => {
     // Assuming the game instructions modal has a unique ID 'gameInstructionsModal'
     const gameInstructionsModal = document.getElementById('gameInstructionsModal');
@@ -224,12 +222,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
   });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    // Test the game instructions modal independently
-    openGameInstructions();
-  });
-  
-  function openGameInstructions() {
+// Function to open the game instructions modal
+function openGameInstructions() {
     console.log('openGameInstructions called'); // This should appear in the console
     const gameInstructionsModal = document.getElementById('gameInstructionsModal');
     if (gameInstructionsModal) {
@@ -237,16 +231,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     } else {
         console.error('Game instructions modal not found');
     }
-  }
-  
-    // Modify this function to start the game when the instructions modal is closed
-    function closeGameInstructions() {
-        const gameInstructionsModal = document.getElementById('gameInstructionsModal');
-        if (gameInstructionsModal) {
-            gameInstructionsModal.style.display = 'none';
-            startGame(); // Start the game when the instructions are closed
-        }
-    }
+}
 
-  
+// Function to start the game when the instructions modal is closed
+function closeGameInstructions() {
+    const gameInstructionsModal = document.getElementById('gameInstructionsModal');
+    if (gameInstructionsModal) {
+        gameInstructionsModal.style.display = 'none';
+        startGame(); // Start the game when the instructions are closed
+    }
+}
 

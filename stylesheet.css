@@ -732,12 +732,25 @@ cursor: pointer;
   background: black;
   color: white;
   margin-bottom: 0px;
+  top:0;
+  z-index: 10;
+  position: sticky;
 }
 
 .cart-sidebar-header h2{
   font-size: 50px;
   text-align: center;
   margin-top: 20px;
+}
+.cart-sidebar-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  /* Other styles */
+}
+#checkoutButton {
+  width: 100%; /* to stretch across the sidebar */
+  /* Other styles */
 }
 
 
@@ -761,6 +774,10 @@ cursor: pointer;
   justify-content: space-between; /* Distribute space between children */
   margin-bottom: 1em;
   border-bottom: 1px solid #ccc;
+}
+#cartItemsContainer {
+  /* Other styles */
+  padding-bottom: 70px; /* at least equal to or more than the footer's height */
 }
 
 

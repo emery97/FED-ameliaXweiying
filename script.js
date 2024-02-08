@@ -29,6 +29,7 @@ if (slideshowContainer) {
         dots[slideIndex-1].className += " active";
     }
 }
+
 // SIGN UP FOR NEWS LETTER
 // Function to show the popup
 
