@@ -84,8 +84,10 @@
                   </div>
               </div>
               <a href="login2.html" class="icon-link"><i class="fas fa-user"></i></a>
-              <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i></a>
-              <a href="all-games.html" class="icon-link"><i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i></a>
+              <a href="javascript:void(0)" class="icon-cart" onclick="toggleCartSidebar()">
+                <i class="fas fa-shopping-basket"></i>
+              </a>
+            <a href="all-games.html" class="icon-link"><i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i></a>
           </div>
       </div>
       
@@ -187,7 +189,7 @@
                         <div class="color-option" style="background-color: #556492;"></div>
                         <div class="color-option" style="background-color: #022c09;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Cheese & Crackers" data-price="48.00" onclick="addToCart('Cheese & Crackers', 48.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Cheese & Crackers', 48.00, 'image/bottoms/denim-skirts/product.png'); return false;">Add to Cart</a>
                 </div>
                 </div>
 
@@ -210,7 +212,7 @@
                     <div class="color-option" style="background-color: #fbec5d;"></div>
                     <div class="color-option" style="background-color: #fbab60;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Dispies Daisies" data-price="28.00" onclick="addToCart('Dispies Daisies', 28.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Cheese & Crackers', 48.00, 'image/bottoms/denim-skirts/product.png'); return false;">Add to Cart</a>
                 </div>
                 </div>
 
@@ -233,7 +235,7 @@
                     <div class="color-option" style="background-color: #c4aead;"></div>
                     <div class="color-option" style="background-color: #5f9ea0;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Cotton" data-price="98.00" onclick="addToCart('Cotton', 98.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Cheese & Crackers', 48.00, 'image/bottoms/denim-skirts/product.png'); return false;">Add to Cart</a>
                 </div>
                 </div>
                 <!-- Product 4 -->
@@ -255,7 +257,7 @@
                     <div class="color-option" style="background-color: #8e3a59;"></div>
                     <div class="color-option" style="background-color: #e7accf;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Lucky Charms" data-price="67.00" onclick="addToCart('Lucky Charms', 67.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Cheese & Crackers', 48.00, 'image/bottoms/denim-skirts/product.png'); return false;">Add to Cart</a>
                 </div>
             </div>
         </div>
@@ -281,7 +283,7 @@
                         <div class="color-option" style="background-color: #fbec5d;"></div>
                         <div class="color-option" style="background-color: #fbab60;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="SpiderMen" data-price="108.00" onclick="addToCart('SpiderMen', 108.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Cheese & Crackers', 48.00, 'image/bottoms/denim-skirts/product.png'); return false;">Add to Cart</a>
                 </div>
                 </div>
 
@@ -304,7 +306,7 @@
                         <div class="color-option" style="background-color: #8e3a59;"></div>
                         <div class="color-option" style="background-color: #e7accf;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Welcome To Your Nightmare" data-price="89.00" onclick="addToCart('Welcome To Your Nightmare', 89.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Cheese & Crackers', 48.00, 'image/bottoms/denim-skirts/product.png'); return false;">Add to Cart</a>
                 </div>
                 </div>
 
@@ -327,7 +329,7 @@
                         <div class="color-option" style="background-color: #000080;"></div>
                         <div class="color-option" style="background-color: #800000;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Cheers Without Tears" data-price="98.00" onclick="addToCart('Cheers Without Tears', 98.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Cheese & Crackers', 48.00, 'image/bottoms/denim-skirts/product.png'); return false;">Add to Cart</a>
                 </div>
                 </div>
                 <!-- Product 4 -->
@@ -349,12 +351,29 @@
                         <div class="color-option" style="background-color: #c4aead;"></div>
                         <div class="color-option" style="background-color: #5f9ea0;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Lissy Dizz" data-price="100.00" onclick="addToCart('Lissy Dizz', 100.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Cheese & Crackers', 48.00, 'image/bottoms/denim-skirts/product.png'); return false;">Add to Cart</a>
                 </div>
             </div>
         </div>
-
-
+        <!-- Cart Sidebar -->
+        <div id="cartSidebar" class="cart-sidebar">
+            <div class="cart-sidebar-header">
+                <h2>MY CART</h2>
+                <button onclick="toggleCartSidebar()">&times;</button>
+            </div>
+            <!-- Somewhere in your sidebar -->
+            <div id="cartItemsContainer">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div id="totalPrice">
+                <!-- Total price will be updated here -->
+            </div>
+            <div class="cart-sidebar-footer">
+                <!-- Inside your sidebar -->
+                <button id="checkoutButton">Checkout</button>
+            </div>
+        </div>
+        
         <footer class="site-footer">
             <div class="footer-top">
             <hr class="footer-divider" /> <!-- for the ---- to separate footer and main stuff -->

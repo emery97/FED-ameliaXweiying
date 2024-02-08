@@ -14,6 +14,8 @@ const finalScore = document.querySelector('.modal-body'); // Update this line
 let correctAnswer = "", correctScore = askedCount = 0, totalQuestion = 10;
 let time, countdownInterval;
 let sessionToken = ''; // Add a variable for the session token
+// Existing variables from your provided code
+let scoreUpdateAttempted = false; // New variable to keep track of the score update attempt
 
 // Function to start the countdown timer
 function startCountdown() {
@@ -26,26 +28,27 @@ function startCountdown() {
 
 // Function to update the countdown timer
 function updateCountdown() {
-    const minutes = Math.floor(time / 60);
-    const seconds = (time % 60).toFixed(0).padStart(2, '0');
-
-    _countdownEl.innerHTML = `${minutes}:${seconds}`;
-
     if (time <= 0) {
-        showGameOverModal();
+        // Only update the score and show the game over modal if the time has actually run out
         clearInterval(countdownInterval);
+        if (!scoreUpdateAttempted) {
+            updatePlayerScore(correctScore);
+        }
+        showGameOverModal();
     } else {
+        const minutes = Math.floor(time / 60);
+        const seconds = (time % 60).toFixed(0).padStart(2, '0');
+        _countdownEl.innerHTML = `${minutes}:${seconds}`;
         time--;
 
-        // Check if time is less than or equal to 10
         if (time <= 10) {
             _countdownEl.style.color = 'red';
         } else {
-            // If time is greater than 10, reset the color to its default
-            _countdownEl.style.color = ''; // or set it to the original color
+            _countdownEl.style.color = '';
         }
     }
 }
+
 
 // Function to display the game over modal
 function showGameOverModal() {
@@ -78,20 +81,35 @@ async function fetchSessionToken() {
 // Asynchronous function to fetch and load a new question from an external API
 async function loadQuestion() {
     if (askedCount < totalQuestion) {
-        // Updated API URL to use session token, category, and difficulty
         const APIUrl = `https://opentdb.com/api.php?amount=1&category=26&difficulty=medium&type=multiple&token=${sessionToken}`;
-        try {
-            const result = await fetch(APIUrl);
-            const data = await result.json();
+        let attempts = 0;
+        const maxAttempts = 5; // set a max number of attempts
+        while (attempts < maxAttempts) {
+            try {
+                const result = await fetch(APIUrl);
+                const data = await result.json();
 
-            if (data.response_code === 0 && data.results.length > 0) {
-                _result.innerHTML = "";
-                showQuestion(data.results[0]);
-            } else {
-                console.error('Failed to fetch question from the trivia API.');
+                if (data.response_code === 0 && data.results.length > 0) {
+                    _result.innerHTML = "";
+                    showQuestion(data.results[0]);
+                    break; // exit the loop if successful
+                } else if (data.response_code === 4) {
+                    // Token Not Found error code from OpenTDB API
+                    await fetchSessionToken(); // refresh the session token
+                    continue; // retry the request with the new token
+                } else {
+                    console.error('Failed to fetch question from the trivia API. Response Code:', data.response_code);
+                    await new Promise(r => setTimeout(r, 5000)); // wait 5 seconds before retrying
+                }
+            } catch (error) {
+                console.error('Error fetching question:', error);
+                await new Promise(r => setTimeout(r, 5000)); // wait 5 seconds before retrying
             }
-        } catch (error) {
-            console.error('Error fetching question:', error);
+            attempts++;
+        }
+        if (attempts >= maxAttempts) {
+            showGameOverModal(); // show game over modal if max attempts reached
+            clearInterval(countdownInterval);
         }
     } else {
         showGameOverModal();
@@ -142,6 +160,8 @@ function selectOption() {
 }
 
 // Function to check the selected answer against the correct answer
+// Remove the call to `updatePlayerScore` from the `checkAnswer` function
+// because we will now only update the score at the end of the game.
 function checkAnswer() {
     _checkBtn.disabled = true;
     if (_options.querySelector('.selected')) {
@@ -187,6 +207,70 @@ function checkCount() {
 function setCount() {
     _totalQuestion.textContent = totalQuestion;
     _correctScore.textContent = correctScore;
+}
+function updatePlayerScore(newScore) {
+    // Check if we already attempted to update the score to avoid double alerts
+    if (scoreUpdateAttempted) {
+        console.log('Score update was already attempted. Skipping.');
+        return;
+    }
+
+    const userId = localStorage.getItem('userId');
+    if (!userId) {
+        console.error('User _id not found. User must be signed in to update score.');
+        alert('Your points could not be added as you do not have an account.');
+        return;
+    }
+
+    // Fetch current user data
+    const urlGet = `https://fedpairassgn-14ba.restdb.io/rest/customer/${userId}`;
+    const settingsGet = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "x-apikey": "65b334a346893806b17bde81",
+            "Cache-Control": "no-cache"
+        }
+    };
+
+    fetch(urlGet, settingsGet)
+        .then(response => response.json())
+        .then(userData => {
+            const currentScore = userData["user-points"] || 0;
+            const updatedScore = currentScore + newScore;
+            const updatedUserData = {
+                ...userData,
+                "user-points": updatedScore
+            };
+
+            const urlPut = `https://fedpairassgn-14ba.restdb.io/rest/customer/${userId}`; // Use correct URL for PUT request
+            const settingsPut = {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "x-apikey": "65b334a346893806b17bde81",
+                    "Cache-Control": "no-cache"
+                },
+                body: JSON.stringify(updatedUserData)
+            };
+
+            return fetch(urlPut, settingsPut);
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(updatedUser => {
+            console.log('Score updated successfully', updatedUser);
+            alert('Your score has been added successfully!');
+            scoreUpdateAttempted = true; // Set the flag after a successful score update
+        })
+        .catch(error => {
+            console.error('Error updating score:', error);
+            alert('There was an error adding your score.');
+        });
 }
 
 // Function to restart the quiz

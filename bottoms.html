@@ -31,10 +31,6 @@
         <div class = "promotion-bar">
             <p>FREE SHIPPING ON ORDERS OVER $50</p>
         </div>
-
-        <div class="top-left-container">
-            <span id="welcome-message"></span>
-        </div>
         <!-- RESPONSIVENESS MOBILE VER -->
         <nav role="navigation">
             <!-- Main container for hamburger menu -->
@@ -75,7 +71,7 @@
         </nav>
         <div class="top-nav">
           <a href="index.html" class="brand-name"> <h2> AMELIAXWEIYING </h2> </a>
-          <div class="top-nav-icons">
+            <div class="top-nav-icons">
               <div class="search-container">
                   <div class="search-box">
                       <input type="text" class="search-input" placeholder="SEARCH">
@@ -83,47 +79,45 @@
                         <i class="fas fa-search" style="font-size: 22px; background: none; border: none; padding: 5px 10px; cursor: pointer; outline: none; background-color: transparent; color: #000000;"></i>
                       </button>
                   </div>
-              </div>
-              <a href="login2.html" class="icon-link"><i class="fas fa-user"></i></a>
-              <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i></a>
-              <a href="all-games.html" class="icon-link"><i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i></a>
-          </div>
-      </div>
+                </div>
+                <a href="login2.html" class="icon-link"><i class="fas fa-user"></i></a>
+                <div class="top-left-container">
+                    <span id="welcome-message"></span>
+                </div>
+                <a href="javascript:void(0)" class="icon-cart" onclick="toggleCartSidebar()">
+                    <i class="fas fa-shopping-basket"></i>
+                </a>
+                <a href="all-games.html" class="icon-link"><i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i></a>
+            </div>
+        </div>
       
       
 
         <div class="navbar">
             <a href="new-products.html">NEW</a>
             <div class="dropdown">
-                <button class="dropbtn">
-                    TOPS
-                </button>
+                <button class="dropbtn">TOPS</button>
                 <div class="dropdown-content">
                     <a href="croptop.html">Crop Tops</a>
                     <a href="strapless&tank.html">Tanks & Strapless Tops</a>
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn">
-                    DRESSES
-                </button>
+                <button class="dropbtn">DRESSES</button>
+
                 <div class="dropdown-content">
                     <a href="midi-dress.html">Midi Dresses</a>
                     <a href="strapless-dress.html">Strapless Dresses</a>
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn">
-                    SKIRTS
-                </button>
+                <button class="dropbtn">SKIRTS</button>
                 <div class="dropdown-content">
                     <a href="denim-skirts.html">Denim Skirts</a>
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn">
-                    JEANS
-                </button>
+                <button class="dropbtn">JEANS</button>
                 <div class="dropdown-content">
                     <a href="cargo-jeans.html">Cargo Jeans</a>
                 </div>
@@ -179,7 +173,7 @@
                 </div>
                 <button class="arrow right-arrow" onclick="toggleImage(this.parentNode)">&#10095;</button>
                 <div class="product-info">
-                    <div class="product-name">Something Happens</div>
+                    <div class="product-name">Something</div>
                     <div class="product-price">$48.00</div>
                     <div class = "product-size"> XS, S, M, L, XL </div>
                     <div class="color-options">
@@ -188,7 +182,7 @@
                         <div class="color-option" style="background-color: #556492;"></div>
                         <div class="color-option" style="background-color: #022c09;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Something Happens" data-price="48.00" onclick="addToCart('Something Happens', 48.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Something', 48.00, 'image/bottoms/bottom/product.png'); return false;">Add to Cart</a>                </div>
                 </div>
                 </div>
 
@@ -211,7 +205,7 @@
                     <div class="color-option" style="background-color: #fbec5d;"></div>
                     <div class="color-option" style="background-color: #fbab60;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Rule The World" data-price="28.00" onclick="addToCart('Rule The World', 28.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Something', 48.00, 'image/bottoms/bottom/product.png'); return false;">Add to Cart</a>                </div>
                 </div>
                 </div>
 
@@ -234,7 +228,7 @@
                     <div class="color-option" style="background-color: #c4aead;"></div>
                     <div class="color-option" style="background-color: #5f9ea0;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="IonKnow" data-price="98.00" onclick="addToCart('IonKnow', 98.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Something', 48.00, 'image/bottoms/bottom/product.png'); return false;">Add to Cart</a>                </div>
                 </div>
                 </div>
                 <!-- Product 4 -->
@@ -256,7 +250,7 @@
                     <div class="color-option" style="background-color: #8e3a59;"></div>
                     <div class="color-option" style="background-color: #e7accf;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Tinkle Winkle" data-price="67.00" onclick="addToCart('Tinkle Winkle', 67.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Something', 48.00, 'image/bottoms/bottom/product.png'); return false;">Add to Cart</a>                </div>
                 </div>
             </div>
         </div>
@@ -282,7 +276,7 @@
                         <div class="color-option" style="background-color: #fbec5d;"></div>
                         <div class="color-option" style="background-color: #fbab60;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="McSpicy" data-price="108.00" onclick="addToCart('McSpicy', 108.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Something', 48.00, 'image/bottoms/bottom/product.png'); return false;">Add to Cart</a>                </div>
                 </div>
                 </div>
 
@@ -305,7 +299,7 @@
                         <div class="color-option" style="background-color: #8e3a59;"></div>
                         <div class="color-option" style="background-color: #e7accf;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="5W1H" data-price="89.00" onclick="addToCart('5W1H', 89.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Something', 48.00, 'image/bottoms/bottom/product.png'); return false;">Add to Cart</a>                </div>
                 </div>
                 </div>
 
@@ -328,7 +322,7 @@
                         <div class="color-option" style="background-color: #000080;"></div>
                         <div class="color-option" style="background-color: #800000;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Sunkissed Skin" data-price="98.00" onclick="addToCart('Sunkissed Skin', 98.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Something', 48.00, 'image/bottoms/bottom/product.png'); return false;">Add to Cart</a>                </div>
                 </div>
                 </div>
                 <!-- Product 4 -->
@@ -350,11 +344,26 @@
                         <div class="color-option" style="background-color: #c4aead;"></div>
                         <div class="color-option" style="background-color: #5f9ea0;"></div>
                     </div>
-                    <a href="cart.html" class="add-to-cart-btn" data-name="Dramarama" data-price="100.00" onclick="addToCart('Dramarama', 100.00)">Add to Cart</a>
+                    <a href="#" class="add-to-cart-btn" onclick="addToCart('Something', 48.00, 'image/bottoms/bottom/product.png'); return false;">Add to Cart</a>                </div>
                 </div>
             </div>
         </div>
-
+        <!-- Cart Sidebar -->
+        <div id="cartSidebar" class="cart-sidebar">
+            <div class="cart-sidebar-header">
+                <h2>MY CART</h2>
+                <button onclick="toggleCartSidebar()">&times;</button>
+            </div>
+            <div id="cartItemsContainer">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div id="totalPrice">
+                <!-- Total price will be updated here -->
+            </div>
+            <div class="cart-sidebar-footer">
+                <button id="checkoutButton">Checkout</button>
+            </div>
+        </div>
 
         <footer class="site-footer">
             <div class="footer-top">
@@ -449,8 +458,9 @@
             </div>
         </footer>
         
-    <script src="login-api.js"></script>
     <script src="script.js"></script>
+    <script src="newsletter-api.js"></script>
+    <script src="login-api.js"></script>
     </div>
 </body>
 </html>

@@ -29,39 +29,11 @@ if (slideshowContainer) {
         dots[slideIndex-1].className += " active";
     }
 }
-
-
-//Home page pop up
-// Function to open the popup
-//function openPopup() {
- // var popup = document.getElementById("popup");
- // popup.style.display = "block";
- // document.body.classList.add('body-no-scroll'); // Disable scrolling
-//}
-
-// Function to close the popup
-//function closePopup() {
- // var popup = document.getElementById("popup");
-//  popup.style.display = "none";
- // document.body.classList.remove('body-no-scroll'); // Re-enable scrolling
-//}
-
-// When the user clicks on <span> (x), close the popup
-//var close = document.getElementsByClassName("close")[0];
-//close.onclick = function() {
- // closePopup();
-//}
-
-//// Open the popup after 3 seconds (3000 milliseconds)
-//window.onload = function() {
- // setTimeout(openPopup, 3000);
-//}
-
-
 // SIGN UP FOR NEWS LETTER
 // Function to show the popup
 
 // Check if the popup-overlay element exists before running the functions related to the popup
+
 const popupOverlay = document.getElementById('popup-overlay');
 if (popupOverlay) {
     // Function to show the popup
@@ -144,3 +116,87 @@ function toggleImage(productItem) {
     }
   }
 }
+// ******************** ADD TO CART *********************************
+
+// Try to load the cart from localStorage when the script loads or is refreshed
+var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function toggleCartSidebar(forceOpen) {
+  var sidebar = document.getElementById('cartSidebar');
+  // Update the cart display whenever the cart is toggled
+  updateCartDisplay(); // This will refresh the cart items from localStorage
+
+  // If forceOpen is true, ensure the sidebar is open; otherwise, toggle normally
+  if (forceOpen === true && !sidebar.classList.contains('open')) {
+    sidebar.classList.add('open');
+  } else if (forceOpen !== true) {
+    sidebar.classList.toggle('open');
+  }
+}
+
+
+function addToCart(name, price, imageSrc) {
+  var existingProduct = cart.find(product => product.name === name);
+  if (existingProduct) {
+    existingProduct.quantity += 1;
+  } else {
+    cart.push({ name: name, price: price, quantity: 1, image: imageSrc });
+  }
+
+  // Save the updated cart back to localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  // Update the cart display without toggling the sidebar
+  updateCartDisplay();
+  // Force the sidebar to open without toggling
+  toggleCartSidebar(true); // Pass true to force the sidebar to stay open
+}
+
+function updateCartDisplay() {
+  var cartItemsContainer = document.getElementById('cartItemsContainer');
+  var totalPrice = 0;
+  cartItemsContainer.innerHTML = ''; // Clear the container
+
+  cart.forEach(function(item, index) {
+    totalPrice += item.price * item.quantity;
+    var cartItemDiv = document.createElement('div');
+    cartItemDiv.className = 'cart-item';
+    cartItemDiv.innerHTML = `
+      <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+      <div class="cart-item-details">
+        <h3>${item.name}</h3>
+        <p>$${item.price} x <span id="quantity_${index}">${item.quantity}</span></p>
+      </div>
+      <div class="cart-item-controls">
+        <button onclick="changeQuantity(${index}, -1)">-</button>
+        <span class="cart-item-quantity">${item.quantity}</span>
+        <button onclick="changeQuantity(${index}, 1)">+</button>
+      </div>
+    `;
+    cartItemsContainer.appendChild(cartItemDiv);
+  });
+
+  // Update the total price
+  var totalPriceElement = document.getElementById('totalPrice');
+  totalPriceElement.textContent = 'Total Price: $' + totalPrice.toFixed(2);
+}
+
+function changeQuantity(index, delta) {
+  var item = cart[index];
+  if (!item) {
+    return;
+  }
+
+  item.quantity += delta;
+
+  // Remove item from cart if quantity is 0
+  if (item.quantity <= 0) {
+    cart.splice(index, 1);
+  }
+
+  // Save the updated cart back to localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  updateCartDisplay();
+}
+

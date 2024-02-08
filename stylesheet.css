@@ -23,14 +23,12 @@
 }
 /*WELCOME USER STYLE*/
 .top-left-container {
-  font-family: 'Open Sans', sans-serif;
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 50px;
-  background-color: pink; /* or any other color that fits your design */
-  color: #000;
+  margin-top: 35px;
+  margin-left: 60px;
+  color: #707070;
   font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
 }
 .top-nav {
 display: flex;
@@ -38,21 +36,27 @@ justify-content: space-between;
 color: black;
 height: 350px;
 }
-
+.icon-cart {
+  text-decoration: none;
+  color: #000;
+  font-size: 30px; /* Adjust size as needed */
+  margin: 0 10px; /* Add space between icons */
+}
 .brand-name {
-font-family: 'Roboto Condensed', sans-serif;
-font-size: 55px;
-margin-top: 0px;
-color: #000;
-text-decoration: none; /* i dont want it to be underlined */
-margin-left: 550px;
-}
-
-.top-nav-icons{
-display: flex;
-align-items: center;
-margin-top: -250px;  /*Shift the icons up*/
-}
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 55px;
+  margin-top: 10px;
+  color: #000;
+  text-decoration: none; /* i dont want it to be underlined */
+  margin-left: 550px;
+  }
+  
+  .top-nav-icons{
+  display: flex;
+  align-items: center;
+  margin-top: -220px;  /*Shift the icons up*/
+  
+  }
 .search-container {
 position: relative;
 }
@@ -93,7 +97,7 @@ color: #555; /* Change color on hover */
   background-color: white;
   display: flex;
   justify-content: center; /* Center-align items */
-  margin-top: -240px;
+  margin-top: -230px;
 }
 
 /* Links inside the navbar */
@@ -427,7 +431,7 @@ flex-direction: column; /* Stack children vertically */
 }
 
 .popup-text h2 {
-font-size: 32px; /* Large font size for the heading */
+font-size: 40px; /* Large font size for the heading */
 word-wrap: break-word;
 }
 
@@ -677,18 +681,160 @@ cursor: pointer;
 }
 
 .add-to-cart-btn {
-padding: 11px 5px;
-background-color: #000;
-color: #fff;
-border: none;
-cursor: pointer;
-margin-top: 15px; /* Increase this value to push the button down */
-margin-bottom: 10px; 
-border-radius: 5px; 
-font-size: 18px;
-text-decoration: none;
-display: block; 
+  padding: 11px 100px;
+  background-color: #000; /* or your preferred color */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px; /* Increase this value to push the button down */
+  margin-bottom: 10px; /* Adjust this as needed */
+  border-radius: 5px; /* Optional: if you want rounded corners */
+  font-size: 18px;
+  text-decoration: none;
+  display: block; /* This will make it a block element */
 }
+/* INDEX PAGE: ADD TO CART FUNCTION */
+.cart-sidebar {
+  position: fixed;
+  right: -400px; /* Hide by default */
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s;
+  z-index: 1000;
+  display: flex; /* Use flex layout */
+  flex-direction: column; /* Arrange children vertically */
+}
+
+/* Adjust the container of the cart items to make it scrollable */
+#cartItemsContainer {
+  flex-grow: 1; /* Allows this element to expand to fill available space */
+  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+  padding: 1em; /* Provide some spacing around items */
+}
+
+.cart-sidebar-footer {
+  position: sticky; /* Use sticky to keep it at the bottom */
+  bottom: 0px;
+  background: white; /* Match the sidebar background */
+}
+
+.cart-sidebar.open {
+  right: 0; /* Show sidebar */
+}
+
+.cart-sidebar-header {
+  padding: 1em;
+  background: black;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.cart-sidebar-header h2{
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.cart-sidebar-header button {
+  float: right;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.cart-items {
+  padding: 1em;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex; /* Establish flex container */
+  align-items: center; /* Align children vertically */
+  justify-content: space-between; /* Distribute space between children */
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.product-info {
+  display: flex; /* Establish flex container */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children */
+  align-items: center; /* Center children horizontally */
+  flex-grow: 1; /* Allow this item to grow to fill space */
+  text-align: center; /* Center the text */
+  font-size: 40px;
+}
+
+.product-info h4, .product-info p {
+  margin: 0; /* Remove default margin */
+}
+
+.quantity-control {
+  display: flex; /* Establish flex container */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children */
+}
+
+
+#checkoutButton {
+  width: 100%;
+  padding: 28px;
+  background: black;
+  color: white;
+  font-size: 23px;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-item-image {
+  width: 130px; /* or the size you want */
+  height: auto;
+  margin-right: 10px; /* Add some space between the image and the text */
+}
+
+.product-info button{
+  padding: 11px 5px;
+  background-color: #000; /* or your preferred color */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px; /* Increase this value to push the button down */
+  margin-bottom: 10px; /* Adjust this as needed */
+  border-radius: 5px; /* Optional: if you want rounded corners */
+  font-size: 30px;
+  text-decoration: none;
+  display: block; /* This will make it a block element */
+}
+
+.cart-item-controls button {
+  font-size: 20px; /* You can adjust the font size as needed */
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  margin: 0 4px; /* Add some margin for spacing */
+  
+}
+
+.cart-item-details h3 {
+  font-size: 20px; /* You can adjust the font size as needed */
+}
+
+.cart-item-details p {
+  font-size: 20px; /* You can adjust the font size as needed */
+}
+
+#totalPrice {
+  text-align: center;
+  font-size: 25px; /* You can adjust the font size as needed */
+}
+
 /* INDEX PAGE: PROMO CONTAINER*/
 .promo-container {
   display: flex;
@@ -983,6 +1129,20 @@ cursor: pointer;
 background-color: #003d82;
 }
 
+.log-out-button{
+  background-color: cadetblue;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.sign-in-button:hover,
+.sign-up-button:hover,
+.log-out-button {
+background-color: #003d82;
+}
 /* ALL GAMES PAGE */
 #our-games{
   text-align: center;
@@ -1018,14 +1178,17 @@ margin-bottom: 40px; /* Space below the header */
 }
 
 .rewards-button {
-  padding: 10px 60px; /* Padding inside the buttons */
+  padding: 15px 100px; /* Padding top increased to shift button up */
   border: none;
   background-color: black; /* Button background color */
   color: white; /* Button text color */
-  font-size: 1em; /* Text size inside buttons */
+  font-size: 25px; /* Text size inside buttons */
   cursor: pointer; /* Changes the cursor to a pointer on hover */
   text-decoration: none;
+  margin-bottom: 50px;
+  text-align: center; /* Center align text */
 }
+
 
 .rewards-button:hover {
   background-color: grey; /* Hover effect for the button */
