@@ -18,6 +18,9 @@ Stay connected with *ameliaXweiying* by subscribing to our monthly newsletter. T
 
 Feel free to join us on this exciting journey at *ameliaXweiying*, where style meets innovation and every visit promises a unique and delightful experience.
 
+## Target Audience 
+At *ameliaxweiying*, we cater to a diverse audience of online shoppers seeking not just products, but an immersive and engaging experience. Our website is designed to appeal to individuals who appreciate style, innovation, and a personalized approach to their shopping journey. Whether you're a fashion enthusiast eager to explore the latest trends or a discerning shopper looking for exclusive deals and rewards, ameliaXweiying welcomes you into our vibrant online community. We cater to those who value quality, creativity, and convenience, offering a range of products and features tailored to meet the diverse needs and preferences of our visitors. From trendsetting millennials to seasoned shoppers, our website provides something for everyone, promising a unique and delightful experience with every visit.
+
 ## Design Process
 
 Our design philosophy draws inspiration from the aesthetics of Princess Polly, a renowned Australian clothing brand known for its chic and stylish online presence. Embracing the elegance of their black and white themed website, we've infused this sophisticated palette into our own site, deriving color accents from product images. This deliberate choice ensures that our customers' attention is directed towards our showcased products, creating a visually pleasing and cohesive user experience.
@@ -108,42 +111,6 @@ In a delightful contrast to our bold aesthetic, we introduce cute mini-games. Th
   1. [Whack A Mole](https://i.pinimg.com/564x/42/5b/18/425b18eb18f33f5a3a35da83db54291c.jpg)
   2. [Dinosaur Game](https://i.pinimg.com/564x/fa/9a/ec/fa9aec8b771312353076b46b66ac4e1a.jpg)
   3. [Quiz](https://i.pinimg.com/564x/2e/35/29/2e352971e6ef5992a68f8759889e6f55.jpg)
-8. Crop Tops:
-   1. Fearless
-   2. Capture it
-      1. [Picture 1](https://us.princesspolly.com/cdn/shop/products/LoveBitesBabyTeeRed_sullivang_-1.jpg?v=1647840319&width=1800)
-      2. [Picture 2](https://us.princesspolly.com/cdn/shop/products/1-modelinfo-chloe_e-us2_34e0b851-a9a1-4540-bd97-4af747db0e14.jpg?v=1647840319&width=654)
-   3. Lushy Lush
-      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-lily-us4_6ca3c4a2-8b3b-446d-90f1-9a24622a75b9.jpg?v=1683687142&width=1800)
-      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/2-modelinfo-Lily-us4_6e262834-eb85-48e6-b794-7d43a5ffbf63.jpg?v=1683687142&width=654)
-   4. Loco Psycho
-      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-nat-us2_031b1e9f-d881-40d0-b0e1-1e48501532e2.jpg?v=1699836025&width=1800)
-      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-nat-us2_63161732-ddd8-4e75-9916-81f451e8df3a.jpg?v=1699836025&width=1800)
-   5. Wishy Wane
-      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-eva-us2_cb3a835a-4701-4ef9-a304-e84f6de6a044.jpg?v=1687484312&width=1800)
-      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-eva-us2_03a623c4-ec2d-407a-81aa-ed45d3442c07.jpg?v=1687484312&width=1800)
-   6. Cinnamon Moonlight
-      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-olivia-us2_e58c8d8b-fbbe-4193-a7af-5220dfc526af.jpg?v=1695941092&width=1800)
-      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-olivia-us2_367c017a-4a4f-40c4-9e54-47cd8c39d07e.jpg?v=1695941092&width=1800)
-   7. August
-      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-sneha-us2_2732b371-eb1d-4080-a8dd-5612f24d9c41.jpg?v=1696803959&width=1800)
-      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-sneha-us2_cc75bbea-1b5b-43ae-982b-299cb86d4ce8.jpg?v=1696803959&width=1800)
-   8. Fresh Flash 
-      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-bianca-us4_1b7c7ad6-ed48-4fad-8e35-2f28c6a192c7.jpg?v=1697432212&width=1800)
-      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-bianca-us4_15400a2e-4ff9-490a-b710-3acec419bb4a.jpg?v=1697432212&width=1800)
-9. Strapless & Tank Tops
-   1. Wanda
-      1. [Picture 1](https://us.princesspolly.com/cdn/shop/products/0-modelinfo-elise-us2_f7cf112d-9ecd-4304-8552-821cfd91a280.jpg?v=1694456711&width=1800)
-      2. [Picture 2](https://us.princesspolly.com/cdn/shop/products/1-modelinfo-elise-us2_f217363a-4e0d-4f38-8967-5167cad97193.jpg?v=1694456711&width=7674)
-   2. Penguin Disaster
-      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-kiana-us2_4db3077b-c4f8-42d6-8c1c-60255bc093cd.jpg?v=1706510673&width=1800)
-      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/3-modelinfo-kiana-us2_36ee69f5-a96c-4db0-a3b6-d32632762621.jpg?v=1706510673&width=654)
-   3. Alixa Melissa
-      1. [Picture 1](https://us.princesspolly.com/cdn/shop/files/1-modelinfo-Nat-us2_edc2c1fb-e15f-466e-aac1-037593505a84.jpg?v=1688015420&width=1800)
-      2. [Picture 2](https://us.princesspolly.com/cdn/shop/files/0-modelinfo-nat-us2_6b46c78a-7cba-4250-8436-cdcb68a59eda.jpg?v=1688015420&width=1800)
-   4. OMG!
-      1. [Picture 1](https://us.princesspolly.com/cdn/shop/products/0-modelinfo-margaret-us2_jpg_3993971e-5b63-4f0b-bf5b-e20bb7298523.jpg?v=1657499338&width=1800)
-      2. [Picture 2](https://us.princesspolly.com/cdn/shop/products/1-modelinfo-margaret-us2_d8f492a3-fb1b-4721-8d87-38198bf347bd.jpg?v=1657499338&width=1800)
 10. All Games
     3. [Spped Typing Game](https://i.pinimg.com/564x/61/29/40/61294096066dcecd6f389b2d13703e2e.jpg)
         
@@ -168,6 +135,20 @@ In a delightful contrast to our bold aesthetic, we introduce cute mini-games. Th
 #### Crop Top Page
 1. https://us.princesspolly.com/cdn/shop/products/0-modelinfo-fiona-us0_e539ae00-4b1d-47eb-91d0-3802f97d2a93.jpg?v=1693515577&width=1800
 2. https://us.princesspolly.com/cdn/shop/products/1-modelinfo-fiona-us0_d30bd2a0-3e94-474f-b894-351e36757785.jpg?v=1693515577&width=1800
+3. https://us.princesspolly.com/cdn/shop/products/LoveBitesBabyTeeRed_sullivang_-1.jpg?v=1647840319&width=1800
+4. https://us.princesspolly.com/cdn/shop/products/1-modelinfo-chloe_e-us2_34e0b851-a9a1-4540-bd97-4af747db0e14.jpg?v=1647840319&width=654
+5. https://us.princesspolly.com/cdn/shop/files/0-modelinfo-lily-us4_6ca3c4a2-8b3b-446d-90f1-9a24622a75b9.jpg?v=1683687142&width=1800
+6. https://us.princesspolly.com/cdn/shop/files/2-modelinfo-Lily-us4_6e262834-eb85-48e6-b794-7d43a5ffbf63.jpg?v=1683687142&width=654
+7. https://us.princesspolly.com/cdn/shop/files/0-modelinfo-nat-us2_031b1e9f-d881-40d0-b0e1-1e48501532e2.jpg?v=1699836025&width=1800
+8. https://us.princesspolly.com/cdn/shop/files/1-modelinfo-nat-us2_63161732-ddd8-4e75-9916-81f451e8df3a.jpg?v=1699836025&width=1800
+9. https://us.princesspolly.com/cdn/shop/files/0-modelinfo-eva-us2_cb3a835a-4701-4ef9-a304-e84f6de6a044.jpg?v=1687484312&width=1800
+10. https://us.princesspolly.com/cdn/shop/files/1-modelinfo-eva-us2_03a623c4-ec2d-407a-81aa-ed45d3442c07.jpg?v=1687484312&width=1800
+11. https://us.princesspolly.com/cdn/shop/files/0-modelinfo-olivia-us2_e58c8d8b-fbbe-4193-a7af-5220dfc526af.jpg?v=1695941092&width=1800
+12. https://us.princesspolly.com/cdn/shop/files/1-modelinfo-olivia-us2_367c017a-4a4f-40c4-9e54-47cd8c39d07e.jpg?v=1695941092&width=1800
+13. https://us.princesspolly.com/cdn/shop/files/0-modelinfo-sneha-us2_2732b371-eb1d-4080-a8dd-5612f24d9c41.jpg?v=1696803959&width=1800
+14. https://us.princesspolly.com/cdn/shop/files/1-modelinfo-sneha-us2_cc75bbea-1b5b-43ae-982b-299cb86d4ce8.jpg?v=1696803959&width=1800
+15. https://us.princesspolly.com/cdn/shop/files/0-modelinfo-bianca-us4_1b7c7ad6-ed48-4fad-8e35-2f28c6a192c7.jpg?v=1697432212&width=1800
+16. https://us.princesspolly.com/cdn/shop/files/1-modelinfo-bianca-us4_15400a2e-4ff9-490a-b710-3acec419bb4a.jpg?v=1697432212&width=1800
 #### Strapless & Tank Tops Page
 1. https://us.princesspolly.com/cdn/shop/products/0-modelinfo-margaret-us2_jpg_3993971e-5b63-4f0b-bf5b-e20bb7298523.jpg?v=1657499338&width=1800
 2. https://us.princesspolly.com/cdn/shop/products/1-modelinfo-margaret-us2_d8f492a3-fb1b-4721-8d87-38198bf347bd.jpg?v=1657499338&width=1800
@@ -180,6 +161,11 @@ In a delightful contrast to our bold aesthetic, we introduce cute mini-games. Th
 9. https://us.princesspolly.com/cdn/shop/products/5-modelinfo-Elise-us2_29a52b07-e531-444e-aeee-9a0deb7d8a4c.jpg?v=1679940636&width=1800
 10. https://us.princesspolly.com/cdn/shop/products/0-modelinfo-Elise-us2_f6df3d61-8f54-4f3e-8758-d6beb7986c9c.jpg?v=1679940636&width=1800
 11. https://us.princesspolly.com/cdn/shop/files/3-modelinfo-Nat-us2_1def2791-9e49-453e-bfe8-d709849edbfa.jpg?v=1688015420&width=1800
+12. https://us.princesspolly.com/cdn/shop/products/0-modelinfo-elise-us2_f7cf112d-9ecd-4304-8552-821cfd91a280.jpg?v=1694456711&width=1800
+13. https://us.princesspolly.com/cdn/shop/products/1-modelinfo-elise-us2_f217363a-4e0d-4f38-8967-5167cad97193.jpg?v=1694456711&width=7674
+14. https://us.princesspolly.com/cdn/shop/files/0-modelinfo-kiana-us2_4db3077b-c4f8-42d6-8c1c-60255bc093cd.jpg?v=1706510673&width=1800
+15. https://us.princesspolly.com/cdn/shop/files/3-modelinfo-kiana-us2_36ee69f5-a96c-4db0-a3b6-d32632762621.jpg?v=1706510673&width=654
+16. https://us.princesspolly.com/cdn/shop/products/0-modelinfo-margaret-us2_jpg_3993971e-5b63-4f0b-bf5b-e20bb7298523.jpg?v=1657499338&width=1800
 #### Dress Page
 1. https://us.princesspolly.com/cdn/shop/products/1-modelinfo-eyes-us2_d3cacbbf-7746-4429-91a1-6581b5f6a6c4.jpg?v=1662698705&width=1800
 2. https://us.princesspolly.com/cdn/shop/products/3-modelinfo-eyes-us2_e00bd5d0-faaf-404b-a454-a1a5a99f8daa.jpg?v=1662698706&width=1800
@@ -266,6 +252,32 @@ In a delightful contrast to our bold aesthetic, we introduce cute mini-games. Th
 14. https://us.princesspolly.com/cdn/shop/files/4-modelinfo-saskia-us2_d2e938fc-8ccf-4f7c-a1b2-d9fea5ae5b06.jpg?v=1687326750&width=654
 15. https://us.princesspolly.com/cdn/shop/files/1-modelinfo-hailey-us4_204b4f15-a49d-4d6d-aacf-d9b349d4810e.jpg?v=1698727673&width=654
 16. https://us.princesspolly.com/cdn/shop/files/CHERRY-KISS-TANK-TOP-WHITE-3.jpg?v=1698727673&width=654
+#### Cargo Jeans Page
+1. https://us.princesspolly.com/cdn/shop/files/1-modelinfo-sneha-us2_d268d267-aa44-492d-951f-a0a926ca914b.jpg?v=1692240899&width=1800
+2. https://us.princesspolly.com/cdn/shop/files/2-modelinfo-sneha-us2_08047753-c259-490c-b395-ca1e6120bf06.jpg?v=1692240899&width=1800
+3. https://us.princesspolly.com/cdn/shop/products/1-modelinfo-kristen-us2_dd10840b-b920-4163-8193-7145ef56e312.jpg?v=1681360328&width=654
+4. https://us.princesspolly.com/cdn/shop/products/2-modelinfo-kristen-us2_c7076c0e-cf9f-46ec-a24f-986abf57c209.jpg?v=1681360328&width=1800
+5. https://us.princesspolly.com/cdn/shop/products/1-modelinfo-Lexi-us2_c06e1b88-ef52-4281-bdeb-69b6695c26e5.jpg?v=1699913663&width=654
+6. https://us.princesspolly.com/cdn/shop/products/2-modelinfo-Lexi-us2_b8f01550-5fd8-4320-b206-bb202a10c2f5.jpg?v=1699913663&width=1800
+7. https://us.princesspolly.com/cdn/shop/products/1-modelinfo-cathlin-us2_3e5d8093-d07a-4d30-9e77-075098b11e29.jpg?v=1699913884&width=654
+8. https://us.princesspolly.com/cdn/shop/products/2-modelinfo-cathlin-us2_27ca769c-3277-43e6-94c7-930833b682a4.jpg?v=1693266057&width=654
+9. https://us.princesspolly.com/cdn/shop/files/0-modelinfo-olivia-us2_7e1fe6f4-18f0-41aa-84e1-cb294b41ace7.jpg?v=1704434356&width=1800
+10. https://us.princesspolly.com/cdn/shop/files/1-modelinfo-olivia-us2_db7e2a79-c0db-406a-a4b1-b5304426e3e3.jpg?v=1704434356&width=1800
+11. https://us.princesspolly.com/cdn/shop/files/1-modelinfo-chloe-us2_4fd85193-a9b4-4643-bab3-55776eaf2065.jpg?v=1692748537&width=1800
+12. https://us.princesspolly.com/cdn/shop/files/2-modelinfo-chloe-us2_60acccf4-8918-4a6f-913f-df608be3e7b2.jpg?v=1692748537&width=1800
+13. https://us.princesspolly.com/cdn/shop/files/0-modelinfo-eva-us2_91e6ba55-d516-4a23-a75d-5d7313f0204e.jpg?v=1687480995&width=654
+14. https://us.princesspolly.com/cdn/shop/files/1-modelinfo-eva-us2_adde9eb7-9cc7-4cc4-951f-0ee968813869.jpg?v=1687480996&width=1800
+15. https://us.princesspolly.com/cdn/shop/products/1-modelinfo-lola-us4_3f6c3484-462c-4669-978d-ecd0faffe1fb.jpg?v=1673240847&width=654
+16. https://us.princesspolly.com/cdn/shop/products/2-modelinfo-lola-us4_27decd06-6126-4842-b58e-a86836a22cec.jpg?v=1673240846&width=1800
+#### Sales Page
+1. https://us.princesspolly.com/cdn/shop/products/0-modelinfo-kiele-us4_1c032b97-8f24-428f-914e-dd69fbfb57db.jpg?v=1674526330&width=1800
+2. https://us.princesspolly.com/cdn/shop/products/1_68ba122f-9060-4980-a601-fdb98a0552b8.jpg?v=1674526330&width=1800
+3. https://us.princesspolly.com/cdn/shop/products/2-modelinfo-milli-us2_e0948785-8887-4c88-9e79-1af10d613eb3.jpg?v=1676436595&width=654
+4. https://us.princesspolly.com/cdn/shop/products/3-modelinfo-milli-us2_6231aec5-28f1-4858-9354-20db2e4d2567.jpg?v=1676436594&width=1800
+5. https://us.princesspolly.com/cdn/shop/products/1-modelinfo-alexa-us2_71e70772-fd6e-4062-bd1a-ebe3908100ac.jpg?v=1680231588&width=1800
+6. https://us.princesspolly.com/cdn/shop/products/2-modelinfo-alexa-us2_cdc69ffa-feb4-4e5b-abc7-6ce24e047d1a.jpg?v=1680231589&width=1800
+7. https://us.princesspolly.com/cdn/shop/products/3_488978cb-bdfa-4d32-aee5-8f9b8934fbc0.jpg?v=1693281572&width=1800
+8. https://us.princesspolly.com/cdn/shop/products/4_82265ab6-4c5e-4653-a6bf-cfb5edfda775.jpg?v=1693281572&width=1800
 
 
 
