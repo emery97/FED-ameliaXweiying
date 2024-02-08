@@ -467,7 +467,7 @@ margin-top: 10px;
 }
 
 #newsletter-submit {
-background-color: #c997a2; /* Blue background */
+background-color: #c997a2; /* Pink background */
 color: white; /* White text */
 display: flex;
 justify-content:center;
@@ -1418,6 +1418,41 @@ font-weight: 600;
   color: var(--light-color);
 }
 /*WHACK A MOLE PAGE*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 80%; /* Adjust the width according to your design */
+  height: 100%;
+  font-size: 20px;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black with opacity */
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 15px;
+  border: 1px solid #888;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .wack-a-mole-container {
   margin-top: 100px;
   padding-top: 20px;
@@ -1593,6 +1628,16 @@ font-weight: 600;
   justify-content: baseline;
   margin-top: 50px; /* Adjust this value as needed to push the canvas down */
 }
+#dino-info{
+  margin-top:auto;
+  color: red;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+#dinosaur-game-p{
+  margin-bottom: auto;
+}
 canvas {
 	width:100%;
 	background: #eee;
@@ -1660,7 +1705,7 @@ canvas {
   width: 80%;
   max-width: 500px; 
   height: auto; 
-  background-color: pink;
+  background-color: #c997a2;
   overflow: hidden;
   display: none;
 }
@@ -2022,6 +2067,11 @@ canvas {
   /*ALL PRODUCTS*/
   .filter-bar{
     display: none;
+  }
+  /* ALL GAMES PAGE */
+  #dino-info{
+    word-wrap: break-word;
+    max-width:50%;
   }
 
 }

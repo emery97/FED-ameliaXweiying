@@ -45,8 +45,14 @@ function showModal(score) {
 }
 
 function closeModal() {
-  document.getElementById('gameOverModal').style.display = 'none';
+  const modal = document.getElementById('gameOverModal');
+  if (modal) {
+    modal.style.display = 'none';
+    renderNewQuote(); // Render a new quote after closing the modal
+  }
 }
+
+
 
 async function renderNewQuote() {
   const quote = await getRandomQuote();
@@ -57,17 +63,21 @@ async function renderNewQuote() {
     quoteDisplayElement.appendChild(characterSpan);
   });
   quoteInputElement.value = null;
-  startTimer();
+  // startTimer(); // Remove this line to prevent the timer from starting here
   score += 10;
 }
 
+
+let interval;
 function startTimer() {
+  clearInterval(interval); // Clear any existing intervals
   timerElement.innerText = 0;
   startTime = new Date();
-  setInterval(() => {
-    timer.innerText = getTimerTime();
+  interval = setInterval(() => {
+    timerElement.innerText = getTimerTime();
   }, 1000);
 }
+
 
 function getTimerTime() {
   return Math.floor((new Date() - startTime) / 1000);
@@ -203,7 +213,8 @@ function getRandomQuote() {
     .then(data => data.content);
 }
 
-renderNewQuote();
+
+
 
 // Set MIME type for CSS files
 document.addEventListener("DOMContentLoaded", function() {
@@ -213,4 +224,87 @@ document.addEventListener("DOMContentLoaded", function() {
       links[i].type = "text/css";
     }
   }
+});
+
+document.querySelector('.modal-close-btn').addEventListener('click', closeModal);
+
+
+// -------------------------------------- WHACK A MOLE POP UP INSTRUCTIONS ----------------------------------------------
+window.addEventListener('DOMContentLoaded', (event) => {
+  // Assuming the game instructions modal has a unique ID 'gameInstructionsModal'
+  const gameInstructionsModal = document.getElementById('gameInstructionsModal');
+  const closeInstructionsButton = document.querySelector('.close-button'); // Make sure this class is unique to the close button of the instructions modal
+
+  // Function to open the game instructions modal
+  function openGameInstructions() {
+    console.log('openGameInstructions called'); // This should appear in the console
+    const gameInstructionsModal = document.getElementById('gameInstructionsModal');
+    if (gameInstructionsModal) {
+        gameInstructionsModal.style.display = 'block';
+    } else {
+        console.error('Game instructions modal not found');
+    }
+  }
+  
+  function closeGameInstructions() {
+    const gameInstructionsModal = document.getElementById('gameInstructionsModal');
+    if (gameInstructionsModal) {
+        gameInstructionsModal.style.display = 'none';
+        startTimer(); // Start the timer when the instructions are closed
+        renderNewQuote(); // Render the new quote immediately
+    }
+  }
+  
+    
+  // Event listener for the close button of the game instructions modal
+  if (closeInstructionsButton) {
+      closeInstructionsButton.addEventListener('click', closeGameInstructions);
+  }
+
+  // If you have an element that should trigger the game instructions popup when clicked
+  // Add a click event listener to that element to open the game instructions
+  const openInstructionsBtn = document.getElementById('showInstructionsBtn'); // Replace with your actual button's ID
+  if (openInstructionsBtn) {
+      openInstructionsBtn.addEventListener('click', openGameInstructions);
+  }
+});
+
+// Combined DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', async () => {
+  await initializePlayCount(); // Ensure play count is initialized
+  openGameInstructions(); // Open the instructions modal when the page is fully loaded
+
+  // Setup event listener for the 'X' button of the instructions modal
+  const closeInstructionsButton = document.querySelector('.close-button');
+  if (closeInstructionsButton) {
+    closeInstructionsButton.addEventListener('click', closeGameInstructions);
+  }
+  
+});
+
+function openGameInstructions() {
+  console.log('openGameInstructions called'); // This should appear in the console
+  const gameInstructionsModal = document.getElementById('gameInstructionsModal');
+  if (gameInstructionsModal) {
+      gameInstructionsModal.style.display = 'block';
+  } else {
+      console.error('Game instructions modal not found');
+  }
+}
+
+  // Modify this function to start the game when the instructions modal is closed
+// Function to start the game and timer when the instructions modal is closed
+function closeGameInstructions() {
+  const gameInstructionsModal = document.getElementById('gameInstructionsModal');
+  if (gameInstructionsModal) {
+    gameInstructionsModal.style.display = 'none';
+    startTimer(); // Start the timer
+    renderNewQuote(); // Display a new quote immediately
+  }
+}
+
+  // Ensure this event listener is at the end of your script
+window.addEventListener('DOMContentLoaded', (event) => {
+  // This function will display the game instructions modal on page load
+  openGameInstructions();
 });

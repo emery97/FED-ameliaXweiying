@@ -1,3 +1,4 @@
+
 const cursor = document.querySelector('.cursor');
 const holes = [...document.querySelectorAll('.hole')];
 const scoreEl = document.querySelector('.score span');
@@ -166,9 +167,10 @@ function startGame() {
 }
 
 // Make sure to properly handle game restarts and modal closure to avoid re-triggering end game logic
+// Remove this part from your current code
 document.querySelector('.modal-close-btn').addEventListener('click', () => {
-    startGame(); // Ensure this properly resets the game state
 });
+
 
 window.addEventListener('mousemove', e => {
     cursor.style.top = e.pageY + 'px';
@@ -183,5 +185,68 @@ window.addEventListener('mouseup', () => {
     cursor.classList.remove('active');
 });
 
-// Initialize the game
-startGame();
+
+
+
+// -------------------------------------- WHACK A MOLE POP UP INSTRUCTIONS ----------------------------------------------
+window.addEventListener('DOMContentLoaded', (event) => {
+    // Assuming the game instructions modal has a unique ID 'gameInstructionsModal'
+    const gameInstructionsModal = document.getElementById('gameInstructionsModal');
+    const closeInstructionsButton = document.querySelector('.close-button'); // Make sure this class is unique to the close button of the instructions modal
+  
+    // Function to open the game instructions modal
+    function openGameInstructions() {
+      console.log('Trying to open game instructions'); // This should show up in the console
+      if (gameInstructionsModal) {
+          gameInstructionsModal.style.display = 'block';
+      }
+    }
+  
+    // Function to close the game instructions modal
+    function closeGameInstructions() {
+        const gameInstructionsModal = document.getElementById('gameInstructionsModal');
+        if (gameInstructionsModal) {
+            gameInstructionsModal.style.display = 'none';
+            startGame(); // This starts the game and the countdown timer when the instructions modal is closed.
+        }
+    }
+      
+    // Event listener for the close button of the game instructions modal
+    if (closeInstructionsButton) {
+        closeInstructionsButton.addEventListener('click', closeGameInstructions);
+    }
+  
+    // If you have an element that should trigger the game instructions popup when clicked
+    // Add a click event listener to that element to open the game instructions
+    const openInstructionsBtn = document.getElementById('showInstructionsBtn'); // Replace with your actual button's ID
+    if (openInstructionsBtn) {
+        openInstructionsBtn.addEventListener('click', openGameInstructions);
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Test the game instructions modal independently
+    openGameInstructions();
+  });
+  
+  function openGameInstructions() {
+    console.log('openGameInstructions called'); // This should appear in the console
+    const gameInstructionsModal = document.getElementById('gameInstructionsModal');
+    if (gameInstructionsModal) {
+        gameInstructionsModal.style.display = 'block';
+    } else {
+        console.error('Game instructions modal not found');
+    }
+  }
+  
+    // Modify this function to start the game when the instructions modal is closed
+    function closeGameInstructions() {
+        const gameInstructionsModal = document.getElementById('gameInstructionsModal');
+        if (gameInstructionsModal) {
+            gameInstructionsModal.style.display = 'none';
+            startGame(); // Start the game when the instructions are closed
+        }
+    }
+
+  
+
