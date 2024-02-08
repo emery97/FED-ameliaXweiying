@@ -18,6 +18,9 @@ Stay connected with *ameliaXweiying* by subscribing to our monthly newsletter. T
 
 Feel free to join us on this exciting journey at *ameliaXweiying*, where style meets innovation and every visit promises a unique and delightful experience.
 
+## Target Audience 
+At*ameliaxweiying*, we cater to a diverse audience of online shoppers seeking not just products, but an immersive and engaging experience. Our website is designed to appeal to individuals who appreciate style, innovation, and a personalized approach to their shopping journey. Whether you're a fashion enthusiast eager to explore the latest trends or a discerning shopper looking for exclusive deals and rewards, ameliaXweiying welcomes you into our vibrant online community. We cater to those who value quality, creativity, and convenience, offering a range of products and features tailored to meet the diverse needs and preferences of our visitors. From trendsetting millennials to seasoned shoppers, our website provides something for everyone, promising a unique and delightful experience with every visit.
+
 ## Design Process
 
 Our design philosophy draws inspiration from the aesthetics of Princess Polly, a renowned Australian clothing brand known for its chic and stylish online presence. Embracing the elegance of their black and white themed website, we've infused this sophisticated palette into our own site, deriving color accents from product images. This deliberate choice ensures that our customers' attention is directed towards our showcased products, creating a visually pleasing and cohesive user experience.
