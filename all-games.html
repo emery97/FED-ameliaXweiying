@@ -90,7 +90,9 @@
         <div class="mobile-icons">
             <!-- Icon links for user-related actions -->
             <a href="login2.html" class="icon-link"><i class="fas fa-user"></i></a>
-            <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i></a>
+            <a href="javascript:void(0)" class="icon-cart" onclick="toggleCartSidebar()">
+                <i class="fas fa-shopping-basket"></i>
+            </a>
             <a href="all-games.html" class="icon-link"><i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i></a>
 
         </div>
@@ -175,18 +177,40 @@
                 <img src="image/games-display/game1.jpg" alt="game1">
                 <p>WHACK A MOLE</p>
             </a>
-            <a href="dinosaur-game/dinosaur-game.html" class="game">
-                <img src="image/games-display/game2.jpg" alt="game2">
-                <p>DINOSAUR GAME</p>
-            </a>
             <a href="speed-typing-game/speed-typing-index.html" class="game">
               <img src="image/games-display/game3.png" alt="game3">
               <p>SPEED TYPING GAME</p>
-          </a>
+            </a>
+            <a href="snake-game/snake.html" class="game">
+                <img src="image/games-display/snake-game.jpg" alt="game5">
+                <p>SNAKE GAME </p>
+            </a>
             <a href="trivia-quiz/trivia-quiz.html" class="game">
                 <img src="image/games-display/game4.jpg" alt="game4">
                 <p>TRIVIA QUIZ</p>
             </a>
+            <a href="dinosaur-game/dinosaur-game.html" class="game">
+                <img src="image/games-display/game2.jpg" alt="game2">
+                <p>DINOSAUR GAME</p>
+            </a>
+        </div>
+    </div>
+     <!-- Cart Sidebar -->
+     <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h2>MY CART</h2>
+            <button onclick="toggleCartSidebar()">&times;</button>
+        </div>
+        <!-- Somewhere in your sidebar -->
+        <div id="cartItemsContainer">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div id="totalPrice">
+            <!-- Total price will be updated here -->
+        </div>
+        <div class="cart-sidebar-footer">
+            <!-- Inside your sidebar -->
+            <button id="checkoutButton">Checkout</button>
         </div>
     </div>
     <footer class="site-footer">
