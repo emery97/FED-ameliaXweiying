@@ -55,7 +55,6 @@ height: 350px;
   display: flex;
   align-items: center;
   margin-top: -220px;  /*Shift the icons up*/
-  
   }
 .search-container {
 position: relative;
@@ -811,6 +810,7 @@ cursor: pointer;
   font-size: 23px;
   border: none;
   cursor: pointer;
+  height: 100px;
 }
 
 .cart-item-image {
@@ -833,13 +833,21 @@ cursor: pointer;
   display: block; /* This will make it a block element */
 }
 
+.cart-item-controls {
+  display: flex; /* Keep this as a flex container */
+  justify-content: space-between; /* This will space out the minus, quantity, and plus equally */
+  align-items: center; /* Center align the items vertically */
+}
+
 .cart-item-controls button {
+  flex: 1; /* Each button will take equal space */
+  margin: 0 5px; /* Add some space between the buttons */
   font-size: 20px; /* You can adjust the font size as needed */
   width: 30px; /* Adjust the width as needed */
   height: 30px; /* Adjust the height as needed */
   margin: 0 4px; /* Add some margin for spacing */
-  
 }
+
 
 .cart-item-details h3 {
   font-size: 20px; /* You can adjust the font size as needed */
@@ -850,6 +858,10 @@ cursor: pointer;
 }
 
 #totalPrice {
+  position: sticky; /* Stick to the top of its parent */
+  top: 0; /* Stay at the top */
+  background: white; /* Match the background for consistency */
+  z-index: 10; /* Ensure it's above the scrollable content */
   text-align: center;
   font-size: 25px; /* You can adjust the font size as needed */
 }
@@ -904,22 +916,25 @@ cursor: pointer;
 }
 
 .leaderboard-container,
-.rewards-program {
+.rewards-program{
   flex: 1; /* Each box will take up an equal amount of space */
   display: flex;
   justify-content: center; /* Centers the content horizontally */
   align-items: center; /* Centers the content vertically *//
 }
 
+
+
 .leaderboard-link{
   display: block;
   background-color: #fff0f7; /* Your choice of color */
-  padding: 78px;
-  font-size: 45px;
+  padding:92px;
+  font-size: 55px;
   text-decoration: none;
   color: #333; /* Your choice of text color */
   font-weight: bold;
   margin: 20px;
+  width: 850px;
 }
 
 /* This is for the rewards link to not stretch beyond its content */
@@ -933,6 +948,8 @@ cursor: pointer;
   font-weight: bold;
   margin: 20px;
 }
+
+
 
 .about-section {
   text-align: center;
@@ -2379,9 +2396,7 @@ canvas {
     margin:0;
     font-size: 20px;
   }
-  .leaderboard-link{
-    height:40%;
-  }
+
   /* index product page*/
   .product-carousel .product {
     flex: 0 0 calc(50% - 10px); /* Adjusts the width to be half of the container minus some margin */
