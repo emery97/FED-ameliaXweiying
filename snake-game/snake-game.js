@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const grid = 16;
     let count = 0;
     let isGameOver = false; // track game state
+    let scoreUpdateAttempted = false; // Ensure this is declared at the top of your script
+
 
     const snake = {
         x: 160,
@@ -23,15 +25,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
+
     function gameOver() {
         isGameOver = true; // Set the game over flag to true
         showModal(snake.maxCells - 1); // Adjust score calculation if needed
+        updatePlayerScore(snake.maxCells - 1); // Update the player score when the game ends
     }
+
     function loop() {
         if (isGameOver) return; // Stop the game loop if the game is over
         requestAnimationFrame(loop);
 
-        if (++count < 4) {
+        if (++count < 8) {
             return;
         }
         count = 0;
@@ -65,10 +70,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     y: getRandomInt(0, 25) * grid
                 };
                 updateScore();
+                // Removed updatePlayerScore call here
             }
         });
     }
-
     document.addEventListener('keydown', function(e) {
         // Prevent the default action to stop scrolling when arrow keys are pressed
         if ([37, 38, 39, 40].includes(e.which)) {
@@ -129,4 +134,79 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector('.modal-close-btn').addEventListener('click', closeModal);
 
     requestAnimationFrame(loop);
+    
+
+
+    // The updatePlayerScore function adapted from your reference code...
+    function updatePlayerScore(newScore) {
+        // Check if we already attempted to update the score to avoid double alerts
+        if (scoreUpdateAttempted) {
+            console.log('Score update was already attempted. Skipping.');
+            return;
+        }
+    
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
+            console.error('User _id not found. User must be signed in to update score.');
+            alert('Your points could not be added as you do not have an account.');
+            scoreUpdateAttempted = true; // Set the flag after the first attempt
+            return;
+        }
+    
+        // Fetch current user data
+        const urlGet = `https://fedpairassgn-14ba.restdb.io/rest/customer/${userId}`;
+        const settingsGet = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "x-apikey": "65b334a346893806b17bde81",
+                "Cache-Control": "no-cache"
+            }
+        };
+    
+        fetch(urlGet, settingsGet)
+            .then(response => response.json())
+            .then(userData => {
+                // Calculate new score by adding newScore to the current score
+                // Ensure we handle if "user-points" does not exist or is undefined
+                const currentScore = userData["user-points"] || 0;
+                const updatedScore = currentScore + newScore;
+    
+                // Prepare updated user data with new score
+                const updatedUserData = {
+                    ...userData,
+                    "user-points": updatedScore // Update the score with new total
+                };
+    
+                // Prepare PUT request to update user data
+                const settingsPut = {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "x-apikey": "65b334a346893806b17bde81",
+                        "Cache-Control": "no-cache"
+                    },
+                    body: JSON.stringify(updatedUserData)
+                };
+    
+                return fetch(urlGet, settingsPut); // Reuse urlGet since it's the same endpoint
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(updatedUser => {
+                console.log('Score updated successfully', updatedUser);
+                alert('Your score has been added successfully!');
+            })
+            .catch(error => {
+                console.error('Error updating score:', error);
+                alert('There was an error adding your score.');
+            });
+    
+            scoreUpdateAttempted = true; // Move this to the end of successful score update
+    }
+    
 });
