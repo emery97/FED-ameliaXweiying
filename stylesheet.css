@@ -55,6 +55,7 @@ height: 350px;
   display: flex;
   align-items: center;
   margin-top: -220px;  /*Shift the icons up*/
+  
   }
 .search-container {
 position: relative;
@@ -810,7 +811,7 @@ cursor: pointer;
   font-size: 23px;
   border: none;
   cursor: pointer;
-  height: 100px;
+  height:100px;
 }
 
 .cart-item-image {
@@ -846,6 +847,7 @@ cursor: pointer;
   width: 30px; /* Adjust the width as needed */
   height: 30px; /* Adjust the height as needed */
   margin: 0 4px; /* Add some margin for spacing */
+  
 }
 
 
@@ -916,7 +918,7 @@ cursor: pointer;
 }
 
 .leaderboard-container,
-.rewards-program{
+.rewards-program {
   flex: 1; /* Each box will take up an equal amount of space */
   display: flex;
   justify-content: center; /* Centers the content horizontally */
@@ -928,8 +930,8 @@ cursor: pointer;
 .leaderboard-link{
   display: block;
   background-color: #fff0f7; /* Your choice of color */
-  padding:92px;
-  font-size: 55px;
+  padding: 78px;
+  font-size: 45px;
   text-decoration: none;
   color: #333; /* Your choice of text color */
   font-weight: bold;
@@ -2396,7 +2398,9 @@ canvas {
     margin:0;
     font-size: 20px;
   }
-
+  .leaderboard-link{
+    height:40%;
+  }
   /* index product page*/
   .product-carousel .product {
     flex: 0 0 calc(50% - 10px); /* Adjusts the width to be half of the container minus some margin */
